@@ -169,6 +169,18 @@ export const services: Service[] = [
       ogDescription: "Professional trade license services for all business activities in UAE."
     }
   },
+  {
+    id: "web-development",
+    name: "Web Development",
+    slug: "web-development",
+    description: "Custom web applications built with cutting-edge technologies for optimal performance.",
+    longDescription: "We build robust, scalable web applications tailored to your business needs using the latest technologies and best practices.",
+    icon: {
+      src: "/icons/web-development.svg",
+      alt: "Web development icon",
+      width: 24,
+      height: 24
+    },
     features: [
       "Full-Stack Development",
       "API Development",
@@ -422,8 +434,8 @@ export const getAllServiceSlugs = (): string[] => {
 export const servicePageContent: ServicePage = {
   hero: {
     title: "Our Services",
-    subtitle: "Comprehensive Digital Solutions",
-    description: "We offer a full spectrum of digital services to help your business thrive in the modern marketplace. From design to development and marketing, we've got you covered.",
+    subtitle: "Complete Business Setup Solutions",
+    description: "We offer comprehensive corporate services to help you establish and grow your business in UAE. From company formation and trade licensing to visa processing and PRO services, we've got you covered.",
     primaryCTA: {
       text: "Get Free Consultation",
       href: "/contact"
@@ -432,41 +444,91 @@ export const servicePageContent: ServicePage = {
       text: "View Our Process",
       href: "/process"
     },
-    backgroundImage: "/images/services-hero.jpg"
+    backgroundImage: {
+      src: "/images/services-hero.jpg",
+      alt: "Business setup services overview",
+      width: 1920,
+      height: 1080
+    }
   },
   services,
   overview: {
-    title: "Why Choose Our Services?",
-    description: "We combine creativity, technology, and business strategy to deliver solutions that not only meet but exceed your expectations. Our team of experts is dedicated to helping you achieve your digital goals."
+    title: "Why Choose Our Business Services?",
+    description: "We combine expertise in UAE business regulations, proven processes, and personalized service to deliver solutions that ensure your business establishment is smooth, compliant, and successful. Our team of consultants is dedicated to helping you achieve your business goals in UAE market."
   },
   process: {
-    title: "Our Service Process",
+    title: "Our Business Setup Process",
+    subtitle: "Streamlined approach to establish your business in UAE",
     steps: [
       {
-        title: "Discovery & Strategy",
-        description: "We start by understanding your business goals, target audience, and competitive landscape to develop a comprehensive digital strategy.",
-        order: 1
+        title: "Initial Consultation",
+        description: "We start by understanding your business requirements, goals, and preferred jurisdiction to develop a comprehensive setup strategy.",
+        order: 1,
+        duration: "1-2 days",
+        deliverables: ["Requirements assessment", "Jurisdiction recommendation", "Cost analysis"]
       },
       {
-        title: "Design & Planning", 
-        description: "Our team creates detailed wireframes, mockups, and project timelines to ensure we're aligned on the vision before development begins.",
-        order: 2
+        title: "Documentation & Application", 
+        description: "Our team prepares all necessary documentation and submits applications to relevant authorities across UAE jurisdictions.",
+        order: 2,
+        duration: "3-5 days",
+        deliverables: ["Document preparation", "Application submission", "Government coordination"]
       },
       {
-        title: "Development & Implementation",
-        description: "We build your digital solution using industry best practices and cutting-edge technologies, ensuring quality and performance.",
-        order: 3
+        title: "Approval & Registration",
+        description: "We secure initial approvals and complete business registration with all required authorities and free zones.",
+        order: 3,
+        duration: "2-5 days",
+        deliverables: ["Trade license", "Company registration", "Initial approval certificate"]
       },
       {
-        title: "Testing & Launch",
-        description: "Rigorous testing ensures everything works perfectly before launch. We handle deployment and monitor performance post-launch.",
-        order: 4
-      },
-      {
-        title: "Support & Growth",
-        description: "Our relationship doesn't end at launch. We provide ongoing support and optimization to help your digital presence grow.",
-        order: 5
+        title: "Post-Registration Support",
+        description: "We handle all post-registration requirements including visa processing, bank account opening, and operational setup.",
+        order: 4,
+        duration: "5-7 days",
+        deliverables: ["Visa applications", "Bank account assistance", "PRO services setup"]
       }
-    ]
+    ],
+    timeline: {
+      enabled: true,
+      title: "Business Setup Timeline",
+      items: [
+        {
+          phase: "Documentation & Consultation",
+          duration: "2-3 days",
+          description: "Initial consultation and document preparation"
+        },
+        {
+          phase: "Application Processing",
+          duration: "3-5 days",
+          description: "Submission and processing with authorities"
+        },
+        {
+          phase: "Registration & Licensing",
+          duration: "2-5 days",
+          description: "Final approvals and business registration"
+        },
+        {
+          phase: "Operational Setup",
+          duration: "5-7 days",
+          description: "Visas, PRO services, and final setup"
+        }
+      ]
+    }
+  },
+  seo: {
+    title: "Business Setup Services UAE | Company Formation & Corporate Services",
+    description: "Complete business setup solutions in UAE including company formation, trade licensing, visa processing, and PRO services. Expert corporate consultancy.",
+    keywords: [
+      "business setup UAE",
+      "company formation services",
+      "trade license Dubai",
+      "visa processing UAE",
+      "PRO services",
+      "corporate consultancy"
+    ],
+    ogImage: "/images/og-services.jpg",
+    ogTitle: "Business Setup Services UAE",
+    ogDescription: "Complete business setup solutions in UAE including company formation, trade licensing, visa processing, and PRO services."
   }
 }

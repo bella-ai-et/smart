@@ -6,7 +6,7 @@ interface HeadingProps {
   className?: string
 }
 
-export default function Heading({
+export function Heading({
   children,
   level = 'h2',
   size = 'lg',

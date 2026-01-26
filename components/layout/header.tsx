@@ -5,16 +5,16 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo placeholder */}
           <div className="text-xl font-bold">
-            Agency Logo
+            UAE Business Setup
           </div>
           
           {/* Navigation placeholder */}
           <nav className="hidden md:flex space-x-6">
-            <a href="#" className="hover:underline">Home</a>
-            <a href="#" className="hover:underline">About</a>
-            <a href="#" className="hover:underline">Services</a>
-            <a href="#" className="hover:underline">Portfolio</a>
-            <a href="#" className="hover:underline">Contact</a>
+            <a href="/" className="hover:underline">Home</a>
+            <a href="/about" className="hover:underline">About</a>
+            <a href="/services" className="hover:underline">Services</a>
+            <a href="/portfolio" className="hover:underline">Success Stories</a>
+            <a href="/contact" className="hover:underline">Contact</a>
           </nav>
           
           {/* Mobile menu placeholder */}

@@ -4,8 +4,8 @@ import Header from '@/components/layout/header'
 import Footer from '@/components/layout/footer'
 
 export const metadata: Metadata = {
-  title: 'Agency Website',
-  description: 'A large-scale agency website built with Next.js',
+  title: 'Business Setup UAE | Corporate Services Consultancy',
+  description: 'Leading business setup consultancy in UAE offering company formation, trade licensing, visa processing, and PRO services for entrepreneurs and corporations.',
 }
 
 export default function RootLayout({

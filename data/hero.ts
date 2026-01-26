@@ -86,30 +86,7 @@ export const aboutHero: Hero = {
   }
 }
 
-export const aboutHero: Hero = {
-  title: "Passionate About Digital Innovation",
-  subtitle: "Meet the Team Behind Your Success",
-  description: "We're a diverse team of creative professionals dedicated to pushing the boundaries of digital design and development.",
-  primaryCTA: {
-    text: "Join Our Team",
-    href: "/careers"
-  },
-  secondaryCTA: {
-    text: "Contact Us",
-    href: "/contact"
-  },
-  backgroundImage: {
-    src: "/images/about-hero.jpg",
-    alt: "Digital agency team collaborating in modern office space",
-    width: 1920,
-    height: 1080
-  },
-  overlay: {
-    enabled: true,
-    opacity: 0.6,
-    color: "#1a1a1a"
-  }
-}
+
 
 export const portfolioPageSEO: SEO = {
   title: "Business Success Stories | UAE Company Formation Case Studies",
