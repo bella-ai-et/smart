@@ -88,6 +88,42 @@ export const aboutHero: Hero = {
 
 
 
+export const contactPageSEO: SEO = {
+  title: "Contact Us | Business Setup Consultants UAE",
+  description: "Get in touch with our expert business consultants for company formation, trade licensing, and visa processing in UAE. Visit our Dubai office or contact us online.",
+  keywords: [
+    "contact business consultants UAE",
+    "business setup office Dubai",
+    "company formation contact",
+    "business consultancy location",
+    "Dubai trade license help"
+  ],
+  ogImage: "/images/og-contact.jpg",
+  ogTitle: "Contact Our Business Setup Experts",
+  ogDescription: "Reach out to our team for professional assistance with your UAE business setup requirements."
+}
+
+export const contactHero: Hero = {
+  title: "Contact Us",
+  subtitle: "Get In Touch With Us",
+  description: "Have questions about setting up your business in the UAE? Our team of experts is ready to assist you with all your company formation and corporate service needs.",
+  primaryCTA: {
+    text: "Call Us Now",
+    href: "tel:+971585417444"
+  },
+  backgroundImage: {
+    src: "/images/contact-hero.jpg",
+    alt: "Customer support representative talking on phone",
+    width: 1920,
+    height: 1080
+  },
+  overlay: {
+    enabled: true,
+    opacity: 0.6,
+    color: "#1a3a52"
+  }
+}
+
 export const portfolioPageSEO: SEO = {
   title: "Business Success Stories | UAE Company Formation Case Studies",
   description: "Explore our portfolio of successful business setups and company formations in UAE. Real stories of entrepreneurs who established their businesses with our consultancy.",
@@ -128,42 +164,3 @@ export const portfolioHero: Hero = {
   }
 }
 
-export const contactPageSEO: SEO = {
-  title: "Contact Business Consultants | UAE Company Formation Services",
-  description: "Get in touch with our business consultants for company formation, trade licensing, visa processing, and PRO services in UAE. Start your business setup today.",
-  keywords: [
-    "contact business consultants UAE",
-    "company formation inquiry",
-    "trade license consultation",
-    "business setup contact",
-    "UAE business consultants"
-  ],
-  ogImage: "/images/og-contact.jpg",
-  ogTitle: "Contact Business Consultants | UAE Company Formation",
-  ogDescription: "Get in touch with our expert business consultants for company formation and corporate services in UAE."
-}
-
-export const contactHero: Hero = {
-  title: "Start Your Business Setup",
-  subtitle: "Ready to Establish Your UAE Company?",
-  description: "Our expert consultants are ready to guide you through company formation, trade licensing, visa processing, and all your business setup needs in UAE. Contact us today.",
-  primaryCTA: {
-    text: "Schedule Consultation",
-    href: "#contact-form"
-  },
-  secondaryCTA: {
-    text: "View Services",
-    href: "/services"
-  },
-  backgroundImage: {
-    src: "/images/contact-hero.jpg",
-    alt: "Business consultants ready to help with company formation in Dubai",
-    width: 1920,
-    height: 1080
-  },
-  overlay: {
-    enabled: true,
-    opacity: 0.4,
-    color: "#1a3a52"
-  }
-}
