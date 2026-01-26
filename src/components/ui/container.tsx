@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils"
+
 interface ContainerProps {
   children: React.ReactNode
   size?: 'sm' | 'md' | 'lg' | 'xl' | 'full'
@@ -109,7 +111,12 @@ export function Grid({
     xl: 'gap-10'
   }
   
-  const classes = `${baseClasses} ${colsClasses[cols]} ${gaps[gap]} ${className}`
+  const classes = cn(
+    baseClasses,
+    colsClasses[cols],
+    gaps[gap],
+    className
+  )
   
   return (
     <div className={classes}>

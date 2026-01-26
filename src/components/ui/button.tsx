@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils"
+
 interface ButtonProps {
   children: React.ReactNode
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost'
@@ -34,7 +36,13 @@ export default function Button({
     lg: 'px-6 py-3 text-lg'
   }
   
-  const classes = `${baseClasses} ${variants[variant]} ${sizes[size]} ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`
+  const classes = cn(
+    baseClasses,
+    variants[variant],
+    sizes[size],
+    disabled && 'opacity-50 cursor-not-allowed',
+    className
+  )
   
   if (href) {
     return (

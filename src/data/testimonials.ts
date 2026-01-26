@@ -158,7 +158,12 @@ export const testimonials: Testimonial[] = [
     company: "Logistics Pro",
     content: "The internal dashboard they developed has streamlined our operations significantly. What used to take hours now takes minutes. Their solution has improved our efficiency and reduced operational costs by 40%.",
     rating: 5,
-    avatar: "/images/testimonials/james.jpg",
+    avatar: {
+      src: "/images/testimonials/james.jpg",
+      alt: "James Mitchell, Operations Manager at Logistics Pro",
+      width: 80,
+      height: 80
+    },
     project: {
       name: "Logistics Pro Dashboard",
       href: "/portfolio/logistics-dashboard"
@@ -172,7 +177,12 @@ export const testimonials: Testimonial[] = [
     company: "NonProfit Foundation",
     content: "As a nonprofit, we needed a website that could effectively communicate our mission and drive donations. They delivered a beautiful, functional website that helped us exceed our fundraising goals by 150% in the first quarter.",
     rating: 5,
-    avatar: "/images/testimonials/amanda.jpg",
+    avatar: {
+      src: "/images/testimonials/amanda.jpg",
+      alt: "Amanda Foster, Executive Director at NonProfit Foundation",
+      width: 80,
+      height: 80
+    },
     project: {
       name: "NonProfit Foundation Website",
       href: "/portfolio/nonprofit-website"
@@ -186,7 +196,12 @@ export const testimonials: Testimonial[] = [
     company: "Bella Vista Restaurant",
     content: "The online ordering system and app they created has revolutionized our restaurant business. Our online orders have tripled, and customers love the intuitive interface. They understood the food service industry perfectly.",
     rating: 5,
-    avatar: "/images/testimonials/robert.jpg",
+    avatar: {
+      src: "/images/testimonials/robert.jpg",
+      alt: "Robert Martinez, Restaurant Owner at Bella Vista Restaurant",
+      width: 80,
+      height: 80
+    },
     project: {
       name: "Bella Vista Ordering System",
       href: "/portfolio/restaurant-ordering-system"

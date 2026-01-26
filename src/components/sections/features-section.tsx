@@ -11,7 +11,7 @@ interface FeaturesSectionProps {
     icon?: string
     image?: string
   }>
-  cols?: 2 | 3 | 4
+  cols?: 1 | 2 | 3 | 4 | 5 | 6
 }
 
 export default function FeaturesSection({

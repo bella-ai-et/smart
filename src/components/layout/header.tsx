@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Header() {
   return (
     <header className="w-full border-b">
@@ -5,16 +7,16 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo placeholder */}
           <div className="text-xl font-bold">
-            UAE Business Setup
+            <Link href="/">UAE Business Setup</Link>
           </div>
           
           {/* Navigation placeholder */}
           <nav className="hidden md:flex space-x-6">
-            <a href="/" className="hover:underline">Home</a>
-            <a href="/about" className="hover:underline">About</a>
-            <a href="/services" className="hover:underline">Services</a>
-            <a href="/portfolio" className="hover:underline">Success Stories</a>
-            <a href="/contact" className="hover:underline">Contact</a>
+            <Link href="/" className="hover:underline">Home</Link>
+            <Link href="/about" className="hover:underline">About</Link>
+            <Link href="/services" className="hover:underline">Services</Link>
+            <Link href="/portfolio" className="hover:underline">Success Stories</Link>
+            <Link href="/contact" className="hover:underline">Contact</Link>
           </nav>
           
           {/* Mobile menu placeholder */}

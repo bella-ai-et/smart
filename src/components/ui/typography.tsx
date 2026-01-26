@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils"
+
 interface HeadingProps {
   children: React.ReactNode
   level?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
@@ -35,7 +37,12 @@ export function Heading({
     bold: 'font-bold'
   }
   
-  const classes = `${baseClasses} ${sizes[size]} ${weights[weight]} ${className}`
+  const classes = cn(
+    baseClasses,
+    sizes[size],
+    weights[weight],
+    className
+  )
   
   const HeadingTag = level
   
@@ -44,7 +51,7 @@ export function Heading({
 
 interface TextProps {
   children: React.ReactNode
-  size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl'
+  size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl'
   weight?: 'light' | 'normal' | 'medium' | 'semibold' | 'bold'
   color?: 'primary' | 'secondary' | 'muted' | 'accent'
   className?: string
@@ -64,7 +71,11 @@ export function Text({
     sm: 'text-sm',
     base: 'text-base',
     lg: 'text-lg',
-    xl: 'text-xl'
+    xl: 'text-xl',
+    '2xl': 'text-2xl',
+    '3xl': 'text-3xl',
+    '4xl': 'text-4xl',
+    '5xl': 'text-5xl'
   }
   
   const weights = {
@@ -82,7 +93,13 @@ export function Text({
     accent: 'text-blue-600'
   }
   
-  const classes = `${baseClasses} ${sizes[size]} ${weights[weight]} ${colors[color]} ${className}`
+  const classes = cn(
+    baseClasses,
+    sizes[size],
+    weights[weight],
+    colors[color],
+    className
+  )
   
   return <p className={classes}>{children}</p>
 }
@@ -114,7 +131,12 @@ export function Paragraph({
     relaxed: 'leading-relaxed'
   }
   
-  const classes = `${baseClasses} ${sizes[size]} ${leadings[leading]} ${className}`
+  const classes = cn(
+    baseClasses,
+    sizes[size],
+    leadings[leading],
+    className
+  )
   
   return <p className={classes}>{children}</p>
 }

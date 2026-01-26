@@ -30,7 +30,7 @@ export default function ServicePage({ params }: ServicePageProps) {
       text: "View All Services",
       href: "/services"
     },
-    backgroundImage: service.image
+    ...(service.heroImage ? { backgroundImage: service.heroImage } : {})
   }
 
   const processFeatures = [

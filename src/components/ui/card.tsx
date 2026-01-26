@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils"
+
 interface CardProps {
   children: React.ReactNode
   className?: string
@@ -5,6 +7,7 @@ interface CardProps {
   shadow?: 'none' | 'sm' | 'md' | 'lg'
   border?: boolean
   hover?: boolean
+  onClick?: () => void
 }
 
 export default function Card({
@@ -13,7 +16,8 @@ export default function Card({
   padding = 'md',
   shadow = 'md',
   border = true,
-  hover = false
+  hover = false,
+  onClick
 }: CardProps) {
   const baseClasses = 'bg-white rounded-lg'
   
@@ -31,10 +35,17 @@ export default function Card({
     lg: 'shadow-lg'
   }
   
-  const classes = `${baseClasses} ${paddings[padding]} ${shadows[shadow]} ${border ? 'border border-gray-200' : ''} ${hover ? 'hover:shadow-lg transition-shadow' : ''} ${className}`
+  const classes = cn(
+    baseClasses,
+    paddings[padding],
+    shadows[shadow],
+    border && 'border border-gray-200',
+    hover && 'hover:shadow-lg transition-shadow',
+    className
+  )
   
   return (
-    <div className={classes}>
+    <div className={classes} onClick={onClick}>
       {children}
     </div>
   )
@@ -73,7 +84,7 @@ interface CardFooterProps {
 
 export function CardFooter({ children, className = '' }: CardFooterProps) {
   return (
-    <div className={`mt-4 pt-4 border-t border-gray-100 ${className}`}>
+    <div className={cn("mt-4 pt-4 border-t border-gray-100", className)}>
       {children}
     </div>
   )

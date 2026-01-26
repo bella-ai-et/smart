@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Footer() {
   return (
     <footer className="w-full border-t bg-gray-50">
@@ -15,10 +17,10 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="/about" className="hover:underline">About Us</a></li>
-              <li><a href="/services" className="hover:underline">Services</a></li>
-              <li><a href="/portfolio" className="hover:underline">Success Stories</a></li>
-              <li><a href="/contact" className="hover:underline">Contact</a></li>
+              <li><Link href="/about" className="hover:underline">About Us</Link></li>
+              <li><Link href="/services" className="hover:underline">Services</Link></li>
+              <li><Link href="/portfolio" className="hover:underline">Success Stories</Link></li>
+              <li><Link href="/contact" className="hover:underline">Contact</Link></li>
             </ul>
           </div>
           
@@ -26,10 +28,10 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="/services/company-formation" className="hover:underline">Company Formation</a></li>
-              <li><a href="/services/trade-license" className="hover:underline">Trade License</a></li>
-              <li><a href="/services/visa-processing" className="hover:underline">Visa Processing</a></li>
-              <li><a href="/services/pro-services" className="hover:underline">PRO Services</a></li>
+              <li><Link href="/services/company-formation" className="hover:underline">Company Formation</Link></li>
+              <li><Link href="/services/trade-license" className="hover:underline">Trade License</Link></li>
+              <li><Link href="/services/visa-processing" className="hover:underline">Visa Processing</Link></li>
+              <li><Link href="/services/pro-services" className="hover:underline">PRO Services</Link></li>
             </ul>
           </div>
           
