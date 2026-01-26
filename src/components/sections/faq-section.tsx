@@ -124,18 +124,6 @@ export default function FAQSection({
         ))}
       </Grid>
 
-      {/* CTA */}
-      <div className="text-center mt-16">
-        <Text size="lg" className="text-gray-600 mb-6">
-          Still have questions?
-        </Text>
-        <a
-          href="/contact"
-          className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-        </a>
-      </div>
     </Container>
   )
 }
