@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import { getCompanySetupBySlug, companySetupData } from '@/data/company-setup'
+import { ajmanFreeZoneData } from '@/data/start-your-company/freezone/ajman-free-zone'
 import HeroSection from '@/components/sections/hero-section'
 import ContentWithImage from '@/components/sections/content-with-image'
 import FeaturesSection from '@/components/sections/features-section'
@@ -19,6 +20,16 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug, category } = await params
+  
+  // Handle Ajman Free Zone with dedicated data
+  if (slug === 'ajman-free-zone' && category === 'free-zone') {
+    return {
+      title: 'Ajman Free Zone Company Setup | Smart Zone',
+      description: `Established in ${ajmanFreeZoneData.ajman_free_zone_overview.established}, Ajman Free Zone offers ${ajmanFreeZoneData.ajman_free_zone_overview.key_value_proposition}`,
+      keywords: ['Ajman Free Zone', 'Company Setup Ajman', 'UAE Free Zone', 'Business Setup', 'Smart Zone'],
+    }
+  }
+  
   const service = getCompanySetupBySlug(slug)
 
   if (!service || service.category !== category) {
@@ -35,14 +46,126 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export async function generateStaticParams() {
-  return companySetupData.map((service) => ({
+  const params = companySetupData.map((service) => ({
     category: service.category,
     slug: service.slug,
   }))
+  
+  // Add Ajman Free Zone with its dedicated data
+  params.push({
+    category: 'free-zone',
+    slug: 'ajman-free-zone',
+  })
+  
+  return params
 }
 
 export default async function CompanySetupPage({ params }: PageProps) {
   const { slug, category } = await params
+  
+  // Handle Ajman Free Zone with dedicated data file
+  if (slug === 'ajman-free-zone' && category === 'free-zone') {
+    // Construct Hero data from dedicated file
+    const heroData = {
+      title: 'Ajman Free Zone',
+      subtitle: ajmanFreeZoneData.ajman_free_zone_overview.description,
+      description: ajmanFreeZoneData.ajman_free_zone_overview.description,
+      primaryCTA: {
+        text: "Get a Free Consultation",
+        href: "#contact"
+      },
+      backgroundImage: {
+        src: '/images/hero/ajman-free-zone.jpg',
+        alt: 'Ajman Free Zone'
+      }
+    }
+
+    return (
+      <>
+        <HeroSection data={heroData} />
+
+        {/* What Is Section */}
+        <div id="what-is">
+          <ContentWithImage
+            title="What is Ajman Free Zone?"
+            description={`Established in ${ajmanFreeZoneData.ajman_free_zone_overview.established}, ${ajmanFreeZoneData.ajman_free_zone_overview.description} The free zone features ${ajmanFreeZoneData.ajman_free_zone_overview.infrastructure}, offering ${ajmanFreeZoneData.ajman_free_zone_overview.key_value_proposition}`}
+            image="/images/services/ajman-overview.jpg"
+          />
+        </div>
+
+        {/* Why Set Up Section */}
+        <FeaturesSection
+          title="Benefits and Incentives"
+          features={[
+            { 
+              title: '100% Foreign Ownership', 
+              description: `${ajmanFreeZoneData.benefits_and_incentives.ownership_and_tax[0]} with ${ajmanFreeZoneData.benefits_and_incentives.ownership_and_tax[3]}.` 
+            },
+            { 
+              title: 'Tax Exemptions', 
+              description: `${ajmanFreeZoneData.benefits_and_incentives.ownership_and_tax[1]}, plus ${ajmanFreeZoneData.benefits_and_incentives.ownership_and_tax[2]}.` 
+            },
+            { 
+              title: 'Operational Flexibility', 
+              description: `${ajmanFreeZoneData.benefits_and_incentives.operational_flexibility[0]}, ${ajmanFreeZoneData.benefits_and_incentives.operational_flexibility[1]}, ${ajmanFreeZoneData.benefits_and_incentives.operational_flexibility[2]}, and ${ajmanFreeZoneData.benefits_and_incentives.operational_flexibility[3]}.` 
+            },
+            { 
+              title: 'Financial Advantages', 
+              description: `${ajmanFreeZoneData.benefits_and_incentives.financial_and_strategic[0]}, ${ajmanFreeZoneData.benefits_and_incentives.financial_and_strategic[1]}, and ${ajmanFreeZoneData.benefits_and_incentives.financial_and_strategic[4]}.` 
+            }
+          ]}
+        />
+        <Container className="text-center pb-16">
+            <Button variant="outline" size="lg" href="/contact">
+                Get Started with Ajman Free Zone
+            </Button>
+        </Container>
+
+        {/* Types of Businesses Allowed */}
+        <Container size="lg" padding="lg" className="bg-gray-50">
+          <div className="text-center mb-16">
+              <Heading level="h2" size="3xl" weight="bold" className="mb-4">
+                  Business License Types
+              </Heading>
+          </div>
+          <Grid cols={3} gap="lg">
+              {ajmanFreeZoneData.business_license_types.map((type, idx) => (
+                  <Card key={idx} padding="lg" className="h-full">
+                      <CardHeader>
+                          <Heading level="h3" size="lg" weight="semibold" className="mb-2">
+                              {type}
+                          </Heading>
+                      </CardHeader>
+                      <CardContent>
+                        <Text className="text-gray-600">&nbsp;</Text>
+                      </CardContent>
+                  </Card>
+              ))}
+          </Grid>
+        </Container>
+
+        {/* Why Choose SmartZone */}
+        <ContentWithImage
+          title="Why Choose Smart Zone?"
+          description={`${ajmanFreeZoneData.service_provider_details.provider_name} is a ${ajmanFreeZoneData.service_provider_details.credentials.status} with ${ajmanFreeZoneData.service_provider_details.credentials.experience}, having incorporated ${ajmanFreeZoneData.service_provider_details.credentials.track_record} with a ${ajmanFreeZoneData.service_provider_details.credentials.retention_rate}. Our services include ${ajmanFreeZoneData.service_provider_details.services_offered[0]}, ${ajmanFreeZoneData.service_provider_details.services_offered[1]}, ${ajmanFreeZoneData.service_provider_details.services_offered[2]}, and ${ajmanFreeZoneData.service_provider_details.services_offered[3]}.`}
+          image="/images/services/why-smartzone.jpg"
+          features={[
+            ajmanFreeZoneData.service_provider_details.credentials.status,
+            ajmanFreeZoneData.service_provider_details.credentials.experience,
+            ajmanFreeZoneData.service_provider_details.credentials.track_record,
+            ajmanFreeZoneData.service_provider_details.credentials.retention_rate
+          ]}
+          reverse={true}
+        />
+
+        {/* Contact Section */}
+        <div id="contact">
+          <ContactForm variant="home" />
+        </div>
+      </>
+    )
+  }
+
   const service = getCompanySetupBySlug(slug)
 
   if (!service || service.category !== category) {
@@ -77,43 +200,7 @@ export default async function CompanySetupPage({ params }: PageProps) {
         />
       </div>
 
-      {/* Cost Section */}
-      <Container size="lg" padding="lg" className="bg-gray-50">
-        <div className="text-center mb-12">
-          <Heading level="h2" size="3xl" weight="bold" className="mb-4">
-            {service.cost.title}
-          </Heading>
-        </div>
-        <Grid cols={service.cost.packages.length > 2 ? 3 : 2} gap="lg">
-            {service.cost.packages.map((pkg, idx) => (
-                <Card key={idx} padding="lg" className="h-full border-t-4 border-t-blue-600">
-                    <CardHeader>
-                        <Heading level="h3" size="xl" weight="bold" className="mb-2 text-blue-900">
-                            {pkg.name}
-                        </Heading>
-                        <Text size="2xl" weight="bold" className="text-blue-600 mb-4">
-                            {pkg.price}
-                        </Text>
-                    </CardHeader>
-                    <CardContent>
-                        <ul className="space-y-3 mb-8">
-                            {pkg.features?.map((feature, fIdx) => (
-                                <li key={fIdx} className="flex items-start">
-                                    <span className="mr-2 text-green-500">✓</span>
-                                    <Text className="text-gray-600">{feature}</Text>
-                                </li>
-                            ))}
-                        </ul>
-                        <div className="text-center">
-                            <Button variant="primary" href="#contact" className="w-full">
-                                Enquire Now
-                            </Button>
-                        </div>
-                    </CardContent>
-                </Card>
-            ))}
-        </Grid>
-      </Container>
+      
 
       {/* Why Set Up Section */}
       <FeaturesSection

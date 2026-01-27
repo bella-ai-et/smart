@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import { services } from '@/data'
-import { companySetupData } from '@/data/company-setup'
+import { startYourCompanyNavigation } from '@/data/navigation'
 
 export default function Header() {
-  const freeZones = companySetupData.filter(i => i.category === 'free-zone')
-  const mainland = companySetupData.filter(i => i.category === 'mainland')
-  const offshore = companySetupData.filter(i => i.category === 'offshore')
+const freeZones = startYourCompanyNavigation.filter(i => i.category === 'free-zone')
+  const mainland = startYourCompanyNavigation.filter(i => i.category === 'mainland')
+  const offshore = startYourCompanyNavigation.filter(i => i.category === 'offshore')
 
   return (
     <header className="w-full border-b relative z-50 bg-white">
@@ -65,13 +65,13 @@ export default function Header() {
                     <div className="absolute left-full top-0 pl-1 hidden group-hover/freezone:block w-72">
                        <div className="bg-white border border-gray-200 shadow-xl rounded-md py-2">
                           <ul className="space-y-1">
-                             {freeZones.map(item => (
-                               <li key={item.id}>
-                                 <Link href={`/start-your-company/free-zone/${item.slug}`} className="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
-                                   {item.menuName}
-                                 </Link>
-                               </li>
-                             ))}
+{freeZones.map(item => (
+                                <li key={item.route}>
+                                  <Link href={item.route} className="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+                                    {item.label}
+                                  </Link>
+                                </li>
+                              ))}
                           </ul>
                        </div>
                     </div>
@@ -86,13 +86,13 @@ export default function Header() {
                     <div className="absolute left-full top-0 pl-1 hidden group-hover/mainland:block w-72">
                        <div className="bg-white border border-gray-200 shadow-xl rounded-md py-2">
                           <ul className="space-y-1">
-                             {mainland.map(item => (
-                               <li key={item.id}>
-                                 <Link href={`/start-your-company/mainland/${item.slug}`} className="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
-                                   {item.menuName}
-                                 </Link>
-                               </li>
-                             ))}
+{mainland.map(item => (
+                                <li key={item.route}>
+                                  <Link href={item.route} className="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+                                    {item.label}
+                                  </Link>
+                                </li>
+                              ))}
                           </ul>
                        </div>
                     </div>
@@ -107,13 +107,13 @@ export default function Header() {
                     <div className="absolute left-full top-0 pl-1 hidden group-hover/offshore:block w-72">
                        <div className="bg-white border border-gray-200 shadow-xl rounded-md py-2">
                           <ul className="space-y-1">
-                             {offshore.map(item => (
-                               <li key={item.id}>
-                                 <Link href={`/start-your-company/offshore/${item.slug}`} className="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
-                                   {item.menuName}
-                                 </Link>
-                               </li>
-                             ))}
+{offshore.map(item => (
+                                <li key={item.route}>
+                                  <Link href={item.route} className="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
+                                    {item.label}
+                                  </Link>
+                                </li>
+                              ))}
                           </ul>
                        </div>
                     </div>

@@ -1,4 +1,5 @@
-import { CompanySetup } from '@/types'
+ import type { CompanySetup } from '@/types'
+import { ajmanFreeZoneData } from './ajman-free-zone'
 
 export const companySetupData: CompanySetup[] = [
   // FREE ZONES
@@ -8,60 +9,61 @@ export const companySetupData: CompanySetup[] = [
     menuName: 'Ajman Free Zone',
     category: 'free-zone',
     hero: {
-      title: 'Ajman Free Zone Company Setup',
-      subtitle: 'Cost-effective business setup in the UAE',
+      title: 'Ajman Free Zone',
+      subtitle: ajmanFreeZoneData.ajman_free_zone_overview.description,
       backgroundImage: '/images/hero/ajman-free-zone.jpg'
     },
     whatIs: {
       title: 'What is Ajman Free Zone?',
-      description: 'Ajman Free Zone (AFZ) is one of the oldest and most reputed free zones in the UAE, offering affordable business setup packages for startups and SMEs. Located strategically near the Ajman Port, it provides excellent connectivity to global markets.',
+      description: `Established in ${ajmanFreeZoneData.ajman_free_zone_overview.established}, ${ajmanFreeZoneData.ajman_free_zone_overview.description} The free zone features ${ajmanFreeZoneData.ajman_free_zone_overview.infrastructure}, offering ${ajmanFreeZoneData.ajman_free_zone_overview.key_value_proposition}`,
       image: '/images/services/ajman-overview.jpg'
     },
     cost: {
-      title: 'Ajman Free Zone License Costs',
-      packages: [
-        {
-          name: 'E-Commerce License',
-          price: 'Starting from AED 5,000',
-          features: ['1 Visa Allocation', 'Virtual Office', 'Trading Activity']
+      title: 'Business License Types',
+      packages: []
+    },
+    whySetup: {
+      title: 'Benefits and Incentives',
+      ctaText: 'Get Started with Ajman Free Zone',
+      ctaHref: '/contact',
+      cards: [
+        { 
+          title: '100% Foreign Ownership', 
+          description: `${ajmanFreeZoneData.benefits_and_incentives.ownership_and_tax[0]} with ${ajmanFreeZoneData.benefits_and_incentives.ownership_and_tax[3]}.` 
         },
-        {
-          name: 'Business License',
-          price: 'Starting from AED 9,000',
-          features: ['2 Visa Allocations', 'Smart Office', 'Professional Services']
+        { 
+          title: 'Tax Exemptions', 
+          description: `${ajmanFreeZoneData.benefits_and_incentives.ownership_and_tax[1]}, plus ${ajmanFreeZoneData.benefits_and_incentives.ownership_and_tax[2]}.` 
+        },
+        { 
+          title: 'Operational Flexibility', 
+          description: `${ajmanFreeZoneData.benefits_and_incentives.operational_flexibility[0]}, ${ajmanFreeZoneData.benefits_and_incentives.operational_flexibility[1]}, ${ajmanFreeZoneData.benefits_and_incentives.operational_flexibility[2]}, and ${ajmanFreeZoneData.benefits_and_incentives.operational_flexibility[3]}.` 
+        },
+        { 
+          title: 'Financial Advantages', 
+          description: `${ajmanFreeZoneData.benefits_and_incentives.financial_and_strategic[0]}, ${ajmanFreeZoneData.benefits_and_incentives.financial_and_strategic[1]}, and ${ajmanFreeZoneData.benefits_and_incentives.financial_and_strategic[4]}.` 
         }
       ]
     },
-    whySetup: {
-      title: 'Why Set Up in Ajman Free Zone?',
-      ctaText: 'View full list of business activities',
-      ctaHref: '/contact',
-      cards: [
-        { title: 'Low Cost', description: 'One of the most affordable free zones in the UAE.' },
-        { title: 'Strategic Location', description: 'Easy access to Ajman Port and Dubai International Airport.' },
-        { title: 'Multiple Installments', description: 'Pay your license fees in easy installments.' },
-        { title: 'Quick Setup', description: 'Get your license issued in as little as 24 hours.' }
-      ]
-    },
     businessTypes: {
-      title: 'Types of Businesses Allowed',
-      types: [
-        { name: 'Trading', description: 'Import, export, and distribution of goods.' },
-        { name: 'Service', description: 'Consultancy and professional services.' },
-        { name: 'Industrial', description: 'Manufacturing and assembly activities.' },
-        { name: 'E-Commerce', description: 'Online trading of goods and services.' }
-      ]
+      title: 'Business License Types',
+      types: ajmanFreeZoneData.business_license_types.map(type => ({ name: type, description: '' }))
     },
     whySmartZone: {
-      title: 'Why Choose SmartZone?',
-      description: 'We simplify the process of setting up your company in Ajman Free Zone. Our experts handle all the paperwork, ensuring a hassle-free experience.',
+      title: 'Why Choose Smart Zone?',
+      description: `${ajmanFreeZoneData.service_provider_details.provider_name} is a ${ajmanFreeZoneData.service_provider_details.credentials.status} with ${ajmanFreeZoneData.service_provider_details.credentials.experience}, having incorporated ${ajmanFreeZoneData.service_provider_details.credentials.track_record} with a ${ajmanFreeZoneData.service_provider_details.credentials.retention_rate}. Our services include ${ajmanFreeZoneData.service_provider_details.services_offered[0]}, ${ajmanFreeZoneData.service_provider_details.services_offered[1]}, ${ajmanFreeZoneData.service_provider_details.services_offered[2]}, and ${ajmanFreeZoneData.service_provider_details.services_offered[3]}.`,
       image: '/images/services/why-smartzone.jpg',
-      features: ['Official Registered Agent', '10+ Years Experience', 'End-to-End Support', 'Transparent Pricing']
+      features: [
+        ajmanFreeZoneData.service_provider_details.credentials.status,
+        ajmanFreeZoneData.service_provider_details.credentials.experience,
+        ajmanFreeZoneData.service_provider_details.credentials.track_record,
+        ajmanFreeZoneData.service_provider_details.credentials.retention_rate
+      ]
     },
     seo: {
-      title: 'Ajman Free Zone Company Setup | SmartZone',
-      description: 'Setup your company in Ajman Free Zone with SmartZone. Affordable packages, quick processing, and 100% ownership.',
-      keywords: ['Ajman Free Zone', 'Company Setup Ajman', 'UAE Free Zone', 'Business Setup']
+      title: 'Ajman Free Zone Company Setup | Smart Zone',
+      description: `Established in ${ajmanFreeZoneData.ajman_free_zone_overview.established}, Ajman Free Zone offers ${ajmanFreeZoneData.ajman_free_zone_overview.key_value_proposition}`,
+      keywords: ['Ajman Free Zone', 'Company Setup Ajman', 'UAE Free Zone', 'Business Setup', 'Smart Zone']
     }
   },
   {
@@ -497,7 +499,7 @@ export const companySetupData: CompanySetup[] = [
       ]
     },
     whySetup: {
-      title: 'Why Set Up in TIP?',
+      title: 'Why Set Up in SRTIP?',
       ctaText: 'View full list of business activities',
       ctaHref: '/contact',
       cards: [
