@@ -1,5 +1,5 @@
  import type { CompanySetup } from '@/types'
-import { ajmanFreeZoneData } from './ajman-free-zone'
+import { ajmanFreeZoneData } from './start-your-company/freezone/ajman-free-zone'
 
 export const companySetupData: CompanySetup[] = [
   // FREE ZONES
