@@ -1,7 +1,19 @@
 import { notFound } from 'next/navigation'
 import { getCompanySetupBySlug, companySetupData } from '@/data/company-setup'
 import { ajmanFreeZoneData } from '@/data/start-your-company/freezone/ajman-free-zone'
+import { ifzaData } from '@/data/start-your-company/freezone/ifza-dsoa'
 import { dmccData } from '@/data/start-your-company/freezone/dmcc'
+import { creativeCityFujairahData } from '@/data/start-your-company/freezone/creative-city-fujairah'
+import { meydanFreeZoneData } from '@/data/start-your-company/freezone/meydan-free-zone'
+import { rakezData } from '@/data/start-your-company/freezone/rakez'
+import { shamsData } from '@/data/start-your-company/freezone/shams'
+import { spcFreeZoneData } from '@/data/start-your-company/freezone/spc-free-zone'
+import { srtipData } from '@/data/start-your-company/freezone/srtip'
+import { dubaiMainlandData } from '@/data/start-your-company/mainland/dubai'
+import { abuDhabiMainlandData } from '@/data/start-your-company/mainland/abu-dhabi'
+import { jafzaOffshoreData } from '@/data/start-your-company/offshore/jafza'
+import { rakIccOffshoreData } from '@/data/start-your-company/offshore/rak-icc'
+import { ajmanOffshoreData } from '@/data/start-your-company/offshore/ajman'
 import HeroSection from '@/components/sections/hero-section'
 import ContentWithImage from '@/components/sections/content-with-image'
 import FeaturesSection from '@/components/sections/features-section'
@@ -31,6 +43,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
+  // Handle IFZA with dedicated data
+  if (slug === 'ifza-dsoa' && category === 'free-zone') {
+    return {
+      title: ifzaData.seo.title,
+      description: ifzaData.seo.description,
+      keywords: ifzaData.seo.keywords,
+    }
+  }
+
   // Handle DMCC with dedicated data
   if (slug === 'dmcc' && category === 'free-zone') {
     return {
@@ -39,7 +60,111 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       keywords: dmccData.seo.keywords,
     }
   }
+
+  // Handle Creative City Fujairah with dedicated data
+  if (slug === 'creative-city-fujairah' && category === 'free-zone') {
+    return {
+      title: creativeCityFujairahData.seo.title,
+      description: creativeCityFujairahData.seo.description,
+      keywords: creativeCityFujairahData.seo.keywords,
+    }
+  }
+
+  // Handle Meydan Free Zone with dedicated data
+  if (slug === 'meydan-free-zone' && category === 'free-zone') {
+    return {
+      title: meydanFreeZoneData.seo.title,
+      description: meydanFreeZoneData.seo.description,
+      keywords: meydanFreeZoneData.seo.keywords,
+    }
+  }
+
+  // Handle RAKEZ with dedicated data
+  if (slug === 'rakez' && category === 'free-zone') {
+    return {
+      title: rakezData.seo.title,
+      description: rakezData.seo.description,
+      keywords: rakezData.seo.keywords,
+    }
+  }
+
+  // Handle SHAMS with dedicated data
+  if (slug === 'shams' && category === 'free-zone') {
+    return {
+      title: shamsData.seo.title,
+      description: shamsData.seo.description,
+      keywords: shamsData.seo.keywords,
+    }
+  }
+
+  // Handle SPC Free Zone with dedicated data
+  if (slug === 'spc-free-zone' && category === 'free-zone') {
+    return {
+      title: spcFreeZoneData.seo.title,
+      description: spcFreeZoneData.seo.description,
+      keywords: spcFreeZoneData.seo.keywords,
+    }
+  }
+
+  // Handle SRTIP with dedicated data
+  if (slug === 'srtip' && category === 'free-zone') {
+    return {
+      title: srtipData.seo.title,
+      description: srtipData.seo.description,
+      keywords: srtipData.seo.keywords,
+    }
+  }
+
+  // Handle Dubai Mainland with dedicated data
+  if (slug === 'dubai' && category === 'mainland') {
+    return {
+      title: dubaiMainlandData.seo.title,
+      description: dubaiMainlandData.seo.description,
+      keywords: dubaiMainlandData.seo.keywords,
+    }
+  }
+
+  // Handle Abu Dhabi Mainland with dedicated data
+  if (slug === 'abu-dhabi' && category === 'mainland') {
+    return {
+      title: abuDhabiMainlandData.seo.title,
+      description: abuDhabiMainlandData.seo.description,
+      keywords: abuDhabiMainlandData.seo.keywords,
+    }
+  }
+
+  // Handle JAFZA Offshore with dedicated data
+  if (slug === 'jafza-offshore' && category === 'offshore') {
+    return {
+      title: jafzaOffshoreData.seo.title,
+      description: jafzaOffshoreData.seo.description,
+      keywords: jafzaOffshoreData.seo.keywords,
+    }
+  }
+
+  // Handle RAK ICC Offshore with dedicated data
+  if (slug === 'rak-icc-offshore' && category === 'offshore') {
+    return {
+      title: rakIccOffshoreData.seo.title,
+      description: rakIccOffshoreData.seo.description,
+      keywords: rakIccOffshoreData.seo.keywords,
+    }
+  }
+
+  // Handle Ajman Offshore with dedicated data
+  if (slug === 'ajman-offshore' && category === 'offshore') {
+    return {
+      title: ajmanOffshoreData.seo.title,
+      description: ajmanOffshoreData.seo.description,
+      keywords: ajmanOffshoreData.seo.keywords,
+    }
+  }
   
+
+
+
+
+
   const service = getCompanySetupBySlug(slug)
 
   if (!service || service.category !== category) {
@@ -67,10 +192,82 @@ export async function generateStaticParams() {
     slug: 'ajman-free-zone',
   })
 
+  // Add IFZA with its dedicated data
+  params.push({
+    category: 'free-zone',
+    slug: 'ifza-dsoa',
+  })
+
   // Add DMCC with its dedicated data
   params.push({
     category: 'free-zone',
     slug: 'dmcc',
+  })
+
+  // Add Creative City Fujairah with its dedicated data
+  params.push({
+    category: 'free-zone',
+    slug: 'creative-city-fujairah',
+  })
+
+  // Add Meydan Free Zone with its dedicated data
+  params.push({
+    category: 'free-zone',
+    slug: 'meydan-free-zone',
+  })
+
+  // Add RAKEZ with its dedicated data
+  params.push({
+    category: 'free-zone',
+    slug: 'rakez',
+  })
+
+  // Add SHAMS with its dedicated data
+  params.push({
+    category: 'free-zone',
+    slug: 'shams',
+  })
+
+  // Add SPC Free Zone with its dedicated data
+  params.push({
+    category: 'free-zone',
+    slug: 'spc-free-zone',
+  })
+
+  // Add SRTIP with its dedicated data
+  params.push({
+    category: 'free-zone',
+    slug: 'srtip',
+  })
+
+  // Add Dubai Mainland with its dedicated data
+  params.push({
+    category: 'mainland',
+    slug: 'dubai',
+  })
+
+  // Add Abu Dhabi Mainland with its dedicated data
+  params.push({
+    category: 'mainland',
+    slug: 'abu-dhabi',
+  })
+
+  // Add JAFZA Offshore with its dedicated data
+  params.push({
+    category: 'offshore',
+    slug: 'jafza-offshore',
+  })
+
+  // Add RAK ICC Offshore with its dedicated data
+  params.push({
+    category: 'offshore',
+    slug: 'rak-icc-offshore',
+  })
+
+  // Add Ajman Offshore with its dedicated data
+  params.push({
+    category: 'offshore',
+    slug: 'ajman-offshore',
   })
   
   return params
@@ -79,7 +276,325 @@ export async function generateStaticParams() {
 export default async function CompanySetupPage({ params }: PageProps) {
   const { slug, category } = await params
   
-  // Handle Ajman Free Zone with dedicated data file
+  // Handle JAFZA Offshore with dedicated data file
+  if (slug === 'jafza-offshore' && category === 'offshore') {
+    const heroData = {
+      title: jafzaOffshoreData.hero.title,
+      subtitle: jafzaOffshoreData.hero.subtitle,
+      description: jafzaOffshoreData.jafza_offshore_overview.description,
+      primaryCTA: {
+        text: "Get a Free Consultation",
+        href: "#contact"
+      },
+      backgroundImage: {
+        src: jafzaOffshoreData.hero.backgroundImage,
+        alt: jafzaOffshoreData.hero.title
+      }
+    }
+
+    return (
+      <>
+        <HeroSection data={heroData} />
+
+        {/* What Is Section */}
+        <div id="what-is">
+          <ContentWithImage
+            title="What is JAFZA Offshore?"
+            description={`${jafzaOffshoreData.jafza_offshore_overview.description} ${jafzaOffshoreData.jafza_offshore_overview.key_advantage}`}
+            image="/images/services/jafza-overview.jpg"
+          />
+        </div>
+
+        {/* Benefits */}
+        <FeaturesSection
+          title="Benefits and Incentives"
+          features={[
+            {
+              title: "Ownership & Tax",
+              description: jafzaOffshoreData.benefits_and_incentives.ownership_and_tax.join('. ')
+            },
+            {
+              title: "Corporate Governance",
+              description: jafzaOffshoreData.benefits_and_incentives.corporate_governance.join('. ')
+            }
+          ]}
+        />
+
+        {/* Costs */}
+        <div className="bg-gray-50 py-16">
+            <Container>
+                <div className="text-center mb-12">
+                    <Heading level="h2" size="3xl" weight="bold">{jafzaOffshoreData.estimated_setup_costs_2026.title}</Heading>
+                </div>
+                <Grid cols={2} gap="lg">
+                    <Card padding="lg">
+                        <CardHeader><Heading level="h3" size="lg" weight="semibold">Initial Setup Fees</Heading></CardHeader>
+                        <CardContent>
+                             <ul className="list-disc pl-4 space-y-2">
+                                <li>Registration: {jafzaOffshoreData.estimated_setup_costs_2026.initial_setup_fees.registration_and_agent_package}</li>
+                                <li>Name Approval: {jafzaOffshoreData.estimated_setup_costs_2026.initial_setup_fees.name_approval_fee}</li>
+                             </ul>
+                        </CardContent>
+                    </Card>
+                    <Card padding="lg">
+                        <CardHeader><Heading level="h3" size="lg" weight="semibold">Annual Renewal</Heading></CardHeader>
+                        <CardContent>
+                             <ul className="list-disc pl-4 space-y-2">
+                                <li>Renewal: {jafzaOffshoreData.estimated_setup_costs_2026.annual_renewal_fees.standard_renewal}</li>
+                                <li>Good Standing: {jafzaOffshoreData.estimated_setup_costs_2026.annual_renewal_fees.certificate_of_good_standing}</li>
+                             </ul>
+                        </CardContent>
+                    </Card>
+                </Grid>
+            </Container>
+        </div>
+
+        {/* Business Activities */}
+        <Container size="lg" padding="lg">
+          <div className="text-center mb-16">
+              <Heading level="h2" size="3xl" weight="bold" className="mb-4">
+                  Permitted Business Activities
+              </Heading>
+          </div>
+          <Grid cols={2} gap="lg">
+              {jafzaOffshoreData.permitted_business_activities.map((type, idx) => (
+                  <Card key={idx} padding="lg" className="h-full">
+                      <CardHeader>
+                          <Heading level="h3" size="lg" weight="semibold" className="mb-2">
+                              {type}
+                          </Heading>
+                      </CardHeader>
+                  </Card>
+              ))}
+          </Grid>
+        </Container>
+
+        {/* Why Choose SmartZone */}
+        <ContentWithImage
+          title={jafzaOffshoreData.whySmartZone.title}
+          description={jafzaOffshoreData.whySmartZone.description}
+          image={jafzaOffshoreData.whySmartZone.image}
+          features={jafzaOffshoreData.whySmartZone.features}
+          reverse={true}
+        />
+
+        {/* Contact Section */}
+        <div id="contact">
+          <ContactForm variant="home" />
+        </div>
+      </>
+    )
+  }
+
+  // Handle RAK ICC Offshore with dedicated data file
+  if (slug === 'rak-icc-offshore' && category === 'offshore') {
+    const heroData = {
+      title: rakIccOffshoreData.hero.title,
+      subtitle: rakIccOffshoreData.hero.subtitle,
+      description: rakIccOffshoreData.rak_icc_offshore_overview.description,
+      primaryCTA: {
+        text: "Get a Free Consultation",
+        href: "#contact"
+      },
+      backgroundImage: {
+        src: rakIccOffshoreData.hero.backgroundImage,
+        alt: rakIccOffshoreData.hero.title
+      }
+    }
+
+    return (
+      <>
+        <HeroSection data={heroData} />
+
+        {/* What Is Section */}
+        <div id="what-is">
+          <ContentWithImage
+            title="What is RAK ICC?"
+            description={`${rakIccOffshoreData.rak_icc_offshore_overview.description} ${rakIccOffshoreData.rak_icc_offshore_overview.real_estate_benefit}`}
+            image="/images/services/rak-icc-overview.jpg"
+          />
+        </div>
+
+        {/* Benefits */}
+        <FeaturesSection
+          title="Benefits and Incentives"
+          features={[
+            {
+              title: "Privacy & Security",
+              description: rakIccOffshoreData.benefits_and_incentives.privacy_and_security.join('. ')
+            },
+            {
+              title: "Financial Features",
+              description: rakIccOffshoreData.benefits_and_incentives.financial_features.join('. ')
+            }
+          ]}
+        />
+
+        {/* Costs */}
+        <div className="bg-gray-50 py-16">
+            <Container>
+                <div className="text-center mb-12">
+                    <Heading level="h2" size="3xl" weight="bold">{rakIccOffshoreData.estimated_setup_costs_2026.title}</Heading>
+                </div>
+                <Grid cols={3} gap="lg">
+                    <Card padding="lg">
+                        <CardHeader><Heading level="h3" size="lg" weight="semibold">Standard Setup</Heading></CardHeader>
+                        <CardContent><Text>{rakIccOffshoreData.estimated_setup_costs_2026.standard_setup_package}</Text></CardContent>
+                    </Card>
+                    <Card padding="lg">
+                        <CardHeader><Heading level="h3" size="lg" weight="semibold">Annual Renewal</Heading></CardHeader>
+                        <CardContent><Text>{rakIccOffshoreData.estimated_setup_costs_2026.annual_renewal_fees}</Text></CardContent>
+                    </Card>
+                    <Card padding="lg">
+                        <CardHeader><Heading level="h3" size="lg" weight="semibold">Additional Costs</Heading></CardHeader>
+                        <CardContent>
+                            <ul className="list-disc pl-4 space-y-2">
+                                <li>Good Standing: {rakIccOffshoreData.estimated_setup_costs_2026.additional_legal_costs.certificate_of_good_standing}</li>
+                                <li>Notarization: {rakIccOffshoreData.estimated_setup_costs_2026.additional_legal_costs.notarization_and_attestation}</li>
+                            </ul>
+                        </CardContent>
+                    </Card>
+                </Grid>
+            </Container>
+        </div>
+
+        {/* Entity Types */}
+        <Container size="lg" padding="lg">
+          <div className="text-center mb-16">
+              <Heading level="h2" size="3xl" weight="bold" className="mb-4">
+                  Entity Types
+              </Heading>
+          </div>
+          <Grid cols={2} gap="lg">
+              {rakIccOffshoreData.specialized_entity_types.map((type, idx) => (
+                  <Card key={idx} padding="lg" className="h-full">
+                      <CardHeader>
+                          <Heading level="h3" size="lg" weight="semibold" className="mb-2">
+                              {type}
+                          </Heading>
+                      </CardHeader>
+                  </Card>
+              ))}
+          </Grid>
+        </Container>
+
+        {/* Why Choose SmartZone */}
+        <ContentWithImage
+          title={rakIccOffshoreData.whySmartZone.title}
+          description={rakIccOffshoreData.whySmartZone.description}
+          image={rakIccOffshoreData.whySmartZone.image}
+          features={rakIccOffshoreData.whySmartZone.features}
+          reverse={true}
+        />
+
+        {/* Contact Section */}
+        <div id="contact">
+          <ContactForm variant="home" />
+        </div>
+      </>
+    )
+  }
+
+  // Handle Ajman Offshore with dedicated data file
+  if (slug === 'ajman-offshore' && category === 'offshore') {
+    const heroData = {
+      title: ajmanOffshoreData.hero.title,
+      subtitle: ajmanOffshoreData.hero.subtitle,
+      description: ajmanOffshoreData.ajman_offshore_overview.description,
+      primaryCTA: {
+        text: "Get a Free Consultation",
+        href: "#contact"
+      },
+      backgroundImage: {
+        src: ajmanOffshoreData.hero.backgroundImage,
+        alt: ajmanOffshoreData.hero.title
+      }
+    }
+
+    return (
+      <>
+        <HeroSection data={heroData} />
+
+        {/* What Is Section */}
+        <div id="what-is">
+          <ContentWithImage
+            title="What is Ajman Offshore?"
+            description={`${ajmanOffshoreData.ajman_offshore_overview.description} ${ajmanOffshoreData.ajman_offshore_overview.operational_limit}`}
+            image="/images/services/ajman-overview.jpg"
+          />
+        </div>
+
+        {/* Benefits */}
+        <FeaturesSection
+          title="Benefits and Incentives"
+          features={[
+            {
+              title: "Privacy",
+              description: ajmanOffshoreData.benefits_and_incentives.privacy_and_confidentiality.join('. ')
+            },
+            {
+              title: "Financial Efficiency",
+              description: ajmanOffshoreData.benefits_and_incentives.financial_efficiency.join('. ')
+            }
+          ]}
+        />
+
+        {/* Costs */}
+        <div className="bg-gray-50 py-16">
+            <Container>
+                <div className="text-center mb-12">
+                    <Heading level="h2" size="3xl" weight="bold">{ajmanOffshoreData.estimated_setup_costs_2026.title}</Heading>
+                </div>
+                <Grid cols={2} gap="lg">
+                    <Card padding="lg">
+                        <CardHeader><Heading level="h3" size="lg" weight="semibold">Setup Package</Heading></CardHeader>
+                        <CardContent><Text>{ajmanOffshoreData.estimated_setup_costs_2026.initial_setup_package}</Text></CardContent>
+                    </Card>
+                    <Card padding="lg">
+                        <CardHeader><Heading level="h3" size="lg" weight="semibold">Annual Renewal</Heading></CardHeader>
+                        <CardContent><Text>{ajmanOffshoreData.estimated_setup_costs_2026.annual_renewal_fee}</Text></CardContent>
+                    </Card>
+                </Grid>
+            </Container>
+        </div>
+
+        {/* Business Activities */}
+        <Container size="lg" padding="lg">
+          <div className="text-center mb-16">
+              <Heading level="h2" size="3xl" weight="bold" className="mb-4">
+                  Permitted Business Activities
+              </Heading>
+          </div>
+          <Grid cols={2} gap="lg">
+              {ajmanOffshoreData.permissible_business_activities.map((type, idx) => (
+                  <Card key={idx} padding="lg" className="h-full">
+                      <CardHeader>
+                          <Heading level="h3" size="lg" weight="semibold" className="mb-2">
+                              {type}
+                          </Heading>
+                      </CardHeader>
+                  </Card>
+              ))}
+          </Grid>
+        </Container>
+
+        {/* Why Choose SmartZone */}
+        <ContentWithImage
+          title={ajmanOffshoreData.whySmartZone.title}
+          description={ajmanOffshoreData.whySmartZone.description}
+          image={ajmanOffshoreData.whySmartZone.image}
+          features={ajmanOffshoreData.whySmartZone.features}
+          reverse={true}
+        />
+
+        {/* Contact Section */}
+        <div id="contact">
+          <ContactForm variant="home" />
+        </div>
+      </>
+    )
+  }
+
   if (slug === 'ajman-free-zone' && category === 'free-zone') {
     // Construct Hero data from dedicated file
     const heroData = {
@@ -171,6 +686,113 @@ export default async function CompanySetupPage({ params }: PageProps) {
             ajmanFreeZoneData.service_provider_details.credentials.track_record,
             ajmanFreeZoneData.service_provider_details.credentials.retention_rate
           ]}
+          reverse={true}
+        />
+
+        {/* Contact Section */}
+        <div id="contact">
+          <ContactForm variant="home" />
+        </div>
+      </>
+    )
+  }
+
+  // Handle IFZA with dedicated data file
+  if (slug === 'ifza-dsoa' && category === 'free-zone') {
+    const heroData = {
+      title: ifzaData.hero.title,
+      subtitle: ifzaData.hero.subtitle,
+      description: ifzaData.ifza_overview.description,
+      primaryCTA: {
+        text: "Get a Free Consultation",
+        href: "#contact"
+      },
+      backgroundImage: {
+        src: ifzaData.hero.backgroundImage,
+        alt: ifzaData.hero.title
+      }
+    }
+
+    return (
+      <>
+        <HeroSection data={heroData} />
+
+        {/* What Is Section */}
+        <div id="what-is">
+          <ContentWithImage
+            title="What is IFZA?"
+            description={ifzaData.ifza_overview.description}
+            image="/images/services/ifza-overview.jpg"
+          />
+        </div>
+
+        {/* Benefits */}
+        <FeaturesSection
+          title="Benefits and Incentives"
+          features={[
+            {
+              title: "Ownership & Tax",
+              description: ifzaData.benefits_and_incentives.ownership_and_tax.join('. ')
+            },
+            {
+              title: "Operational Benefits",
+              description: ifzaData.benefits_and_incentives.operational_benefits.join('. ')
+            }
+          ]}
+        />
+
+        {/* License Costs */}
+        <div className="bg-gray-50 py-16">
+            <Container>
+                <div className="text-center mb-12">
+                    <Heading level="h2" size="3xl" weight="bold">{ifzaData.cost.title}</Heading>
+                </div>
+                <Grid cols={2} gap="lg">
+                    {ifzaData.cost.packages.map((pkg, idx) => (
+                        <Card key={idx} padding="lg">
+                            <CardHeader>
+                                <Heading level="h3" size="lg" weight="semibold">{pkg.name}</Heading>
+                                <Text className="text-xl font-bold text-primary mt-2">{pkg.price}</Text>
+                            </CardHeader>
+                            <CardContent>
+                                <ul className="list-disc pl-4 space-y-2 mt-4">
+                                    {pkg.features.map((feature, fIdx) => (
+                                        <li key={fIdx}>{feature}</li>
+                                    ))}
+                                </ul>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </Grid>
+            </Container>
+        </div>
+
+        {/* Business License Types */}
+        <Container size="lg" padding="lg">
+          <div className="text-center mb-16">
+              <Heading level="h2" size="3xl" weight="bold" className="mb-4">
+                  Business License Types
+              </Heading>
+          </div>
+          <Grid cols={3} gap="lg">
+              {ifzaData.business_license_types.map((type, idx) => (
+                  <Card key={idx} padding="lg" className="h-full">
+                      <CardHeader>
+                          <Heading level="h3" size="lg" weight="semibold" className="mb-2">
+                              {type}
+                          </Heading>
+                      </CardHeader>
+                  </Card>
+              ))}
+          </Grid>
+        </Container>
+
+        {/* Why Choose SmartZone */}
+        <ContentWithImage
+          title={ifzaData.whySmartZone.title}
+          description={ifzaData.whySmartZone.description}
+          image={ifzaData.whySmartZone.image}
+          features={ifzaData.whySmartZone.features}
           reverse={true}
         />
 
@@ -313,6 +935,792 @@ export default async function CompanySetupPage({ params }: PageProps) {
           description={dmccData.whySmartZone.description}
           image={dmccData.whySmartZone.image}
           features={dmccData.whySmartZone.features}
+          reverse={true}
+        />
+
+        {/* Contact Section */}
+        <div id="contact">
+          <ContactForm variant="home" />
+        </div>
+      </>
+    )
+  }
+
+  // Handle Creative City Fujairah with dedicated data file
+  if (slug === 'creative-city-fujairah' && category === 'free-zone') {
+    const heroData = {
+      title: creativeCityFujairahData.hero.title,
+      subtitle: creativeCityFujairahData.hero.subtitle,
+      description: creativeCityFujairahData.creative_city_fujairah_overview.description,
+      primaryCTA: {
+        text: "Get a Free Consultation",
+        href: "#contact"
+      },
+      backgroundImage: {
+        src: creativeCityFujairahData.hero.backgroundImage,
+        alt: creativeCityFujairahData.hero.title
+      }
+    }
+
+    return (
+      <>
+        <HeroSection data={heroData} />
+
+        {/* What Is Section */}
+        <div id="what-is">
+          <ContentWithImage
+            title={creativeCityFujairahData.creative_city_fujairah_overview.title}
+            description={creativeCityFujairahData.creative_city_fujairah_overview.description}
+            image={creativeCityFujairahData.creative_city_fujairah_overview.image}
+          />
+        </div>
+
+        {/* Benefits */}
+        <FeaturesSection
+          title={creativeCityFujairahData.whySetup.title}
+          features={creativeCityFujairahData.whySetup.cards.map(card => ({
+            title: card.title,
+            description: card.description
+          }))}
+        />
+        <Container className="text-center pb-16">
+            <Button variant="outline" size="lg" href={creativeCityFujairahData.whySetup.ctaHref}>
+                {creativeCityFujairahData.whySetup.ctaText}
+            </Button>
+        </Container>
+
+        {/* License Costs */}
+        <div className="bg-gray-50 py-16">
+            <Container>
+                <div className="text-center mb-12">
+                    <Heading level="h2" size="3xl" weight="bold">{creativeCityFujairahData.cost.title}</Heading>
+                </div>
+                <Grid cols={2} gap="lg">
+                    {creativeCityFujairahData.cost.packages.map((pkg, idx) => (
+                        <Card key={idx} padding="lg">
+                            <CardHeader>
+                                <Heading level="h3" size="lg" weight="semibold">{pkg.name}</Heading>
+                                <Text className="text-xl font-bold text-primary mt-2">{pkg.price}</Text>
+                            </CardHeader>
+                            <CardContent>
+                                <ul className="list-disc pl-4 space-y-2 mt-4">
+                                    {pkg.features.map((feature, fIdx) => (
+                                        <li key={fIdx}>{feature}</li>
+                                    ))}
+                                </ul>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </Grid>
+            </Container>
+        </div>
+
+        {/* Business License Types */}
+        <Container size="lg" padding="lg">
+          <div className="text-center mb-16">
+              <Heading level="h2" size="3xl" weight="bold" className="mb-4">
+                  {creativeCityFujairahData.businessTypes.title}
+              </Heading>
+          </div>
+          <Grid cols={3} gap="lg">
+              {creativeCityFujairahData.businessTypes.types.map((type, idx) => (
+                  <Card key={idx} padding="lg" className="h-full">
+                      <CardHeader>
+                          <Heading level="h3" size="lg" weight="semibold" className="mb-2">
+                              {type.name}
+                          </Heading>
+                      </CardHeader>
+                      <CardContent>
+                          <Text className="text-gray-600">{type.description}</Text>
+                      </CardContent>
+                  </Card>
+              ))}
+          </Grid>
+        </Container>
+
+        {/* Why Choose SmartZone */}
+        <ContentWithImage
+          title={creativeCityFujairahData.whySmartZone.title}
+          description={creativeCityFujairahData.whySmartZone.description}
+          image={creativeCityFujairahData.whySmartZone.image}
+          features={creativeCityFujairahData.whySmartZone.features}
+          reverse={true}
+        />
+
+        {/* Contact Section */}
+        <div id="contact">
+          <ContactForm variant="home" />
+        </div>
+      </>
+    )
+  }
+
+  // Handle Meydan Free Zone with dedicated data file
+  if (slug === 'meydan-free-zone' && category === 'free-zone') {
+    const heroData = {
+      title: meydanFreeZoneData.hero.title,
+      subtitle: meydanFreeZoneData.hero.subtitle,
+      description: meydanFreeZoneData.meydan_free_zone_overview.description,
+      primaryCTA: {
+        text: "Get a Free Consultation",
+        href: "#contact"
+      },
+      backgroundImage: {
+        src: meydanFreeZoneData.hero.backgroundImage,
+        alt: meydanFreeZoneData.hero.title
+      }
+    }
+
+    return (
+      <>
+        <HeroSection data={heroData} />
+
+        {/* What Is Section */}
+        <div id="what-is">
+          <ContentWithImage
+            title="What is Meydan Free Zone?"
+            description={`${meydanFreeZoneData.meydan_free_zone_overview.description} Located at ${meydanFreeZoneData.meydan_free_zone_overview.location}. Key innovation: ${meydanFreeZoneData.meydan_free_zone_overview.key_innovation}`}
+            image="/images/services/meydan-overview.jpg"
+          />
+        </div>
+
+        {/* Benefits */}
+        <FeaturesSection
+          title="Benefits and Incentives"
+          features={[
+            {
+              title: "Ownership & Tax",
+              description: meydanFreeZoneData.benefits_and_incentives.ownership_and_tax.join('. ')
+            },
+            {
+              title: "Operational Advantages",
+              description: meydanFreeZoneData.benefits_and_incentives.operational_advantages.join('. ')
+            }
+          ]}
+        />
+
+        {/* License Costs */}
+        <div className="bg-gray-50 py-16">
+            <Container>
+                <div className="text-center mb-12">
+                    <Heading level="h2" size="3xl" weight="bold">{meydanFreeZoneData.cost.title}</Heading>
+                </div>
+                <Grid cols={1} gap="lg">
+                    {meydanFreeZoneData.cost.packages.map((pkg, idx) => (
+                        <Card key={idx} padding="lg" className="max-w-2xl mx-auto w-full">
+                            <CardHeader>
+                                <Heading level="h3" size="lg" weight="semibold">{pkg.name}</Heading>
+                                <Text className="text-xl font-bold text-primary mt-2">{pkg.price}</Text>
+                            </CardHeader>
+                            <CardContent>
+                                <ul className="list-disc pl-4 space-y-2 mt-4">
+                                    {pkg.features.map((feature, fIdx) => (
+                                        <li key={fIdx}>{feature}</li>
+                                    ))}
+                                </ul>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </Grid>
+            </Container>
+        </div>
+
+        {/* Business License Types */}
+        <Container size="lg" padding="lg">
+          <div className="text-center mb-16">
+              <Heading level="h2" size="3xl" weight="bold" className="mb-4">
+                  Business License Types
+              </Heading>
+          </div>
+          <Grid cols={2} gap="lg">
+              {meydanFreeZoneData.business_license_types.map((type, idx) => (
+                  <Card key={idx} padding="lg" className="h-full">
+                      <CardHeader>
+                          <Heading level="h3" size="lg" weight="semibold" className="mb-2">
+                              {type}
+                          </Heading>
+                      </CardHeader>
+                  </Card>
+              ))}
+          </Grid>
+        </Container>
+
+        {/* Why Choose SmartZone */}
+        <ContentWithImage
+          title={meydanFreeZoneData.whySmartZone.title}
+          description={meydanFreeZoneData.whySmartZone.description}
+          image={meydanFreeZoneData.whySmartZone.image}
+          features={meydanFreeZoneData.whySmartZone.features}
+          reverse={true}
+        />
+
+        {/* Contact Section */}
+        <div id="contact">
+          <ContactForm variant="home" />
+        </div>
+      </>
+    )
+  }
+
+  // Handle RAKEZ with dedicated data file
+  if (slug === 'rakez' && category === 'free-zone') {
+    const heroData = {
+      title: rakezData.hero.title,
+      subtitle: rakezData.hero.subtitle,
+      description: rakezData.rakez_overview.description,
+      primaryCTA: {
+        text: "Get a Free Consultation",
+        href: "#contact"
+      },
+      backgroundImage: {
+        src: rakezData.hero.backgroundImage,
+        alt: rakezData.hero.title
+      }
+    }
+
+    return (
+      <>
+        <HeroSection data={heroData} />
+
+        {/* What Is Section */}
+        <div id="what-is">
+          <ContentWithImage
+            title="What is RAKEZ?"
+            description={`${rakezData.rakez_overview.description} Located in ${rakezData.rakez_overview.location}. ${rakezData.rakez_overview.dual_licensing}`}
+            image="/images/services/rakez-overview.jpg"
+          />
+        </div>
+
+        {/* Benefits */}
+        <FeaturesSection
+          title="Benefits and Incentives"
+          features={[
+            {
+              title: "Ownership & Tax",
+              description: rakezData.benefits_and_incentives.ownership_and_tax.join('. ')
+            },
+            {
+              title: "Unique Features",
+              description: rakezData.benefits_and_incentives.unique_features.join('. ')
+            }
+          ]}
+        />
+
+        {/* License Costs */}
+        <div className="bg-gray-50 py-16">
+            <Container>
+                <div className="text-center mb-12">
+                    <Heading level="h2" size="3xl" weight="bold">{rakezData.cost.title}</Heading>
+                </div>
+                <Grid cols={1} gap="lg">
+                    {rakezData.cost.packages.map((pkg, idx) => (
+                        <Card key={idx} padding="lg" className="max-w-2xl mx-auto w-full">
+                            <CardHeader>
+                                <Heading level="h3" size="lg" weight="semibold">{pkg.name}</Heading>
+                                <Text className="text-xl font-bold text-primary mt-2">{pkg.price}</Text>
+                            </CardHeader>
+                            <CardContent>
+                                <ul className="list-disc pl-4 space-y-2 mt-4">
+                                    {pkg.features.map((feature, fIdx) => (
+                                        <li key={fIdx}>{feature}</li>
+                                    ))}
+                                </ul>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </Grid>
+            </Container>
+        </div>
+
+        {/* Business License Types */}
+        <Container size="lg" padding="lg">
+          <div className="text-center mb-16">
+              <Heading level="h2" size="3xl" weight="bold" className="mb-4">
+                  Business License Types
+              </Heading>
+          </div>
+          <Grid cols={3} gap="lg">
+              {rakezData.business_license_types.map((type, idx) => (
+                  <Card key={idx} padding="lg" className="h-full">
+                      <CardHeader>
+                          <Heading level="h3" size="lg" weight="semibold" className="mb-2">
+                              {type}
+                          </Heading>
+                      </CardHeader>
+                  </Card>
+              ))}
+          </Grid>
+        </Container>
+
+        {/* Why Choose SmartZone */}
+        <ContentWithImage
+          title={rakezData.whySmartZone.title}
+          description={rakezData.whySmartZone.description}
+          image={rakezData.whySmartZone.image}
+          features={rakezData.whySmartZone.features}
+          reverse={true}
+        />
+
+        {/* Contact Section */}
+        <div id="contact">
+          <ContactForm variant="home" />
+        </div>
+      </>
+    )
+  }
+
+  // Handle SHAMS with dedicated data file
+  if (slug === 'shams' && category === 'free-zone') {
+    const heroData = {
+      title: shamsData.hero.title,
+      subtitle: shamsData.hero.subtitle,
+      description: shamsData.shams_free_zone_overview.description,
+      primaryCTA: {
+        text: "Get a Free Consultation",
+        href: "#contact"
+      },
+      backgroundImage: {
+        src: shamsData.hero.backgroundImage,
+        alt: shamsData.hero.title
+      }
+    }
+
+    return (
+      <>
+        <HeroSection data={heroData} />
+
+        {/* What Is Section */}
+        <div id="what-is">
+          <ContentWithImage
+            title="What is SHAMS?"
+            description={`${shamsData.shams_free_zone_overview.description} Located in ${shamsData.shams_free_zone_overview.location}.`}
+            image="/images/services/shams-overview.jpg"
+          />
+        </div>
+
+        {/* Benefits */}
+        <FeaturesSection
+          title="Benefits and Incentives"
+          features={[
+            {
+              title: "Ownership & Tax",
+              description: shamsData.benefits_and_incentives.ownership_and_tax.join('. ')
+            },
+            {
+              title: "Visa Advantages",
+              description: shamsData.benefits_and_incentives.visa_advantages.join('. ')
+            }
+          ]}
+        />
+
+        {/* License Costs */}
+        <div className="bg-gray-50 py-16">
+            <Container>
+                <div className="text-center mb-12">
+                    <Heading level="h2" size="3xl" weight="bold">{shamsData.cost.title}</Heading>
+                </div>
+                <Grid cols={1} gap="lg">
+                    {shamsData.cost.packages.map((pkg, idx) => (
+                        <Card key={idx} padding="lg" className="max-w-2xl mx-auto w-full">
+                            <CardHeader>
+                                <Heading level="h3" size="lg" weight="semibold">{pkg.name}</Heading>
+                                <Text className="text-xl font-bold text-primary mt-2">{pkg.price}</Text>
+                            </CardHeader>
+                            <CardContent>
+                                <ul className="list-disc pl-4 space-y-2 mt-4">
+                                    {pkg.features.map((feature, fIdx) => (
+                                        <li key={fIdx}>{feature}</li>
+                                    ))}
+                                </ul>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </Grid>
+            </Container>
+        </div>
+
+        {/* Business License Types */}
+        <Container size="lg" padding="lg">
+          <div className="text-center mb-16">
+              <Heading level="h2" size="3xl" weight="bold" className="mb-4">
+                  Business License Types
+              </Heading>
+          </div>
+          <Grid cols={2} gap="lg">
+              {shamsData.business_license_types.map((type, idx) => (
+                  <Card key={idx} padding="lg" className="h-full">
+                      <CardHeader>
+                          <Heading level="h3" size="lg" weight="semibold" className="mb-2">
+                              {type}
+                          </Heading>
+                      </CardHeader>
+                  </Card>
+              ))}
+          </Grid>
+        </Container>
+
+        {/* Why Choose SmartZone */}
+        <ContentWithImage
+          title={shamsData.whySmartZone.title}
+          description={shamsData.whySmartZone.description}
+          image={shamsData.whySmartZone.image}
+          features={shamsData.whySmartZone.features}
+          reverse={true}
+        />
+
+        {/* Contact Section */}
+        <div id="contact">
+          <ContactForm variant="home" />
+        </div>
+      </>
+    )
+  }
+
+  // Handle SPC Free Zone with dedicated data file
+  if (slug === 'spc-free-zone' && category === 'free-zone') {
+    const heroData = {
+      title: spcFreeZoneData.hero.title,
+      subtitle: spcFreeZoneData.hero.subtitle,
+      description: spcFreeZoneData.spc_free_zone_overview.description,
+      primaryCTA: {
+        text: "Get a Free Consultation",
+        href: "#contact"
+      },
+      backgroundImage: {
+        src: spcFreeZoneData.hero.backgroundImage,
+        alt: spcFreeZoneData.hero.title
+      }
+    }
+
+    return (
+      <>
+        <HeroSection data={heroData} />
+
+        {/* What Is Section */}
+        <div id="what-is">
+          <ContentWithImage
+            title="What is SPC Free Zone?"
+            description={`${spcFreeZoneData.spc_free_zone_overview.description} Located in ${spcFreeZoneData.spc_free_zone_overview.location}. ${spcFreeZoneData.spc_free_zone_overview.dual_license}`}
+            image="/images/services/spc-overview.jpg"
+          />
+        </div>
+
+        {/* Benefits */}
+        <FeaturesSection
+          title="Benefits and Incentives"
+          features={[
+            {
+              title: "Operational Flexibility",
+              description: spcFreeZoneData.benefits_and_incentives.operational_flexibility.join('. ')
+            },
+            {
+              title: "Setup Perks",
+              description: spcFreeZoneData.benefits_and_incentives.setup_perks.join('. ')
+            }
+          ]}
+        />
+
+        {/* License Costs */}
+        <div className="bg-gray-50 py-16">
+            <Container>
+                <div className="text-center mb-12">
+                    <Heading level="h2" size="3xl" weight="bold">{spcFreeZoneData.cost.title}</Heading>
+                </div>
+                <Grid cols={2} gap="lg">
+                    {spcFreeZoneData.cost.packages.map((pkg, idx) => (
+                        <Card key={idx} padding="lg">
+                            <CardHeader>
+                                <Heading level="h3" size="lg" weight="semibold">{pkg.name}</Heading>
+                                <Text className="text-xl font-bold text-primary mt-2">{pkg.price}</Text>
+                            </CardHeader>
+                            <CardContent>
+                                <ul className="list-disc pl-4 space-y-2 mt-4">
+                                    {pkg.features.map((feature, fIdx) => (
+                                        <li key={fIdx}>{feature}</li>
+                                    ))}
+                                </ul>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </Grid>
+            </Container>
+        </div>
+
+        {/* Why Choose SmartZone */}
+        <ContentWithImage
+          title={spcFreeZoneData.whySmartZone.title}
+          description={spcFreeZoneData.whySmartZone.description}
+          image={spcFreeZoneData.whySmartZone.image}
+          features={spcFreeZoneData.whySmartZone.features}
+          reverse={true}
+        />
+
+        {/* Contact Section */}
+        <div id="contact">
+          <ContactForm variant="home" />
+        </div>
+      </>
+    )
+  }
+
+  // Handle SRTIP with dedicated data file
+    if (slug === 'srtip' && category === 'free-zone') {
+      const heroData = {
+        title: srtipData.hero.title,
+        subtitle: srtipData.hero.subtitle,
+        description: srtipData.srtip_free_zone_overview.description,
+        primaryCTA: {
+          text: "Get a Free Consultation",
+          href: "#contact"
+        },
+        backgroundImage: {
+          src: srtipData.hero.backgroundImage,
+          alt: srtipData.hero.title
+        }
+      }
+  
+      return (
+        <>
+          <HeroSection data={heroData} />
+  
+          {/* What Is Section */}
+          <div id="what-is">
+            <ContentWithImage
+              title="What is SRTIP?"
+              description={`${srtipData.srtip_free_zone_overview.description} Located in ${srtipData.srtip_free_zone_overview.location}.`}
+              image="/images/services/srtip-overview.jpg"
+            />
+          </div>
+
+        {/* Benefits */}
+        <FeaturesSection
+          title="Benefits and Incentives"
+          features={[
+            {
+              title: "Innovation Support",
+              description: srtipData.benefits_and_incentives.innovation_support.join('. ')
+            },
+            {
+              title: "Operational Benefits",
+              description: srtipData.benefits_and_incentives.operational_benefits.join('. ')
+            }
+          ]}
+        />
+
+        {/* License Costs */}
+        <div className="bg-gray-50 py-16">
+            <Container>
+                <div className="text-center mb-12">
+                    <Heading level="h2" size="3xl" weight="bold">{srtipData.cost.title}</Heading>
+                </div>
+                <Grid cols={1} gap="lg">
+                    {srtipData.cost.packages.map((pkg, idx) => (
+                        <Card key={idx} padding="lg" className="max-w-2xl mx-auto w-full">
+                            <CardHeader>
+                                <Heading level="h3" size="lg" weight="semibold">{pkg.name}</Heading>
+                                <Text className="text-xl font-bold text-primary mt-2">{pkg.price}</Text>
+                            </CardHeader>
+                            <CardContent>
+                                <ul className="list-disc pl-4 space-y-2 mt-4">
+                                    {pkg.features.map((feature, fIdx) => (
+                                        <li key={fIdx}>{feature}</li>
+                                    ))}
+                                </ul>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </Grid>
+            </Container>
+        </div>
+
+        {/* Business License Types */}
+        <Container size="lg" padding="lg">
+          <div className="text-center mb-16">
+              <Heading level="h2" size="3xl" weight="bold" className="mb-4">
+                  Business License Types
+              </Heading>
+          </div>
+          <Grid cols={2} gap="lg">
+              {srtipData.business_license_types.map((type, idx) => (
+                  <Card key={idx} padding="lg" className="h-full">
+                      <CardHeader>
+                          <Heading level="h3" size="lg" weight="semibold" className="mb-2">
+                              {type}
+                          </Heading>
+                      </CardHeader>
+                  </Card>
+              ))}
+          </Grid>
+        </Container>
+
+        {/* Why Choose SmartZone */}
+        <ContentWithImage
+          title={srtipData.whySmartZone.title}
+          description={srtipData.whySmartZone.description}
+          image={srtipData.whySmartZone.image}
+          features={srtipData.whySmartZone.features}
+          reverse={true}
+        />
+
+        {/* Contact Section */}
+        <div id="contact">
+          <ContactForm variant="home" />
+        </div>
+      </>
+    )
+  }
+
+  // Handle Dubai Mainland with dedicated data file
+  if (slug === 'dubai' && category === 'mainland') {
+    const heroData = {
+      title: dubaiMainlandData.hero.title,
+      subtitle: dubaiMainlandData.hero.subtitle,
+      description: dubaiMainlandData.dubai_mainland_overview.description,
+      primaryCTA: {
+        text: "Get a Free Consultation",
+        href: "#contact"
+      },
+      backgroundImage: {
+        src: dubaiMainlandData.hero.backgroundImage,
+        alt: dubaiMainlandData.hero.title
+      }
+    }
+
+    return (
+      <>
+        <HeroSection data={heroData} />
+
+        {/* What Is Section */}
+        <div id="what-is">
+          <ContentWithImage
+            title="What is Dubai Mainland?"
+            description={`${dubaiMainlandData.dubai_mainland_overview.description} Entity: ${dubaiMainlandData.dubai_mainland_overview.entity}`}
+            image="/images/services/dubai-mainland-overview.jpg"
+          />
+        </div>
+
+        {/* Benefits */}
+        <FeaturesSection
+          title="Benefits and Incentives"
+          features={[
+            {
+              title: "Ownership & Tax",
+              description: dubaiMainlandData.benefits_and_incentives.ownership_and_tax.join('. ')
+            },
+            {
+              title: "Setup Efficiency",
+              description: dubaiMainlandData.benefits_and_incentives.setup_efficiency.join('. ')
+            }
+          ]}
+        />
+
+        {/* Business License Types */}
+        <Container size="lg" padding="lg" className="bg-gray-50">
+          <div className="text-center mb-16">
+              <Heading level="h2" size="3xl" weight="bold" className="mb-4">
+                  Business License Types
+              </Heading>
+          </div>
+          <Grid cols={2} gap="lg">
+              {dubaiMainlandData.business_license_types.map((type, idx) => (
+                  <Card key={idx} padding="lg" className="h-full">
+                      <CardHeader>
+                          <Heading level="h3" size="lg" weight="semibold" className="mb-2">
+                              {type}
+                          </Heading>
+                      </CardHeader>
+                  </Card>
+              ))}
+          </Grid>
+        </Container>
+
+        {/* Why Choose SmartZone */}
+        <ContentWithImage
+          title={dubaiMainlandData.whySmartZone.title}
+          description={dubaiMainlandData.whySmartZone.description}
+          image={dubaiMainlandData.whySmartZone.image}
+          features={dubaiMainlandData.whySmartZone.features}
+          reverse={true}
+        />
+
+        {/* Contact Section */}
+        <div id="contact">
+          <ContactForm variant="home" />
+        </div>
+      </>
+    )
+  }
+
+  // Handle Abu Dhabi Mainland with dedicated data file
+  if (slug === 'abu-dhabi' && category === 'mainland') {
+    const heroData = {
+      title: abuDhabiMainlandData.hero.title,
+      subtitle: abuDhabiMainlandData.hero.subtitle,
+      description: abuDhabiMainlandData.abu_dhabi_mainland_overview.description,
+      primaryCTA: {
+        text: "Get a Free Consultation",
+        href: "#contact"
+      },
+      backgroundImage: {
+        src: abuDhabiMainlandData.hero.backgroundImage,
+        alt: abuDhabiMainlandData.hero.title
+      }
+    }
+
+    return (
+      <>
+        <HeroSection data={heroData} />
+
+        {/* What Is Section */}
+        <div id="what-is">
+          <ContentWithImage
+            title="What is Abu Dhabi Mainland?"
+            description={`${abuDhabiMainlandData.abu_dhabi_mainland_overview.description} Key Advantage: ${abuDhabiMainlandData.abu_dhabi_mainland_overview.key_advantage}`}
+            image="/images/services/abu-dhabi-mainland-overview.jpg"
+          />
+        </div>
+
+        {/* Benefits */}
+        <FeaturesSection
+          title="Benefits and Incentives"
+          features={[
+            {
+              title: "Setup Efficiency",
+              description: abuDhabiMainlandData.benefits_and_incentives.setup_efficiency.join('. ')
+            },
+            {
+              title: "Strategic Benefits",
+              description: abuDhabiMainlandData.benefits_and_incentives.strategic_benefits.join('. ')
+            }
+          ]}
+        />
+
+        {/* Business License Types */}
+        <Container size="lg" padding="lg" className="bg-gray-50">
+          <div className="text-center mb-16">
+              <Heading level="h2" size="3xl" weight="bold" className="mb-4">
+                  Business License Types
+              </Heading>
+          </div>
+          <Grid cols={2} gap="lg">
+              {abuDhabiMainlandData.business_license_types.map((type, idx) => (
+                  <Card key={idx} padding="lg" className="h-full">
+                      <CardHeader>
+                          <Heading level="h3" size="lg" weight="semibold" className="mb-2">
+                              {type}
+                          </Heading>
+                      </CardHeader>
+                  </Card>
+              ))}
+          </Grid>
+        </Container>
+
+        {/* Why Choose SmartZone */}
+        <ContentWithImage
+          title={abuDhabiMainlandData.whySmartZone.title}
+          description={abuDhabiMainlandData.whySmartZone.description}
+          image={abuDhabiMainlandData.whySmartZone.image}
+          features={abuDhabiMainlandData.whySmartZone.features}
           reverse={true}
         />
 

@@ -48,23 +48,18 @@ export const startYourCompanyNavigation: NavigationItem[] = [
   },
   {
     label: 'SRTIP Free Zone',
-    route: '/start-your-company/free-zone/tip-free-zone',
+    route: '/start-your-company/free-zone/srtip',
     category: 'free-zone'
   },
   // MAINLAND
   {
     label: 'Dubai Mainland',
-    route: '/start-your-company/mainland/dubai-mainland',
+    route: '/start-your-company/mainland/dubai',
     category: 'mainland'
   },
   {
     label: 'Abu Dhabi Mainland',
-    route: '/start-your-company/mainland/abu-dhabi-mainland',
-    category: 'mainland'
-  },
-  {
-    label: 'Sharjah Mainland',
-    route: '/start-your-company/mainland/sharjah-mainland',
+    route: '/start-your-company/mainland/abu-dhabi',
     category: 'mainland'
   },
   // OFFSHORE
@@ -74,13 +69,13 @@ export const startYourCompanyNavigation: NavigationItem[] = [
     category: 'offshore'
   },
   {
-    label: 'RAK ICC',
-    route: '/start-your-company/offshore/rak-icc',
+    label: 'JAFZA Offshore',
+    route: '/start-your-company/offshore/jafza-offshore',
     category: 'offshore'
   },
   {
-    label: 'BVI',
-    route: '/start-your-company/offshore/bvi',
+    label: 'RAK ICC Offshore',
+    route: '/start-your-company/offshore/rak-icc-offshore',
     category: 'offshore'
   }
 ]
