@@ -223,6 +223,55 @@ export interface Testimonial {
   }
 }
 
+export interface CompanySetup {
+  id: string
+  slug: string
+  menuName: string
+  category: 'free-zone' | 'mainland' | 'offshore'
+  hero: {
+    title: string
+    subtitle: string
+    backgroundImage: string
+  }
+  whatIs: {
+    title: string
+    description: string
+    image: string
+  }
+  cost: {
+    title: string
+    packages: Array<{
+      name: string
+      price: string
+      features?: string[]
+    }>
+  }
+  whySetup: {
+    title: string
+    cards: Array<{
+      title: string
+      description: string
+    }>
+    ctaText: string
+    ctaHref: string
+  }
+  businessTypes: {
+    title: string
+    types: Array<{
+      name: string
+      description?: string
+      icon?: string
+    }>
+  }
+  whySmartZone: {
+    title: string
+    description: string
+    image: string
+    features: string[]
+  }
+  seo: SEO
+}
+
 export interface CaseStudy {
   id: string
   title: string
