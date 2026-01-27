@@ -66,62 +66,7 @@ export const companySetupData: CompanySetup[] = [
       keywords: ['Ajman Free Zone', 'Company Setup Ajman', 'UAE Free Zone', 'Business Setup', 'Smart Zone']
     }
   },
-  {
-    id: 'dmcc',
-    slug: 'dmcc',
-    menuName: 'DMCC',
-    category: 'free-zone',
-    hero: {
-      title: 'DMCC Company Setup',
-      subtitle: 'World\'s #1 Free Zone',
-      backgroundImage: '/images/hero/dmcc.jpg'
-    },
-    whatIs: {
-      title: 'What is DMCC?',
-      description: 'Dubai Multi Commodities Centre (DMCC) is the world’s most interconnected Free Zone, and the leading trade and enterprise hub for commodities. Located in Jumeirah Lakes Towers (JLT), it offers state-of-the-art infrastructure.',
-      image: '/images/services/dmcc-overview.jpg'
-    },
-    cost: {
-      title: 'DMCC License Costs',
-      packages: [
-        {
-          name: 'DMCC License',
-          price: 'Starting from AED 34,000',
-          features: ['Up to 3 Shareholders', 'Flexi Desk', 'General Trading']
-        }
-      ]
-    },
-    whySetup: {
-      title: 'Why Set Up in DMCC?',
-      ctaText: 'View full list of business activities',
-      ctaHref: '/contact',
-      cards: [
-        { title: 'Global Hub', description: 'Connect with over 20,000 businesses.' },
-        { title: 'Prime Location', description: 'Located in the heart of new Dubai.' },
-        { title: '100% Ownership', description: 'Full foreign ownership of your business.' },
-        { title: '0% Tax', description: 'No personal or corporate income tax.' }
-      ]
-    },
-    businessTypes: {
-      title: 'Types of Businesses Allowed',
-      types: [
-        { name: 'Commodities', description: 'Gold, diamonds, tea, coffee, and more.' },
-        { name: 'Crypto', description: 'Cryptocurrency and blockchain businesses.' },
-        { name: 'Services', description: 'Marketing, consultancy, and IT services.' }
-      ]
-    },
-    whySmartZone: {
-      title: 'Why Choose SmartZone for DMCC?',
-      description: 'SmartZone provides expert guidance for setting up in DMCC, ensuring compliance and speed.',
-      image: '/images/services/why-smartzone-dmcc.jpg',
-      features: ['Expert Consultants', 'Fast Track Process', 'Bank Account Assistance', 'Visa Processing']
-    },
-    seo: {
-      title: 'DMCC Company Setup | SmartZone',
-      description: 'Start your business in DMCC with SmartZone. The world\'s best free zone for commodities and trade.',
-      keywords: ['DMCC', 'Dubai Free Zone', 'Company Setup Dubai', 'JLT Business']
-    }
-  },
+
   {
     id: 'creative-city-fujairah',
     slug: 'creative-city-fujairah',

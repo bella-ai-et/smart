@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { getCompanySetupBySlug, companySetupData } from '@/data/company-setup'
 import { ajmanFreeZoneData } from '@/data/start-your-company/freezone/ajman-free-zone'
+import { dmccData } from '@/data/start-your-company/freezone/dmcc'
 import HeroSection from '@/components/sections/hero-section'
 import ContentWithImage from '@/components/sections/content-with-image'
 import FeaturesSection from '@/components/sections/features-section'
@@ -29,6 +30,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       keywords: ['Ajman Free Zone', 'Company Setup Ajman', 'UAE Free Zone', 'Business Setup', 'Smart Zone'],
     }
   }
+
+  // Handle DMCC with dedicated data
+  if (slug === 'dmcc' && category === 'free-zone') {
+    return {
+      title: dmccData.seo.title,
+      description: dmccData.seo.description,
+      keywords: dmccData.seo.keywords,
+    }
+  }
   
   const service = getCompanySetupBySlug(slug)
 
@@ -55,6 +65,12 @@ export async function generateStaticParams() {
   params.push({
     category: 'free-zone',
     slug: 'ajman-free-zone',
+  })
+
+  // Add DMCC with its dedicated data
+  params.push({
+    category: 'free-zone',
+    slug: 'dmcc',
   })
   
   return params
@@ -155,6 +171,148 @@ export default async function CompanySetupPage({ params }: PageProps) {
             ajmanFreeZoneData.service_provider_details.credentials.track_record,
             ajmanFreeZoneData.service_provider_details.credentials.retention_rate
           ]}
+          reverse={true}
+        />
+
+        {/* Contact Section */}
+        <div id="contact">
+          <ContactForm variant="home" />
+        </div>
+      </>
+    )
+  }
+
+  // Handle DMCC with dedicated data file
+  if (slug === 'dmcc' && category === 'free-zone') {
+    const heroData = {
+      title: dmccData.hero.title,
+      subtitle: dmccData.hero.subtitle,
+      description: dmccData.dmcc_free_zone_overview.description,
+      primaryCTA: {
+        text: "Get a Free Consultation",
+        href: "#contact"
+      },
+      backgroundImage: {
+        src: dmccData.hero.backgroundImage,
+        alt: dmccData.hero.title
+      }
+    }
+
+    return (
+      <>
+        <HeroSection data={heroData} />
+
+        {/* What Is Section */}
+        <div id="what-is">
+          <ContentWithImage
+            title="What is DMCC?"
+            description={`${dmccData.dmcc_free_zone_overview.description} ${dmccData.dmcc_free_zone_overview.infrastructure} ${dmccData.dmcc_free_zone_overview.accolades}`}
+            image="/images/services/dmcc-overview.jpg"
+          />
+        </div>
+
+        {/* Benefits and Incentives */}
+        <FeaturesSection
+          title="Benefits and Incentives"
+          features={[
+            {
+              title: "Ownership & Tax",
+              description: dmccData.benefits_and_incentives.ownership_and_tax.join('. ')
+            },
+            {
+              title: "Operational Flexibility",
+              description: dmccData.benefits_and_incentives.operational_flexibility.join('. ')
+            },
+            {
+              title: "Strategic Advantages",
+              description: dmccData.benefits_and_incentives.strategic_advantages.join('. ')
+            }
+          ]}
+        />
+
+        {/* Financial Requirements */}
+        <div className="bg-gray-50 py-16">
+            <Container>
+                <div className="text-center mb-12">
+                    <Heading level="h2" size="3xl" weight="bold">Financial Requirements (2026)</Heading>
+                </div>
+                <Grid cols={3} gap="lg">
+                    <Card padding="lg">
+                        <CardHeader><Heading level="h3" size="lg" weight="semibold">Minimum Share Capital</Heading></CardHeader>
+                        <CardContent><Text>{dmccData.financial_requirements_2026.minimum_share_capital}</Text></CardContent>
+                    </Card>
+                    <Card padding="lg">
+                        <CardHeader><Heading level="h3" size="lg" weight="semibold">Initial Setup Costs</Heading></CardHeader>
+                        <CardContent>
+                            <ul className="list-disc pl-4 space-y-2">
+                                <li>Application: {dmccData.financial_requirements_2026.initial_setup_costs.application_fee}</li>
+                                <li>Registration: {dmccData.financial_requirements_2026.initial_setup_costs.registration_fee}</li>
+                                <li>License: {dmccData.financial_requirements_2026.initial_setup_costs.license_fee_range}</li>
+                            </ul>
+                        </CardContent>
+                    </Card>
+                    <Card padding="lg">
+                        <CardHeader><Heading level="h3" size="lg" weight="semibold">Ongoing Compliance</Heading></CardHeader>
+                        <CardContent>
+                            <ul className="list-disc pl-4 space-y-2">
+                                {dmccData.financial_requirements_2026.ongoing_compliance.map((item, i) => (
+                                    <li key={i}>{item}</li>
+                                ))}
+                            </ul>
+                        </CardContent>
+                    </Card>
+                </Grid>
+            </Container>
+        </div>
+
+        {/* Setup Timeline */}
+        <FeaturesSection
+            title="Setup Timeline"
+            features={dmccData.setup_timeline.phases.map((phase) => {
+                const [title, desc] = phase.split(':');
+                return {
+                    title: title || phase,
+                    description: desc || ''
+                };
+            })}
+        />
+        <Container className="text-center pb-16">
+            <Text className="text-lg font-medium text-gray-700">
+                Total Duration: {dmccData.setup_timeline.total_duration}
+            </Text>
+            <div className="mt-8">
+                <Button variant="outline" size="lg" href="/contact">
+                    Start Your Application
+                </Button>
+            </div>
+        </Container>
+
+        {/* Business License Types */}
+        <Container size="lg" padding="lg" className="bg-gray-50">
+          <div className="text-center mb-16">
+              <Heading level="h2" size="3xl" weight="bold" className="mb-4">
+                  Business License Types
+              </Heading>
+          </div>
+          <Grid cols={3} gap="lg">
+              {dmccData.business_license_types.map((type, idx) => (
+                  <Card key={idx} padding="lg" className="h-full">
+                      <CardHeader>
+                          <Heading level="h3" size="lg" weight="semibold" className="mb-2">
+                              {type}
+                          </Heading>
+                      </CardHeader>
+                  </Card>
+              ))}
+          </Grid>
+        </Container>
+
+        {/* Why Choose SmartZone */}
+        <ContentWithImage
+          title={dmccData.whySmartZone.title}
+          description={dmccData.whySmartZone.description}
+          image={dmccData.whySmartZone.image}
+          features={dmccData.whySmartZone.features}
           reverse={true}
         />
 
