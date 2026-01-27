@@ -18,7 +18,6 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li><Link href="/about" className="hover:underline">About Us</Link></li>
-              <li><Link href="/services" className="hover:underline">Services</Link></li>
               <li><Link href="/portfolio" className="hover:underline">Success Stories</Link></li>
               <li><Link href="/contact" className="hover:underline">Contact</Link></li>
             </ul>
@@ -26,12 +25,12 @@ export default function Footer() {
           
           {/* Services */}
           <div>
-            <h4 className="font-semibold mb-4">Services</h4>
+            <h4 className="font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/services/company-formation" className="hover:underline">Company Formation</Link></li>
-              <li><Link href="/services/trade-license" className="hover:underline">Trade License</Link></li>
-              <li><Link href="/services/visa-processing" className="hover:underline">Visa Processing</Link></li>
-              <li><Link href="/services/pro-services" className="hover:underline">PRO Services</Link></li>
+              <li><Link href="/our-service/accounting-bookkeeping-services-dubai" className="hover:underline">Accounting & Bookkeeping</Link></li>
+              <li><Link href="/our-service/bank-account-opening" className="hover:underline">Bank Account Opening</Link></li>
+              <li><Link href="/our-service/vat-services-dubai" className="hover:underline">VAT Services</Link></li>
+              <li><Link href="/our-service/corporate-tax-consultants-dubai" className="hover:underline">Corporate Tax</Link></li>
             </ul>
           </div>
           

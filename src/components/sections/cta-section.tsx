@@ -1,7 +1,7 @@
 import Button from '@/components/ui/button'
 import { Heading, Text } from '@/components/ui/typography'
 import Container from '@/components/ui/container'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 interface CTASectionProps {
   title?: string

@@ -91,6 +91,52 @@ export interface Service {
   seo?: SEO
 }
 
+export interface ServiceProcessStep {
+  id?: string
+  title: string
+  description: string
+}
+
+export interface ServiceFAQ {
+  question: string
+  answer: string
+}
+
+export interface DetailedService {
+  id: string
+  slug: string
+  hero: {
+    title: string
+    subtitle: string
+    backgroundImage: string
+  }
+  whyMatters: {
+    title: string
+    description: string
+    image: string
+  }
+  howItWorks: {
+    title: string
+    steps: ServiceProcessStep[]
+  }
+  whyChooseUs: {
+    title: string
+    description: string
+    image: string
+    features: string[]
+  }
+  whoIsItFor: {
+    title: string
+    audiences: string[]
+  }
+  processOverview: {
+    title: string
+    steps: ServiceProcessStep[]
+  }
+  faqs: ServiceFAQ[]
+  seo: SEO
+}
+
 export interface ServicePage {
   hero: Hero
   services: Service[]

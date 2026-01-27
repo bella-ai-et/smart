@@ -23,10 +23,10 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
             variant="primary"
-            href="/services"
+            href="/contact"
             className="bg-blue-600 hover:bg-blue-700"
           >
-            View All Services
+            Contact Us
           </Button>
           
           <Button

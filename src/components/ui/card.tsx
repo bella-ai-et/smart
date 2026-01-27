@@ -8,6 +8,7 @@ interface CardProps {
   border?: boolean
   hover?: boolean
   onClick?: () => void
+  id?: string
 }
 
 export default function Card({
@@ -17,7 +18,8 @@ export default function Card({
   shadow = 'md',
   border = true,
   hover = false,
-  onClick
+  onClick,
+  id
 }: CardProps) {
   const baseClasses = 'bg-white rounded-lg'
   
@@ -45,7 +47,7 @@ export default function Card({
   )
   
   return (
-    <div className={classes} onClick={onClick}>
+    <div className={classes} onClick={onClick} id={id}>
       {children}
     </div>
   )

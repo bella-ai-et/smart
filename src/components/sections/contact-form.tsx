@@ -114,7 +114,7 @@ export default function ContactForm({ variant = 'default' }: ContactFormProps) {
               {renderLabel('Message', 'message')}
               <Textarea 
                  id="message" 
-                 label={!isHome ? "Message" : undefined} 
+                 label={!isHome ? "Message" : ""} 
                  rows={4} 
                  className={inputClasses}
               />
