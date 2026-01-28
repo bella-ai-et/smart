@@ -1,101 +1,68 @@
-import type { DetailedService } from '@/types';
-
-export const corporateStructuring: DetailedService = {
-  id: 'corporate-structuring',
-  slug: 'corporate-structuring',
-  hero: {
-    title: 'Optimize Your Business Structure for Growth and Protection',
-    subtitle: 'Tailored Corporate Structuring Solutions for UAE Businesses',
-    backgroundImage: '/images/services/structuring-hero.jpg',
+export const corporateStructuringData = {
+  "corporate_structuring_overview": {
+    "title": "Strategic Corporate Structuring & Restructuring",
+    "description": "Optimizing legal, operational, and financial frameworks for UAE businesses. Our 2026 approach aligns your corporate architecture with new Commercial Companies Law reforms and global tax transparency standards.",
+    "core_objective": "To enhance operational efficiency, protect shareholder rights, and ensure tax-efficient growth."
   },
-  whyMatters: {
-    title: 'The Importance of Proper Corporate Structuring',
-    description: 'A well-designed corporate structure is the backbone of a successful business. It protects your assets, optimizes tax efficiency, facilitates investment, and simplifies succession planning. In the UAE\'s evolving regulatory landscape, having the right legal structure is crucial for operational stability and risk management.',
-    image: '/images/services/structuring-matters.jpg',
-  },
-  howItWorks: {
-    title: 'Our Structuring Methodology',
-    steps: [
-      {
-        title: 'Strategic Analysis',
-        description: 'We review your current assets, business goals, and risk exposure to determine the optimal legal structure.',
-      },
-      {
-        title: 'Structure Design',
-        description: 'We design bespoke structures using Holding Companies, SPVs, Foundations, or Trusts across various UAE jurisdictions (ADGM, DIFC, RAK ICC).',
-      },
-      {
-        title: 'Implementation',
-        description: 'We handle the incorporation of entities, drafting of constitutional documents, and transfer of assets.',
-      },
-      {
-        title: 'Maintenance',
-        description: 'We provide ongoing corporate secretarial services to ensure your structure remains compliant and effective.',
-      },
-    ],
-  },
-  whyChooseUs: {
-    title: 'Why Choose Smart Zone for Structuring',
-    description: 'We combine legal expertise with commercial acumen to build structures that work in practice, not just on paper. Our cross-jurisdictional knowledge ensures you get the best solution for your needs.',
-    image: '/images/services/structuring-team.jpg',
-    features: [
-      'Cross-Border Expertise',
-      'Asset Protection Focus',
-      'Tax-Efficient Solutions',
-      'DIFC & ADGM Specialists',
-    ],
-  },
-  whoIsItFor: {
-    title: 'Who Needs Corporate Structuring?',
-    audiences: [
-      'Family businesses planning for succession',
-      'Real estate investors protecting portfolios',
-      'Startups preparing for fundraising',
-      'International companies expanding to UAE',
-    ],
-  },
-  processOverview: {
-    title: 'Structuring Implementation Process',
-    steps: [
-      {
-        title: 'Consult',
-        description: 'Define objectives and risks.',
-      },
-      {
-        title: 'Design',
-        description: 'Blueprint the legal structure.',
-      },
-      {
-        title: 'Draft',
-        description: 'Prepare MOAs and agreements.',
-      },
-      {
-        title: 'Register',
-        description: 'Incorporate entities and transfer assets.',
-      },
-    ],
-  },
-  faqs: [
+  "key_structuring_models_2026": [
     {
-      question: 'What is a Holding Company?',
-      answer: 'A Holding Company is an entity established primarily to own assets (shares, IP, real estate) of other companies (subsidiaries) to reduce risk and centralize control.',
+      "model": "Holding Company Structures",
+      "use_case": "Ideal for managing multiple subsidiaries, protecting intellectual property, and centralizing regional assets.",
+      "benefits": ["Risk isolation between entities", "Consolidated tax reporting", "Easier exit strategies"]
     },
     {
-      question: 'Why use an SPV (Special Purpose Vehicle)?',
-      answer: 'SPVs are used to ring-fence assets and liabilities, making them ideal for specific projects or investments without putting the main operating company at risk.',
+      "model": "Dual Licensing (Hybrid)",
+      "use_case": "For Free Zone companies needing to operate directly in the UAE mainland.",
+      "benefits": ["Access to government tenders", "Retain Free Zone tax benefits", "No physical mainland office required"]
     },
     {
-      question: 'Can I restructure an existing business?',
-      answer: 'Yes, we can assist with reorganizing existing groups, including share transfers, mergers, and establishing new holding layers.',
-    },
-    {
-      question: 'What is the difference between Mainland and Free Zone structuring?',
-      answer: 'Mainland allows trading within the local UAE market, while Free Zones often offer 100% foreign ownership and specific regulatory benefits. We help you choose the right mix.',
-    },
+      "model": "SPV (Special Purpose Vehicles)",
+      "use_case": "High-net-worth asset protection or project-specific financing in ADGM or DIFC.",
+      "benefits": ["Common Law protection", "Ring-fencing liabilities", "Flexible share classes"]
+    }
   ],
-  seo: {
-    title: 'Corporate Structuring Services Dubai | Asset Protection',
-    description: 'Expert corporate structuring services in Dubai. We design holding companies, SPVs, and foundations for asset protection and tax efficiency.',
-    keywords: ['corporate structuring dubai', 'holding company uae', 'spv setup dubai', 'asset protection uae', 'business restructuring'],
+  "new_legal_features_2026": [
+    {
+      "feature": "Differentiated Share Classes",
+      "description": "LLCs and private joint stock companies can now issue different classes of shares with varied voting rights, dividend priorities, and redemption terms."
+    },
+    {
+      "feature": "Statutory Minority Protections",
+      "description": "Formalized 'Drag-along' and 'Tag-along' rights embedded in the Memorandum of Association (MOA) for cleaner investor exits."
+    },
+    {
+      "feature": "Corporate Re-domiciliation",
+      "description": "Streamlined procedures to move company registration between Emirates or from offshore to onshore without losing legal personality."
+    }
+  ],
+  "governance_and_compliance": {
+    "ubo_transparency": "Mandatory maintenance of Ultimate Beneficial Owner (UBO) registers and prompt disclosure of ownership changes.",
+    "director_accountability": "Enhanced director duties requiring documented decision-making and strict conflict-of-interest registers.",
+    "board_succession": "Provisions for structured succession planning within the MOA to prevent operational deadlock upon the exit of a key partner."
   },
-};
+  "restructuring_triggers": [
+    "Preparing for a Merger, Acquisition (M&A), or IPO",
+    "Mitigating risks from upcoming 2026 Corporate Tax audits",
+    "Realigning business activities with 100% foreign ownership regulations",
+    "Consolidating fragmented legacy structures into a unified group",
+    "Addressing financial distress through debt-for-equity swaps"
+  ],
+  "our_structuring_process": [
+    {
+      "step": "Diagnostic Review",
+      "action": "Analyzing current licenses, ownership ratios, and tax exposure."
+    },
+    {
+      "step": "Architecture Design",
+      "action": "Mapping the new legal hierarchy (Mainland vs. Free Zone vs. Offshore)."
+    },
+    {
+      "step": "Document Drafting",
+      "action": "Customizing the MOA to include 2026 governance protections and share classes."
+    },
+    {
+      "step": "Regulatory Execution",
+      "action": "Managing the transfer of shares, license amendments, and UBO updates with authorities."
+    }
+  ]
+}

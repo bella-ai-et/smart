@@ -1,101 +1,42 @@
-import type { DetailedService } from '@/types';
-
-export const accountingBookkeeping: DetailedService = {
-  id: 'accounting-bookkeeping',
-  slug: 'accounting-bookkeeping-services-dubai',
-  hero: {
-    title: 'Expert Accounting & Bookkeeping Services in Dubai',
-    subtitle: 'Ensure Compliance and Financial Clarity for Your UAE Business',
-    backgroundImage: '/images/services/accounting-hero.jpg',
+export const accountingBookkeepingData = {
+  "accounting_bookkeeping_overview": {
+    "title": "Professional Accounting & Bookkeeping Services",
+    "description": "Comprehensive financial management solutions ensuring your business stays compliant with UAE Federal Tax Authority (FTA) regulations and International Financial Reporting Standards (IFRS).",
+    "compliance_focus": "Fully updated for 2026 UAE Corporate Tax requirements and VAT regulations."
   },
-  whyMatters: {
-    title: 'Why Professional Bookkeeping Matters in the UAE',
-    description: 'With the implementation of Corporate Tax and strict VAT regulations, maintaining accurate financial records is no longer optional in the UAE. Proper bookkeeping ensures compliance with Federal Decree-Law No. 47 of 2022, avoids heavy penalties from the Federal Tax Authority (FTA), and provides the financial transparency needed for banking and growth.',
-    image: '/images/services/accounting-matters.jpg',
-  },
-  howItWorks: {
-    title: 'How Our Accounting Service Works',
-    steps: [
-      {
-        title: 'Initial Financial Assessment',
-        description: 'We analyze your current business structure, transaction volume, and reporting needs to tailor a bookkeeping solution.',
-      },
-      {
-        title: 'System Setup & Integration',
-        description: 'We set up your chart of accounts on FTA-approved software (Xero, QuickBooks, Zoho) and integrate it with your operations.',
-      },
-      {
-        title: 'Monthly Transaction Processing',
-        description: 'Our team records all invoices, expenses, and bank transactions, ensuring every entry is accurate and compliant.',
-      },
-      {
-        title: 'Financial Reporting & Review',
-        description: 'You receive detailed monthly management reports, including P&L, Balance Sheet, and Cash Flow statements.',
-      },
-    ],
-  },
-  whyChooseUs: {
-    title: 'Why Choose Smart Zone for Accounting',
-    description: 'Our team of certified Chartered Accountants brings years of UAE-specific experience. We go beyond data entry to provide strategic financial insights.',
-    image: '/images/services/accounting-team.jpg',
-    features: [
-      'FTA-Compliant Tax Agents',
-      'Certified Experts (ACCA/CPA)',
-      'Data Security & Confidentiality',
-      'Timely Financial Reporting',
-    ],
-  },
-  whoIsItFor: {
-    title: 'Who Needs This Service?',
-    audiences: [
-      'Startups seeking organized financials for investors',
-      'SMEs needing VAT and Corporate Tax compliance',
-      'Large Enterprises requiring outsourced finance departments',
-      'Free Zone & Mainland companies across all sectors',
-    ],
-  },
-  processOverview: {
-    title: 'Our Accounting Process Overview',
-    steps: [
-      {
-        title: 'Onboarding',
-        description: 'Document collection and software access setup.',
-      },
-      {
-        title: 'Execution',
-        description: 'Daily/Weekly recording of financial data.',
-      },
-      {
-        title: 'Compliance Check',
-        description: 'Review for VAT and Corporate Tax readiness.',
-      },
-      {
-        title: 'Support',
-        description: 'Ongoing advisory and audit support.',
-      },
-    ],
-  },
-  faqs: [
+  "core_services": [
     {
-      question: 'Is it mandatory to maintain books of accounts in the UAE?',
-      answer: 'Yes, under the UAE Commercial Companies Law and Tax Procedures Law, all businesses must maintain accurate financial records for at least 5 years.',
+      "service": "Daily Bookkeeping",
+      "features": ["Accurate recording of all financial transactions", "Expense classification", "General ledger maintenance"]
     },
     {
-      question: 'Which accounting software do you use?',
-      answer: 'We are experts in leading cloud accounting platforms including Xero, QuickBooks, and Zoho Books, ensuring you have real-time access to your data.',
+      "service": "Financial Reporting",
+      "features": ["Monthly/Quarterly management accounts", "Balance sheets and P&L statements", "Cash flow analysis and forecasting"]
     },
     {
-      question: 'Can you help with backlog accounting?',
-      answer: 'Absolutely. We specialize in updating and correcting historical financial records to bring your business into full compliance.',
+      "service": "Bank & Ledger Reconciliation",
+      "features": ["Regular bank statement matching", "Accounts Payable/Receivable management", "Inter-company reconciliation"]
     },
     {
-      question: 'How often do I receive financial reports?',
-      answer: 'We typically provide monthly management reports, but we can customize the frequency to weekly or quarterly based on your needs.',
-    },
+      "service": "Audit Readiness",
+      "features": ["Year-end financial statement preparation", "Liaising with external auditors", "Ensuring IFRS compliance"]
+    }
   ],
-  seo: {
-    title: 'Accounting & Bookkeeping Services Dubai | Smart Zone',
-    description: 'Professional accounting and bookkeeping services in Dubai, UAE. Ensure VAT and Corporate Tax compliance with our certified experts.',
-    keywords: ['accounting services dubai', 'bookkeeping services uae', 'vat accounting', 'corporate tax accounting', 'finance outsourcing'],
+  "tax_compliance_integration": {
+    "corporate_tax": "Preparation of financial records to support the 9% UAE Corporate Tax filing and profit reconciliation.",
+    "vat_services": "Calculation of VAT inputs/outputs, invoice verification, and preparation of data for quarterly FTA returns.",
+    "record_retention": "Safe maintenance of digital and physical records for the mandatory 7-year period as per UAE law."
   },
-};
+  "why_outsource": [
+    "Reduce overhead costs of a full-time in-house finance team",
+    "Eliminate penalties caused by late or incorrect filings",
+    "Access to FTA-accredited accounting software (Zoho Books, Xero, Tally)",
+    "Scalable solutions from startups (low transaction volume) to large enterprises"
+  ],
+  "process_workflow": [
+    "Initial assessment of current financial records",
+    "Chart of Accounts setup tailored to business activity",
+    "Ongoing data entry and transaction processing",
+    "Periodic reporting and strategic financial advisory"
+  ]
+}

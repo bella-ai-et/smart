@@ -27,10 +27,15 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/our-service/accounting-bookkeeping-services-dubai" className="hover:underline">Accounting & Bookkeeping</Link></li>
-              <li><Link href="/our-service/bank-account-opening" className="hover:underline">Bank Account Opening</Link></li>
-              <li><Link href="/our-service/vat-services-dubai" className="hover:underline">VAT Services</Link></li>
-              <li><Link href="/our-service/corporate-tax-consultants-dubai" className="hover:underline">Corporate Tax</Link></li>
+              <li><Link href="/services/accounting-and-bookkeeping" className="hover:underline">Accounting & Bookkeeping</Link></li>
+              <li><Link href="/services/bank-account-opening" className="hover:underline">Bank Account Opening</Link></li>
+              <li><Link href="/services/vat-services-dubai" className="hover:underline">VAT Services</Link></li>
+              <li><Link href="/services/corporate-tax-consultants-dubai" className="hover:underline">Corporate Tax</Link></li>
+              <li><Link href="/services/corporate-structuring" className="hover:underline">Corporate Structuring</Link></li>
+              <li><Link href="/services/office-space-solutions" className="hover:underline">Office Space Solutions</Link></li>
+              <li><Link href="/services/attestation-legalization" className="hover:underline">Attestation & Legalization</Link></li>
+              <li><Link href="/services/product-registration" className="hover:underline">Product Registration</Link></li>
+              <li><Link href="/services/corporate-relocation" className="hover:underline">Corporate Relocation</Link></li>
             </ul>
           </div>
           

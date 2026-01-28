@@ -1,101 +1,56 @@
-import type { DetailedService } from '@/types';
-
-export const vatServices: DetailedService = {
-  id: 'vat-services',
-  slug: 'vat-services-dubai',
-  hero: {
-    title: 'Comprehensive VAT Services in Dubai',
-    subtitle: 'Expert VAT Registration, Filing, and Compliance Solutions',
-    backgroundImage: '/images/services/vat-hero.jpg',
+export const vatServicesData = {
+  "vat_services_overview": {
+    "title": "VAT Compliance & Advisory Services",
+    "description": "Expert guidance on UAE Value Added Tax (VAT) regulations. We ensure your business remains compliant with the latest Federal Tax Authority (FTA) amendments effective from January 1, 2026.",
+    "key_stat": "Standard VAT rate of 5% applies to most goods and services in the UAE."
   },
-  whyMatters: {
-    title: 'Why VAT Compliance is Critical',
-    description: 'Since the introduction of Value Added Tax (VAT) in the UAE, compliance is mandatory for eligible businesses. Errors in registration or filing can lead to significant administrative penalties starting from AED 10,000. Professional VAT management ensures you meet all Federal Tax Authority (FTA) requirements accurately and on time.',
-    image: '/images/services/vat-matters.jpg',
+  "registration_thresholds_2026": {
+    "mandatory_registration": "Annual taxable turnover exceeding AED 375,000.",
+    "voluntary_registration": "Annual taxable turnover or taxable expenses exceeding AED 187,500.",
+    "exemption": "Available for businesses exclusively making zero-rated supplies."
   },
-  howItWorks: {
-    title: 'How Our VAT Service Works',
-    steps: [
-      {
-        title: 'Eligibility Check',
-        description: 'We assess your turnover to determine if you need to register for mandatory (AED 375,000) or voluntary (AED 187,500) VAT.',
-      },
-      {
-        title: 'Registration & Setup',
-        description: 'We handle the complete registration process with the FTA and help you obtain your Tax Registration Number (TRN).',
-      },
-      {
-        title: 'Ongoing Filing',
-        description: 'Our team prepares and submits your quarterly or monthly VAT returns, ensuring all input and output tax is correctly calculated.',
-      },
-      {
-        title: 'Advisory & Refund',
-        description: 'We provide ongoing advice on complex transactions and assist with VAT refund applications for eligible expenses.',
-      },
-    ],
-  },
-  whyChooseUs: {
-    title: 'Why Choose Smart Zone for VAT',
-    description: 'Our tax experts are well-versed in UAE Tax Laws. We minimize your risk of non-compliance and help you optimize your tax position legally.',
-    image: '/images/services/vat-team.jpg',
-    features: [
-      'Registered Tax Agents',
-      'Accurate Return Filing',
-      'Penalty Dispute Assistance',
-      'Comprehensive Tax Advisory',
-    ],
-  },
-  whoIsItFor: {
-    title: 'Who Needs VAT Services?',
-    audiences: [
-      'Businesses exceeding the mandatory registration threshold',
-      'Startups opting for voluntary registration',
-      'Exporters seeking VAT refunds',
-      'Companies facing FTA audits or penalties',
-    ],
-  },
-  processOverview: {
-    title: 'Our VAT Compliance Process',
-    steps: [
-      {
-        title: 'Analysis',
-        description: 'Review of transaction data.',
-      },
-      {
-        title: 'Calculation',
-        description: 'Compute VAT payable/recoverable.',
-      },
-      {
-        title: 'Filing',
-        description: 'Submit returns via FTA portal.',
-      },
-      {
-        title: 'Record Keeping',
-        description: 'Maintain documentation for 5 years.',
-      },
-    ],
-  },
-  faqs: [
+  "core_vat_services": [
     {
-      question: 'What is the VAT registration threshold?',
-      answer: 'Mandatory registration is required if taxable supplies exceed AED 375,000 in the last 12 months. Voluntary registration is possible above AED 187,500.',
+      "service": "VAT Registration & De-registration",
+      "details": "Handling the entire FTA portal process, from document submission to obtaining your Tax Registration Number (TRN)."
     },
     {
-      question: 'How often do I need to file VAT returns?',
-      answer: 'Most businesses file quarterly, but some large businesses may be required to file monthly. The FTA assigns your tax period upon registration.',
+      "service": "VAT Return Filing",
+      "details": "Quarterly or monthly preparation and submission of Form VAT201, ensuring accurate reporting of output and input tax."
     },
     {
-      question: 'Can I claim VAT on business expenses?',
-      answer: 'Yes, you can generally reclaim VAT paid on business-related expenses, provided you have valid tax invoices and the expenses are not specifically blocked.',
+      "service": "VAT Refund Claims",
+      "details": "Assistance in recovering excess input tax, adhering to the new 2026 five-year statutory time limit for claims."
     },
     {
-      question: 'What happens if I file late?',
-      answer: 'Late filing attracts a penalty of AED 1,000 for the first offense and AED 2,000 for repetition within 24 months, plus late payment penalties.',
-    },
+      "service": "VAT Health Check & Audit",
+      "details": "Pre-emptive review of your records to identify errors and ensure audit readiness for FTA inspections."
+    }
   ],
-  seo: {
-    title: 'VAT Services Dubai | VAT Registration & Filing UAE',
-    description: 'Expert VAT services in Dubai including registration, return filing, and consultancy. Avoid penalties with our FTA compliant solutions.',
-    keywords: ['vat services dubai', 'vat registration uae', 'vat filing dubai', 'tax consultant uae'],
+  "important_2026_updates": [
+    {
+      "update": "RCM Self-Invoicing Removal",
+      "description": "Effective Jan 1, 2026, businesses are no longer required to issue self-invoices for Reverse Charge Mechanism (RCM) transactions, provided they retain supplier invoices and import documents."
+    },
+    {
+      "update": "5-Year Refund Limit",
+      "description": "A new strict deadline requires all VAT refund claims to be submitted within 5 years from the end of the relevant tax period."
+    },
+    {
+      "update": "E-Invoicing Readiness",
+      "description": "Preparation for the upcoming UAE E-Invoicing mandate (transitioning through 2026-2027)."
+    }
+  ],
+  "penalty_prevention": {
+    "late_registration": "AED 10,000 fine for failing to register within the legal timeframe.",
+    "late_filing": "AED 1,000 for the first offense; AED 2,000 for repetition within 24 months.",
+    "incorrect_filing": "Fixed and percentage-based penalties starting from AED 3,000 for errors in tax returns."
   },
-};
+  "required_documentation": [
+    "Valid Trade License",
+    "Passport & Emirates ID of authorized signatories",
+    "Turnover declaration for the last 12 months (signed/stamped)",
+    "Customs Registration Code (for importers/exporters)",
+    "Articles of Association / Partnership Agreements"
+  ]
+}

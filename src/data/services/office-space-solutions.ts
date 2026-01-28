@@ -1,102 +1,71 @@
-import type { DetailedService } from '@/types';
-
-export const officeSpace: DetailedService = {
-  id: 'office-space',
-  slug: 'office-space-solutions',
-  hero: {
-    title: 'Premium Office Space Solutions in Dubai',
-    subtitle: 'Find the Perfect Workspace for Your Business Success',
-    backgroundImage: '/images/services/office-hero.jpg',
-  },
-  whyMatters: {
-    title: 'The Right Office for Your Business',
-    description: 'Having a physical office is not just a licensing requirement; it\'s a statement of your business presence. Whether you need a prestigious address, a flexible desk for a startup, or a fully fitted office for a growing team, the right space enhances productivity and credibility.',
-    image: '/images/services/office-matters.jpg',
-  },
-  howItWorks: {
-    title: 'Finding Your Ideal Workspace',
-    steps: [
-      {
-        title: 'Needs Analysis',
-        description: 'We assess your team size, budget, location preferences, and licensing requirements to shortlist the best options.',
-      },
-      {
-        title: 'Property Selection',
-        description: 'Choose from our portfolio of Business Centers, Flexi-Desks, Coworking Spaces, and private offices in prime locations.',
-      },
-      {
-        title: 'Leasing & Documentation',
-        description: 'We handle the Ejari registration and lease agreements to ensure compliance with DED and Free Zone regulations.',
-      },
-      {
-        id: 'relocation-services',
-        title: 'Relocation Services',
-        description: 'Moving offices? We manage the entire relocation process, from logistics and IT setup to fit-out coordination, ensuring zero downtime for your business operations.',
-      },
-    ],
-  },
-  whyChooseUs: {
-    title: 'Why Choose Smart Zone Offices',
-    description: 'We offer more than just space; we offer business environments designed for growth. Our strong network with landlords and business centers guarantees the best rates.',
-    image: '/images/services/office-team.jpg',
-    features: [
-      'Prime Business Locations',
-      'Flexible Lease Terms',
-      'Ejari Assistance',
-      'Ready-to-Move-In Options',
-    ],
-  },
-  whoIsItFor: {
-    title: 'Who Needs Office Solutions?',
-    audiences: [
-      'Startups needing affordable flexi-desks',
-      'SMEs requiring private serviced offices',
-      'Mainland companies needing Ejari for license',
-      'International firms setting up HQs',
-    ],
-  },
-  processOverview: {
-    title: 'Office Setup Process',
-    steps: [
-      {
-        title: 'Select',
-        description: 'Choose your preferred location/type.',
-      },
-      {
-        title: 'Sign',
-        description: 'Execute lease agreement.',
-      },
-      {
-        title: 'Register',
-        description: 'Complete Ejari registration.',
-      },
-      {
-        title: 'Move In',
-        description: 'Start working immediately.',
-      },
-    ],
-  },
-  faqs: [
-    {
-      question: 'Do I need a physical office for a trade license?',
-      answer: 'Yes, most Mainland licenses require a physical office with Ejari. Some Free Zones offer virtual office or flexi-desk packages as a minimum requirement.',
-    },
-    {
-      question: 'What is Ejari?',
-      answer: 'Ejari is a mandatory system in Dubai for registering tenancy contracts. It is required for trade license issuance and renewal.',
-    },
-    {
-      question: 'Can I upgrade my space later?',
-      answer: 'Absolutely. Our flexible solutions allow you to scale up from a desk to a private office as your team grows.',
-    },
-    {
-      question: 'What is included in a serviced office?',
-      answer: 'Serviced offices typically include furniture, high-speed internet, reception services, utilities, and access to meeting rooms.',
-    },
-  ],
-  seo: {
-    title: 'Office Space Solutions Dubai | Serviced Offices & Coworking',
-    description: 'Find your perfect office space in Dubai. We offer serviced offices, coworking spaces, and flexi-desks with Ejari for business licensing.',
-    keywords: ['office space dubai', 'serviced offices uae', 'coworking space dubai', 'office rental dubai', 'ejari services'],
-  },
+export const officeSpaceData = {
+  "office_solutions_overview": { 
+    "title": "Flexible Office Space Solutions in the UAE", 
+    "description": "Securing the right physical or virtual presence is a legal requirement for any UAE trade license. We provide a range of workspace options that satisfy regulatory standards while optimizing your operational costs.", 
+    "key_requirement": "Every UAE business must have a registered physical address (Ejari or Free Zone Lease) to maintain its license and open bank accounts." 
+  }, 
+  "office_types_2026": [ 
+    { 
+      "type": "Flexi Desk / Smart Desk", 
+      "best_for": "Startups, Freelancers, and Remote Teams", 
+      "features": ["Lowest cost entry point", "Approved for Free Zone licenses", "Shared workspace access", "Inclusive of high-speed Wi-Fi"], 
+      "visa_quota": "Typically allows for 1–3 visas depending on the jurisdiction." 
+    }, 
+    { 
+      "type": "Serviced Office", 
+      "best_for": "SMEs and Branch Offices", 
+      "features": ["Fully furnished and move-in ready", "Professional reception and mail handling", "Meeting room access included", "No utility or maintenance overheads"], 
+      "visa_quota": "Based on office size (usually 1 visa per 80-100 sq. ft)." 
+    }, 
+    { 
+      "type": "Mainland Virtual Office (with Ejari)", 
+      "best_for": "Consultants and Professional Services", 
+      "features": ["Legal 'Sub-Lease' for DED Mainland licenses", "Registered Ejari for banking and government use", "Professional business address in prime districts", "Option for call forwarding and secretarial support"], 
+      "visa_quota": "Typically up to 2-3 visas on a virtual setup." 
+    }, 
+    { 
+      "type": "Private Physical Office", 
+      "best_for": "Established Businesses and Regulated Sectors", 
+      "features": ["Complete customization (Shell & Core or Fitted)", "Private signage and branding", "Ideal for companies with 5+ employees", "Best for high-security banking requirements"], 
+      "visa_quota": "Unlimited (subject to square footage calculations)." 
+    } 
+  ], 
+  "strategic_locations": [ 
+    { 
+      "area": "Business Bay & Downtown", 
+      "advantage": "Prestigious central hub with proximity to DIFC and major corporate HQs." 
+    }, 
+    { 
+      "area": "Sheikh Zayed Road", 
+      "advantage": "Unbeatable accessibility and visibility along Dubai's main artery." 
+    }, 
+    { 
+      "area": "Dubai Silicon Oasis (DSO)", 
+      "advantage": "Cost-effective tech hub with modern infrastructure for startups." 
+    }, 
+    { 
+      "area": "JLT / DMCC", 
+      "advantage": "Dynamic free zone community with hundreds of business centers." 
+    } 
+  ], 
+  "compliance_and_facilities": { 
+    "mandatory_services": [ 
+      "DEWA (Electricity & Water) connection management", 
+      "Ejari registration for Mainland entities", 
+      "Building security and Civil Defense approvals", 
+      "Telecommunication (Etisalat/Du) setup" 
+    ], 
+    "shared_amenities": [ 
+      "State-of-the-art boardrooms and meeting pods", 
+      "Pantry and cafeteria facilities", 
+      "Printing, scanning, and IT support", 
+      "Business lounge access for networking" 
+    ] 
+  }, 
+  "our_process": [ 
+    "Requirement Analysis: Based on your license type and visa needs.", 
+    "Site Inspections: Curated tours of pre-screened, compliant office spaces.", 
+    "Lease Negotiation: Securing flexible terms and all-inclusive packages.", 
+    "Licensing Integration: Mapping your office lease to your trade license issuance." 
+  ] 
 };

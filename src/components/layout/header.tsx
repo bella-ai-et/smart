@@ -33,7 +33,7 @@ const freeZones = startYourCompanyNavigation.filter(i => i.category === 'free-zo
                     {services.map((s) => (
                       <li key={s.id}>
                         <Link
-                          href={`/our-service/${s.slug}`}
+                          href={s.cta.href || `/our-service/${s.slug}`}
                           className="block text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-md transition-colors"
                         >
                           {s.name}

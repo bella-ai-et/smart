@@ -1,101 +1,71 @@
-import type { DetailedService } from '@/types';
-
-export const bankAccountOpening: DetailedService = {
-  id: 'bank-account-opening',
-  slug: 'bank-account-opening',
-  hero: {
-    title: 'Hassle-Free Business Bank Account Opening in UAE',
-    subtitle: 'Navigate the Complex Banking Landscape with Expert Guidance',
-    backgroundImage: '/images/services/banking-hero.jpg',
+export const bankAccountOpeningData = {
+  "bank_account_opening_overview": {
+    "title": "Corporate Bank Account Opening Assistance",
+    "description": "Navigating the UAE's stringent KYC and AML regulations to secure reliable banking for your business. We provide end-to-end support for Mainland, Free Zone, and Offshore entities.",
+    "success_rate_2026": "95% approval rate through pre-screening and direct relationship manager access."
   },
-  whyMatters: {
-    title: 'Why Expert Banking Assistance Matters',
-    description: 'Opening a corporate bank account in the UAE has become increasingly challenging due to strict KYC and AML regulations. Without proper guidance, applications are frequently rejected or delayed for months. Our service ensures your company profile is presented correctly to the right banks, maximizing your chances of quick approval.',
-    image: '/images/services/banking-matters.jpg',
-  },
-  howItWorks: {
-    title: 'How Our Bank Account Service Works',
-    steps: [
-      {
-        title: 'Profile Assessment',
-        description: 'We evaluate your business activity, nationality, and transaction profile to recommend the most suitable banks.',
-      },
-      {
-        title: 'Documentation Preparation',
-        description: 'Our team compiles a comprehensive file including business plans, CVs, and corporate documents as required by compliance departments.',
-      },
-      {
-        title: 'Bank Selection & Application',
-        description: 'We introduce you to our network of relationship managers at top UAE banks and submit your application.',
-      },
-      {
-        title: 'Follow-up & Activation',
-        description: 'We liaise with the bank to answer queries, track progress, and ensure your account is activated smoothly.',
-      },
-    ],
-  },
-  whyChooseUs: {
-    title: 'Why Choose Smart Zone for Banking',
-    description: 'We have established strong relationships with leading local and international banks in the UAE. We understand exactly what compliance teams are looking for.',
-    image: '/images/services/banking-team.jpg',
-    features: [
-      '95% Success Rate',
-      'Direct Access to Relationship Managers',
-      'Tailored Banking Solutions',
-      'Fast-Track Processing Support',
-    ],
-  },
-  whoIsItFor: {
-    title: 'Who Needs This Service?',
-    audiences: [
-      'New Free Zone and Mainland companies',
-      'Offshore companies requiring local accounts',
-      'Foreign entities opening branches in UAE',
-      'High-risk business activities needing specialized banking',
-    ],
-  },
-  processOverview: {
-    title: 'Our Banking Support Process',
-    steps: [
-      {
-        title: 'Consultation',
-        description: 'Assess needs and eligibility.',
-      },
-      {
-        title: 'Preparation',
-        description: 'Gather and verify all documents.',
-      },
-      {
-        title: 'Submission',
-        description: 'Submit to selected banks.',
-      },
-      {
-        title: 'Approval',
-        description: 'Coordinate account opening and access.',
-      },
-    ],
-  },
-  faqs: [
+  "banking_options_2026": [
     {
-      question: 'How long does it take to open a bank account?',
-      answer: 'Timelines vary by bank and business profile. Typically, it takes 2-4 weeks, but with our assistance, we aim to expedite this process.',
+      "type": "Digital-First Banks",
+      "best_for": "Startups, E-commerce, and Freelancers",
+      "examples": ["Wio Business", "Mashreq NeoBiz", "Zand"],
+      "advantages": ["Instant onboarding (1-3 days)", "Zero minimum balance options", "100% mobile-first interface"]
     },
     {
-      question: 'Can I open a bank account remotely?',
-      answer: 'Most UAE banks require the physical presence of the signatory for identity verification. However, some digital banks offer remote onboarding options which we can explore.',
+      "type": "Tier 1 Traditional Banks",
+      "best_for": "Large Enterprises, Trading, and Manufacturing",
+      "examples": ["Emirates NBD", "ADCB", "First Abu Dhabi Bank (FAB)"],
+      "advantages": ["Dedicated Relationship Managers", "Complex Trade Finance (LCs/LGs)", "Extensive branch network"]
     },
     {
-      question: 'Is a minimum balance required?',
-      answer: 'Yes, most corporate accounts require a minimum monthly average balance, ranging from AED 50,000 to AED 500,000 depending on the bank tier.',
-    },
-    {
-      question: 'Do you guarantee account opening?',
-      answer: 'While we cannot guarantee approval as it is at the bank’s sole discretion, our expertise significantly increases your success rate by ensuring all compliance requirements are met.',
-    },
+      "type": "Islamic Business Banking",
+      "best_for": "Sharia-compliant financial operations",
+      "examples": ["Dubai Islamic Bank (DIB)", "Abu Dhabi Islamic Bank (ADIB)", "Emirates Islamic"],
+      "advantages": ["Ethical financing", "Specialized SME packages", "Profit-sharing investment accounts"]
+    }
   ],
-  seo: {
-    title: 'Business Bank Account Opening Dubai | Smart Zone',
-    description: 'Expert assistance for corporate bank account opening in Dubai and UAE. We help you navigate KYC/AML requirements for fast approval.',
-    keywords: ['bank account opening dubai', 'corporate bank account uae', 'business banking dubai', 'company bank account'],
+  "mandatory_requirements": {
+    "company_documents": [
+      "Valid UAE Trade License",
+      "Memorandum and Articles of Association (MOA/AOA)",
+      "Certificate of Registration/Incorporation",
+      "Share Registry or Register of Members"
+    ],
+    "shareholder_documents": [
+      "Passport copies and Emirates IDs",
+      "Valid UAE Residency Visas",
+      "Proof of residential address (utility bill/lease)",
+      "3-6 months personal/corporate bank statements"
+    ],
+    "business_substance": [
+      "Comprehensive Business Plan with financial forecasts",
+      "Proof of physical office space (Ejari or lease)",
+      "List of potential suppliers and customers",
+      "Company website and professional profile"
+    ]
   },
-};
+  "our_assistance_process": [
+    {
+      "step": "Pre-Compliance Review",
+      "action": "We screen your profile against bank-specific risk appetite to avoid immediate rejection."
+    },
+    {
+      "step": "Bank Selection",
+      "action": "Matching your business activity with the right banking partner based on transaction volume and fees."
+    },
+    {
+      "step": "Document Attestation",
+      "action": "Organizing legal translations and UAE Ministry of Foreign Affairs (MOFA) attestations if required."
+    },
+    {
+      "step": "Interview Coordination",
+      "action": "Scheduling and preparing you for the face-to-face meeting with the bank's relationship manager."
+    }
+  ],
+  "common_challenges_solved": [
+    "Overcoming 'High Risk' nationality or activity hurdles",
+    "Managing complex multi-layered corporate ownership structures",
+    "Securing accounts for Free Zone companies without physical offices",
+    "Resolving 'Source of Wealth' and 'Source of Funds' documentation queries"
+  ]
+}

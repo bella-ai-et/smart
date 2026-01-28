@@ -66,6 +66,19 @@ export function CardHeader({ children, className = '' }: CardHeaderProps) {
   )
 }
 
+interface CardTitleProps {
+  children: React.ReactNode
+  className?: string
+}
+
+export function CardTitle({ children, className = '' }: CardTitleProps) {
+  return (
+    <h3 className={cn("text-lg font-semibold leading-none tracking-tight", className)}>
+      {children}
+    </h3>
+  )
+}
+
 interface CardContentProps {
   children: React.ReactNode
   className?: string
