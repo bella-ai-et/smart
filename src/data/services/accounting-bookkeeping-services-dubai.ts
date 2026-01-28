@@ -1,8 +1,8 @@
 export const accountingBookkeepingData = {
   "accounting_bookkeeping_overview": {
     "title": "Professional Accounting & Bookkeeping Services",
-    "description": "Comprehensive financial management solutions ensuring your business stays compliant with UAE Federal Tax Authority (FTA) regulations and International Financial Reporting Standards (IFRS).",
-    "compliance_focus": "Fully updated for 2026 UAE Corporate Tax requirements and VAT regulations."
+    "description": "Financial record‑keeping and reporting services aligned with UAE regulatory requirements and International Financial Reporting Standards (IFRS).",
+    "compliance_focus": "Integration with current UAE Corporate Tax and VAT obligations."
   },
   "core_services": [
     {
@@ -19,13 +19,13 @@ export const accountingBookkeepingData = {
     },
     {
       "service": "Audit Readiness",
-      "features": ["Year-end financial statement preparation", "Liaising with external auditors", "Ensuring IFRS compliance"]
+      "features": ["Year‑end financial statement preparation", "Liaising with external auditors", "IFRS alignment"]
     }
   ],
   "tax_compliance_integration": {
-    "corporate_tax": "Preparation of financial records to support the 9% UAE Corporate Tax filing and profit reconciliation.",
-    "vat_services": "Calculation of VAT inputs/outputs, invoice verification, and preparation of data for quarterly FTA returns.",
-    "record_retention": "Safe maintenance of digital and physical records for the mandatory 7-year period as per UAE law."
+    "corporate_tax": "Preparation of financial records to support corporate tax computations and filings.",
+    "vat_services": "Compilation of VAT data, invoice verification, and support for return preparation.",
+    "record_retention": "Maintenance of financial records for the period prescribed under current UAE regulations."
   },
   "why_outsource": [
     "Reduce overhead costs of a full-time in-house finance team",

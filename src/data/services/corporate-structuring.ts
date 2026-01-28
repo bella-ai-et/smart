@@ -1,7 +1,7 @@
 export const corporateStructuringData = {
   "corporate_structuring_overview": {
     "title": "Strategic Corporate Structuring & Restructuring",
-    "description": "Optimizing legal, operational, and financial frameworks for UAE businesses. Our 2026 approach aligns your corporate architecture with new Commercial Companies Law reforms and global tax transparency standards.",
+    "description": "Optimizing legal, operational, and financial frameworks for UAE businesses. We design structures aligned with current Commercial Companies Law and tax transparency standards.",
     "core_objective": "To enhance operational efficiency, protect shareholder rights, and ensure tax-efficient growth."
   },
   "key_structuring_models_2026": [
@@ -12,8 +12,8 @@ export const corporateStructuringData = {
     },
     {
       "model": "Dual Licensing (Hybrid)",
-      "use_case": "For Free Zone companies needing to operate directly in the UAE mainland.",
-      "benefits": ["Access to government tenders", "Retain Free Zone tax benefits", "No physical mainland office required"]
+      "use_case": "For free zone companies seeking to conduct permitted activities in the UAE mainland.",
+      "benefits": ["Access to mainland customer base (subject to approvals)", "Tax treatment as per UAE corporate tax law", "Facility requirements depend on authority rules"]
     },
     {
       "model": "SPV (Special Purpose Vehicles)",
@@ -24,15 +24,15 @@ export const corporateStructuringData = {
   "new_legal_features_2026": [
     {
       "feature": "Differentiated Share Classes",
-      "description": "LLCs and private joint stock companies can now issue different classes of shares with varied voting rights, dividend priorities, and redemption terms."
+      "description": "Certain company forms may issue different share classes subject to current law and authority approvals."
     },
     {
       "feature": "Statutory Minority Protections",
-      "description": "Formalized 'Drag-along' and 'Tag-along' rights embedded in the Memorandum of Association (MOA) for cleaner investor exits."
+      "description": "Minority protections (including drag‑along and tag‑along) can be embedded in corporate documents subject to legal review."
     },
     {
       "feature": "Corporate Re-domiciliation",
-      "description": "Streamlined procedures to move company registration between Emirates or from offshore to onshore without losing legal personality."
+      "description": "Procedures exist to continue entities between jurisdictions; applicability depends on current regulations and authority consent."
     }
   ],
   "governance_and_compliance": {
@@ -42,7 +42,7 @@ export const corporateStructuringData = {
   },
   "restructuring_triggers": [
     "Preparing for a Merger, Acquisition (M&A), or IPO",
-    "Mitigating risks from upcoming 2026 Corporate Tax audits",
+    "Preparing for corporate tax reviews and audits",
     "Realigning business activities with 100% foreign ownership regulations",
     "Consolidating fragmented legacy structures into a unified group",
     "Addressing financial distress through debt-for-equity swaps"
@@ -58,7 +58,7 @@ export const corporateStructuringData = {
     },
     {
       "step": "Document Drafting",
-      "action": "Customizing the MOA to include 2026 governance protections and share classes."
+      "action": "Customizing corporate documents to reflect governance protections and share classes."
     },
     {
       "step": "Regulatory Execution",

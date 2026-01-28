@@ -12,8 +12,8 @@ export const rakezData = {
   benefits_and_incentives: {
     ownership_and_tax: [
       "100% foreign ownership",
-      "0% personal income tax",
-      "Exemption from all import and export duties"
+      "No personal income tax in the UAE",
+      "Customs duty exemptions may apply within the free zone for eligible transactions (imports into the UAE mainland are subject to customs rules)"
     ],
     unique_features: [
       "Specialized zones for Industrial, Academic, and Business",

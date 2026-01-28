@@ -5,24 +5,24 @@ export const ifzaData = {
     backgroundImage: '/images/hero/ifza.jpg'
   },
   ifza_overview: {
-    description: "International Free Zone Authority (IFZA) in partnership with Dubai Silicon Oasis Authority (DSOA) offers highly competitive business setup packages in Dubai. It provides flexibility and a wide range of business activities.",
+    description: "International Free Zone Authority (IFZA), in partnership with Dubai Silicon Oasis Authority (DSOA), offers flexible incorporation frameworks and a broad range of business activities under established regulatory procedures.",
     key_features: [
-      "Cost Effective: Competitive pricing for Dubai license",
-      "Wide Activities: Combine professional, commercial and industrial activities",
-      "No Physical Presence: Setup remotely without visiting UAE",
-      "Bank Account: Easy bank account opening assistance"
+      "Flexible activity combinations across professional, commercial and selected industrial categories",
+      "Remote processing options (subject to authority requirements)",
+      "Bank account support with standard KYC/AML procedures"
     ]
   },
   benefits_and_incentives: {
     ownership_and_tax: [
       "100% foreign ownership",
-      "0% corporate and personal tax",
-      "No paid-up share capital requirement"
+      "No personal income tax in the UAE",
+      "Corporate tax treatment in accordance with UAE corporate tax law (free zone qualifying income may benefit from 0% if conditions are met)",
+      "Paid‑up share capital policy based on activity and authority rules"
     ],
     operational_benefits: [
-      "Fast and easy incorporation",
-      "No physical office required",
-      "Wide range of business activities"
+      "Streamlined incorporation processes",
+      "Facility options including flexi‑desk and serviced offices (minimum facility requirements apply)",
+      "Wide range of business activities (subject to approval)"
     ]
   },
   cost: {
@@ -30,13 +30,13 @@ export const ifzaData = {
     packages: [
       {
         name: 'Zero Visa Package',
-        price: 'Starting from AED 12,900',
-        features: ['Professional/Commercial', 'No Visa', 'Virtual Office']
+        price: 'Fees vary by activity and package',
+        features: ['Professional/Commercial', 'No Visa Allocation', 'Virtual/Desk Facility']
       },
       {
         name: '1 Visa Package',
-        price: 'Starting from AED 14,900',
-        features: ['Professional/Commercial', '1 Visa Allocation', 'Virtual Office']
+        price: 'Fees vary by activity and package',
+        features: ['Professional/Commercial', '1 Visa Allocation', 'Facility Requirement']
       }
     ]
   },
@@ -46,14 +46,14 @@ export const ifzaData = {
     "Services"
   ],
   whyChooseUs: {
-    title: 'Why Choose JOAB SOLUTIONS for IFZA?',
-    description: 'As an authorized partner, JOAB SOLUTIONS ensures the fastest route to your IFZA license.',
+    title: 'Our Role',
+    description: 'Application management, documentation, and regulatory coordination for IFZA licenses in line with authority policies.',
     image: '/images/services/why-smartzone.jpg',
-    features: ['Authorized Partner', 'Lowest Prices', 'Instant Approval', 'Residency Visa Support']
+    features: ['Regulatory Guidance', 'Process Management', 'Banking Coordination', 'Visa Facilitation (subject to eligibility)']
   },
   seo: {
     title: 'IFZA Dubai Company Setup | JOAB SOLUTIONS',
-    description: 'Get your IFZA Dubai license with JOAB SOLUTIONS. Cheapest Free Zone in Dubai.',
+    description: 'Company setup advisory for IFZA in partnership with DSOA. Services focused on compliance and authority‑aligned processes.',
     keywords: ['IFZA', 'Dubai Silicon Oasis', 'Cheap Free Zone Dubai', 'Business Setup']
   }
 }

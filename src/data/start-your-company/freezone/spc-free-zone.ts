@@ -26,12 +26,12 @@ export const spcFreeZoneData = {
     packages: [
       {
         name: 'Publishing Package',
-        price: 'Starting from AED 6,000',
+        price: 'Fees vary by package',
         features: ['Publishing Activities', 'Shared Office', '0 Visa']
       },
       {
         name: 'General Package',
-        price: 'Starting from AED 9,000',
+        price: 'Fees vary by package',
         features: ['Trading/Consultancy', '1 Visa Allocation', 'Co-working Space']
       }
     ]

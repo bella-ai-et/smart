@@ -1,27 +1,27 @@
 export const dmccData = {
   dmcc_free_zone_overview: {
     established: 2002,
-    description: "The world's premier free zone and a global hub for trade in commodities like gold, diamonds, and tea, located in the Jumeirah Lakes Towers (JLT) district.",
-    infrastructure: "Home to over 25,000 companies across 180+ countries, featuring Grade A office solutions in 87 towers including Almas Tower and Uptown Tower.",
-    accolades: "Awarded 'Global Free Zone of the Year' by the Financial Times fDi Magazine for nine consecutive years."
+    description: "A leading Dubai free zone located in Jumeirah Lakes Towers (JLT), supporting commodities and diversified industries under clear regulatory frameworks.",
+    infrastructure: "Grade‑A office options across multiple towers, anchored by Almas Tower and Uptown Tower, with established business support services.",
+    accolades: "Recognized internationally for free zone performance by reputable institutions."
   },
   benefits_and_incentives: {
     ownership_and_tax: [
-      "100% foreign business ownership",
-      "0% personal income tax guaranteed for 50 years",
-      "0% corporate tax on qualifying income",
-      "100% capital and profit repatriation"
+      "100% foreign ownership",
+      "No personal income tax in the UAE",
+      "Potential 0% corporate tax on qualifying income for qualifying free zone persons (subject to UAE corporate tax law)",
+      "Full repatriation of capital and profits"
     ],
     operational_flexibility: [
-      "100% digital company setup process",
-      "Dual licensing options to expand into Dubai Mainland",
-      "Multi-year licensing options (1, 2, 3, or 5 years)",
-      "Flexi-desk and co-working solutions starting from 20-30 sq. m."
+      "Digital company setup processes",
+      "Dual licensing options to conduct permitted activities in Dubai Mainland (subject to approvals)",
+      "Multi‑year licensing options (1–5 years)",
+      "Flexi‑desk and co‑working solutions (minimum facility requirements apply)"
     ],
     strategic_advantages: [
-      "Central location with access to two international airports and Jebel Ali Port",
-      "Dedicated industry ecosystems for Crypto, AI, and Gaming",
-      "Vibrant community with over 100,000 residents and workers"
+      "Central location with access to airports and Jebel Ali Port",
+      "Industry ecosystems for emerging sectors",
+      "Established community and business services"
     ]
   },
   business_license_types: [
@@ -33,41 +33,41 @@ export const dmccData = {
     "Crypto / Blockchain / Web3"
   ],
   financial_requirements_2026: {
-    minimum_share_capital: "AED 50,000 per company (AED 1,000,000 for General Trading)",
+    minimum_share_capital: "Typical minimum share capital requirements apply; higher capital may be required for General Trading.",
     initial_setup_costs: {
-      application_fee: "AED 1,035",
-      registration_fee: "AED 9,020",
-      license_fee_range: "AED 7,500 to AED 35,000 per year"
+      application_fee: "As per current DMCC fee schedule",
+      registration_fee: "As per current DMCC fee schedule",
+      license_fee_range: "Varies by activity and package"
     },
     ongoing_compliance: [
       "Mandatory annual license renewal",
-      "Independent statutory annual audit required from second year onwards",
-      "Mandatory physical office presence (minimum Flexi-desk)"
+      "Independent statutory annual audit (as required by policy and activity)",
+      "Facility requirement (minimum flexi‑desk or office) subject to authority rules"
     ]
   },
   setup_timeline: {
-    total_duration: "Typically 10–15 working days",
+    total_duration: "Typical processing within several working days, subject to approvals",
     phases: [
-      "Activity Selection & Name Reservation: 1-3 days",
-      "Initial Approval & Compliance Check: 7-10 days",
-      "Document Signing & Office Leasing: 5-7 days",
-      "License Issuance & Bank Letter: 5 days"
+      "Activity selection and name reservation",
+      "Initial approval and compliance checks",
+      "Document execution and facility arrangements",
+      "License issuance and banking letters"
     ]
   },
   hero: {
     title: 'DMCC Company Setup',
-    subtitle: "World's #1 Free Zone",
+    subtitle: "Dubai Multi Commodities Centre (DMCC)",
     backgroundImage: '/images/hero/dmcc.jpg'
   },
   seo: {
     title: 'DMCC Company Setup | JOAB SOLUTIONS',
-    description: 'Start your business in DMCC with JOAB SOLUTIONS. The world\'s best free zone for commodities and trade.',
+    description: 'Company formation and regulatory support in DMCC. Advisory services aligned with current UAE regulations and authority guidelines.',
     keywords: ['DMCC', 'Dubai Free Zone', 'Company Setup Dubai', 'JLT Business']
   },
   whyChooseUs: {
-    title: 'Why Choose JOAB SOLUTIONS for DMCC?',
-    description: 'JOAB SOLUTIONS provides expert guidance for setting up in DMCC, ensuring compliance and speed.',
+    title: 'Our Role',
+    description: 'Assistance with application preparation, authority liaison, compliance reviews, and banking introductions in accordance with DMCC policies.',
     image: '/images/services/why-smartzone-dmcc.jpg',
-    features: ['Expert Consultants', 'Fast Track Process', 'Bank Account Assistance', 'Visa Processing']
+    features: ['Regulatory Guidance', 'Document Management', 'Banking Coordination', 'Visa Facilitation (subject to eligibility)']
   }
 }

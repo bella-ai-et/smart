@@ -11,13 +11,14 @@ export const shamsData = {
   benefits_and_incentives: {
     ownership_and_tax: [
       "100% foreign ownership",
-      "0% personal and corporate income tax",
-      "100% repatriation of profits"
+      "No personal income tax in the UAE",
+      "Corporate tax treatment in accordance with UAE corporate tax law (free zone qualifying income may benefit from 0% if conditions are met)",
+      "Full repatriation of profits"
     ],
     visa_advantages: [
       "Allocation of up to 6 visas on a shared desk facility",
-      "No age limit for investor visa applicants",
-      "No NOC required from current sponsors"
+      "Visa allocation policies depend on facility and authority rules",
+      "Sponsor/NOC requirements depend on applicant status"
     ]
   },
   business_license_types: [

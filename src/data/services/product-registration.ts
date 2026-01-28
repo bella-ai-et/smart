@@ -1,8 +1,8 @@
 export const productRegistrationData = {
   "product_registration_overview": { 
     "title": "Product Registration & Compliance", 
-    "description": "Securing mandatory government approvals for goods sold in the UAE. We manage the technical evaluation, laboratory testing, and label assessment to ensure your products meet Dubai Municipality, MoIAT, and MoHAP standards.", 
-    "market_access_2026": "Mandatory for all consumer goods (imported or locally made) before they can be cleared by Customs or listed on e-commerce platforms like Amazon and Noon." 
+    "description": "Support for obtaining regulatory approvals required for goods sold in the UAE. We manage classification, dossier preparation, laboratory testing coordination, and label assessment to meet Dubai Municipality, MoIAT, and MoHAP standards.", 
+    "market_access_2026": "Approvals are mandatory for in‑scope consumer goods prior to customs clearance or listing with major retailers and platforms, subject to authority rules." 
   }, 
   "regulatory_authorities_2026": [ 
     { 
@@ -41,21 +41,21 @@ export const productRegistrationData = {
   "registration_pathways": [ 
     { 
       "path": "Montaji (Dubai Municipality)", 
-      "timeline": "5–10 working days", 
-      "validity": "5 years", 
-      "fee_estimate": "AED 110 - 240 (per variant)" 
+      "timeline": "Timelines vary by product category and dossier completeness", 
+      "validity": "Validity periods as per current Dubai Municipality policy", 
+      "fee_estimate": "Fees per current schedule (varies by product and category)" 
     }, 
     { 
       "path": "ECAS Certification (MoIAT)", 
-      "timeline": "15–20 working days", 
-      "validity": "1 year (Renewable)", 
-      "fee_estimate": "Starting from AED 3,700" 
+      "timeline": "Timelines vary by product and conformity assessment requirements", 
+      "validity": "Validity per current MoIAT rules", 
+      "fee_estimate": "Fees per current schedule" 
     }, 
     { 
       "path": "Medical Device Registration (MoHAP)", 
-      "timeline": "2–4 months", 
-      "validity": "5 years", 
-      "fee_estimate": "Application AED 100 + Registration AED 5,000" 
+      "timeline": "Timelines vary based on device class and dossier review", 
+      "validity": "Validity per current MoHAP rules", 
+      "fee_estimate": "Fees per current schedule" 
     } 
   ], 
   "our_compliance_process": [ 

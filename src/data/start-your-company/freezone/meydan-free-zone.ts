@@ -26,7 +26,7 @@ export const meydanFreeZoneData = {
     packages: [
       {
         name: 'License Only',
-        price: 'Starting from AED 12,500',
+        price: 'Fees vary by activity and package',
         features: ['MoFA Recognized', '3 Business Activities', 'Lease Agreement']
       }
     ]

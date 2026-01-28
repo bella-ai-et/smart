@@ -1,15 +1,15 @@
 export const ajmanOffshoreData = {
   hero: {
     title: 'Ajman Offshore Company Setup',
-    subtitle: 'Asset Protection and Confidentiality',
+    subtitle: 'International Business Company (IBC)',
     backgroundImage: '/images/hero/ajman-offshore.jpg'
   },
   ajman_offshore_overview: {
     entity: "Ajman Offshore (International Business Company - IBC)",
     authority: "Ajman Free Zone Authority (AFZA)",
-    description: "A tax-neutral, non-resident company structure designed for international operations, asset holding, and global investment.",
-    visa_eligibility: "None. Offshore companies do not grant residence visas to directors or shareholders.",
-    operational_limit: "Cannot conduct business inside the UAE; restricted to international trade and holding activities."
+    description: "A non‑resident corporate structure intended for international operations, asset holding, and investment under AFZA rules.",
+    visa_eligibility: "Offshore companies do not grant UAE residence visas.",
+    operational_limit: "Cannot conduct business inside the UAE; activities are limited to international trade and holding functions."
   },
   benefits_and_incentives: {
     privacy_and_confidentiality: [
@@ -17,15 +17,15 @@ export const ajmanOffshoreData = {
       "Highly secure asset protection environment"
     ],
     financial_efficiency: [
-      "0% corporate tax on non-UAE income",
+      "Tax‑neutral on non‑UAE income (subject to applicable law)",
       "100% foreign ownership",
-      "No mandatory annual audit or financial filing",
+      "Audit and filing requirements depend on registrar policy and banking arrangements",
       "No paid-up share capital required"
     ],
     setup_convenience: [
-      "100% remote registration (no need to visit the UAE for setup)",
+      "Remote registration via registered agents",
       "The office address is that of the 'Registered Agent' (no office lease needed)",
-      "Fast-track incorporation (typically 1–3 business days)"
+      "Incorporation timelines depend on documentation and approvals"
     ]
   },
   permissible_business_activities: [
@@ -38,34 +38,34 @@ export const ajmanOffshoreData = {
   ],
   estimated_setup_costs_2026: {
     title: "Ajman Offshore Setup Costs",
-    initial_setup_package: "Approx. AED 7,000 – 11,500 (includes government fees and agent services)",
-    annual_renewal_fee: "Approx. AED 5,000 – 7,500",
+    initial_setup_package: "Government and agent fees apply; amounts vary by provider and package",
+    annual_renewal_fee: "Annual renewal fees vary by agent and registrar requirements",
     mandatory_requirements: {
-      registered_agent_fee: "AED 3,000 – 5,000 (included in most setup packages)",
-      registered_address: "Included as part of the agent's service"
+      registered_agent_fee: "Registered agent fees are set by providers",
+      registered_address: "Registered agent address is provided per package"
     },
-    banking_assistance: "AED 1,000 – 2,500 (Optional but recommended for offshore entities)"
+    banking_assistance: "Banking support subject to institution requirements; fees vary"
   },
   legal_structure_requirements: {
-    directors: "Minimum 1–2 directors required (varies by agent policy; corporate directors not permitted)",
-    shareholders: "Minimum 1 shareholder (Corporate shareholders are accepted)",
+    directors: "Director requirements per registrar rules (agent policies may vary)",
+    shareholders: "Shareholder requirements per registrar rules (corporate shareholders may be accepted)",
     secretary: "Mandatory (can be the same person as the director)",
     suffix: "Company name must end in 'Limited' or 'LTD'"
   },
   whyChooseUs: {
-    title: "Why Choose JOAB SOLUTIONS?",
-    description: "As a registered agent, we handle the entire Ajman Offshore incorporation process for you, ensuring compliance and speed.",
+    title: "Our Role",
+    description: "Coordination with registered agents, documentation management, and compliance advisory for Ajman Offshore incorporations.",
     image: "/images/services/why-smartzone.jpg",
     features: [
-      "Registered Agent",
-      "Fast Incorporation",
-      "Bank Account Support",
+      "Registered Agent Liaison",
+      "Process Management",
+      "Bank Account Coordination",
       "Document Attestation"
     ]
   },
   seo: {
     title: "Ajman Offshore Company Setup | JOAB SOLUTIONS",
-    description: "Incorporate your Ajman Offshore company for asset protection and tax efficiency. 100% remote setup.",
+    description: "Offshore company setup advisory for Ajman Offshore under AFZA. Content aligned with current UAE regulations.",
     keywords: ["Ajman Offshore", "Offshore Company UAE", "Asset Protection", "Ajman Free Zone Authority"]
   }
 }

@@ -14,12 +14,12 @@ export const creativeCityFujairahData = {
     packages: [
       {
         name: 'Freelancer',
-        price: 'Starting from AED 11,000',
+        price: 'Fees vary by package',
         features: ['No Capital Required', '0 Visa Allocation', 'Media Activities']
       },
       {
         name: 'Commercial',
-        price: 'Starting from AED 15,000',
+        price: 'Fees vary by package',
         features: ['Up to 3 Visas', 'Flexi Desk', 'Multiple Activities']
       }
     ]

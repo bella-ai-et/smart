@@ -1,8 +1,8 @@
 export const bankAccountOpeningData = {
   "bank_account_opening_overview": {
     "title": "Corporate Bank Account Opening Assistance",
-    "description": "Navigating the UAE's stringent KYC and AML regulations to secure reliable banking for your business. We provide end-to-end support for Mainland, Free Zone, and Offshore entities.",
-    "success_rate_2026": "95% approval rate through pre-screening and direct relationship manager access."
+    "description": "Support for corporate account opening in line with UAE KYC/AML regulations. Assistance extends to Mainland, Free Zone, and Offshore entities, subject to bank policies and risk assessments.",
+    "success_rate_2026": "Outcomes depend on bank due diligence, activity type, and business substance."
   },
   "banking_options_2026": [
     {
@@ -47,11 +47,11 @@ export const bankAccountOpeningData = {
   "our_assistance_process": [
     {
       "step": "Pre-Compliance Review",
-      "action": "We screen your profile against bank-specific risk appetite to avoid immediate rejection."
+      "action": "Screening the profile against bank risk appetite to identify documentation gaps."
     },
     {
       "step": "Bank Selection",
-      "action": "Matching your business activity with the right banking partner based on transaction volume and fees."
+      "action": "Matching activity, transaction volume, and fees with appropriate banking partners."
     },
     {
       "step": "Document Attestation",
@@ -59,7 +59,7 @@ export const bankAccountOpeningData = {
     },
     {
       "step": "Interview Coordination",
-      "action": "Scheduling and preparing you for the face-to-face meeting with the bank's relationship manager."
+      "action": "Scheduling and preparation for meetings with bank relationship managers."
     }
   ],
   "common_challenges_solved": [

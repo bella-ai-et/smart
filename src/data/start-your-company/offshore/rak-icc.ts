@@ -7,10 +7,10 @@ export const rakIccOffshoreData = {
   rak_icc_offshore_overview: {
     entity: "RAK International Corporate Centre (RAK ICC)",
     jurisdiction: "Offshore (International Business Company)",
-    description: "A world-class, premium offshore registry providing flexible and modern corporate structures for global investment and asset protection.",
-    visa_eligibility: "None. This is a non-resident entity and does not grant UAE residency.",
-    key_advantage: "Common Law regulations with access to DIFC and ADGM courts for dispute resolution, providing high legal certainty.",
-    real_estate_benefit: "One of the few offshore structures permitted to own freehold property in both Dubai and Ras Al Khaimah (via a Memorandum of Understanding with the Land Departments)."
+    description: "A recognized offshore registry offering modern corporate structures for international holding, investment, and asset protection.",
+    visa_eligibility: "Offshore entities do not grant UAE residency.",
+    key_advantage: "Access to common law frameworks (DIFC/ADGM) in certain circumstances.",
+    real_estate_benefit: "Property ownership rules are subject to Land Department policies; certain holdings may be permitted."
   },
   benefits_and_incentives: {
     privacy_and_security: [
@@ -19,14 +19,14 @@ export const rakIccOffshoreData = {
       "Protection against foreign expropriation or creditor claims"
     ],
     financial_features: [
-      "0% corporate and personal income tax",
+      "Tax‑neutral on non‑UAE income (subject to applicable law)",
       "100% foreign ownership and profit repatriation",
       "No minimum paid-up share capital requirement",
       "Ability to issue different classes of shares (e.g., voting vs. non-voting)"
     ],
     operational_simplicity: [
       "No requirement for a physical office (Registered Agent's address used)",
-      "No mandatory annual audit or financial filing required by the registrar",
+      "Audit and filing requirements depend on current registrar policy and banking needs",
       "Transfer of Domicile: Allows companies to 'migrate' from other offshore zones (like BVI or Cayman) to RAK ICC"
     ]
   },
@@ -39,28 +39,28 @@ export const rakIccOffshoreData = {
   ],
   estimated_setup_costs_2026: {
     title: 'RAK ICC Costs (2026)',
-    standard_setup_package: "Approx. AED 7,500 – 12,000 (includes registration and agent fees)",
-    annual_renewal_fees: "Approx. AED 5,000 – 7,500 (inclusive of agent and address fees)",
+    standard_setup_package: "Government and agent fees apply; amounts vary by provider and package",
+    annual_renewal_fees: "Annual renewal fees vary by agent and registrar requirements",
     additional_legal_costs: {
-      certificate_of_good_standing: "Approx. AED 1,000 – 1,500",
-      notarization_and_attestation: "Varies by country; AED 400 – 1,000 locally",
-      agent_service_fee: "AED 1,500 – 3,000 (included in renewal)"
+      certificate_of_good_standing: "Available upon request; fee per current schedule",
+      notarization_and_attestation: "Varies by jurisdiction",
+      agent_service_fee: "Agent service fees vary; typically included in renewal packages"
     }
   },
   incorporation_timeline: {
     name_approval: "Under 24 hours",
-    registration_process: "Typically 2–5 working days after document submission",
-    full_dossier_issuance: "Within 1 week"
+    registration_process: "Processing usually completed within several working days after document submission",
+    full_dossier_issuance: "Issuance timelines depend on completeness and approvals"
   },
   whyChooseUs: {
-    title: 'Why Choose JOAB SOLUTIONS?',
-    description: 'We are a leading registered agent for RAK ICC, ensuring compliance and smooth operations.',
+    title: 'Our Role',
+    description: 'Coordination with registered agents, documentation management, and compliance advisory for RAK ICC incorporations.',
     image: '/images/services/why-smartzone.jpg',
-    features: ['Top Agent', 'Compliance Experts', 'Banking Partners', 'Legal Support']
+    features: ['Agent Liaison', 'Compliance Review', 'Banking Coordination', 'Legal Support']
   },
   seo: {
     title: 'RAK ICC Offshore Company Setup | JOAB SOLUTIONS',
-    description: 'Setup your RAK ICC Offshore company. Global recognition and property ownership rights.',
+    description: 'Offshore company setup advisory for RAK ICC. Content subject to registrar and Land Department policies.',
     keywords: ['RAK ICC', 'RAK Offshore', 'Offshore Business Setup', 'Dubai Property Holding']
   }
 }

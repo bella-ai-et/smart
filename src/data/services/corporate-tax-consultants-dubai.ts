@@ -1,9 +1,9 @@
 export const corporateTaxData = {
   "corporate_tax_overview": {
     "title": "UAE Corporate Tax Compliance",
-    "description": "Comprehensive tax management services to navigate the UAE's federal corporate tax regime. We assist in registration, taxable income calculation, and filing to ensure total alignment with Federal Decree-Law No. 47 of 2022.",
-    "standard_rate": "9% on taxable income exceeding AED 375,000.",
-    "effective_date": "Mandatory for all financial years starting on or after June 1, 2023."
+    "description": "Compliance advisory for the UAE federal corporate tax regime. We support registration, determination of taxable income, return filing, and governance in line with Federal Decree‑Law No. 47 of 2022 and related decisions.",
+    "standard_rate": "9% on taxable income exceeding AED 375,000 (subject to current law and decisions).",
+    "effective_date": "Applies to financial years starting on or after 1 June 2023."
   },
   "tax_slabs_2026": [
     {
@@ -19,18 +19,23 @@ export const corporateTaxData = {
     {
       "slab": "Large Multinationals (Revenue > €750m)",
       "rate": "15% (DMTT)",
-      "applicability": "Domestic Minimum Top-up Tax in line with OECD Pillar Two Pillar Two rules."
+      "applicability": "Domestic Minimum Top‑up Tax aligned with OECD Pillar Two rules (scope defined by ministerial decisions)."
     }
   ],
   "small_business_relief_sbr": {
     "threshold": "Annual Revenue ≤ AED 3 million",
     "validity": "Available for tax periods ending on or before December 31, 2026.",
-    "benefit": "Eligible businesses can elect to be treated as having 'No Taxable Income' for the period, effectively paying 0% tax regardless of profit levels.",
+    "benefit": "Eligible persons may elect SBR treatment, resulting in ‘no taxable income’ for the period.",
     "limitations": "Cannot carry forward tax losses or net interest expenditure if SBR is elected."
   },
+  "free_zone_regime": {
+    "qualifying_person": "Free zone entities may benefit from 0% on qualifying income if they meet the conditions to be a Qualifying Free Zone Person.",
+    "non_qualifying": "Non‑qualifying income is generally subject to the standard 9% rate.",
+    "disclaimer": "Eligibility depends on activity, substance, and compliance with detailed ministerial decisions."
+  },
   "key_compliance_deadlines": {
-    "registration": "New businesses must register within 3 months of incorporation; existing businesses must follow the FTA's staggered registration timetable.",
-    "filing_and_payment": "Tax returns and payments must be submitted within 9 months from the end of the relevant tax period.",
+    "registration": "Register as per FTA timelines (new entities typically within prescribed months of incorporation; existing entities per published schedules).",
+    "filing_and_payment": "File and pay within 9 months from the end of the tax period, unless otherwise specified.",
     "example": "For a financial year ending Dec 31, 2025, the filing deadline is September 30, 2026."
   },
   "exempt_income_and_entities": {
@@ -55,8 +60,8 @@ export const corporateTaxData = {
     "Annual Tax Return Preparation and Submission"
   ],
   "penalties_for_non_compliance": {
-    "late_registration": "AED 10,000 fixed penalty.",
-    "late_filing": "AED 500 per month for the first 12 months, increasing to AED 1,000 thereafter.",
-    "incorrect_records": "AED 10,000 for first violation; AED 50,000 for repeated violations."
+    "late_registration": "Late registration and late filing attract administrative penalties under current decisions.",
+    "late_filing": "Submit returns and payments on time to avoid penalties.",
+    "incorrect_records": "Maintain accurate records and disclosures; penalties vary by violation and are subject to FTA schedules."
   }
 }

@@ -17,8 +17,9 @@ export const srtipData = {
     ],
     operational_benefits: [
       "100% foreign ownership",
-      "No corporate or personal income tax",
-      "Fast and easy business setup"
+      "No personal income tax in the UAE",
+      "Corporate tax treatment in accordance with UAE corporate tax law (free zone qualifying income may benefit from 0% if conditions are met)",
+      "Streamlined business setup processes"
     ]
   },
   cost: {

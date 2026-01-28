@@ -1,22 +1,22 @@
 export const dubaiMainlandData = {
   hero: {
     title: 'Dubai Mainland Company Setup',
-    subtitle: 'Unlimited Business Opportunities',
+    subtitle: 'Operate across the UAE under DET oversight',
     backgroundImage: '/images/hero/dubai-mainland.jpg'
   },
   dubai_mainland_overview: {
     entity: "Department of Economy and Tourism (DET)",
-    description: "Versatile business environment allowing companies to trade across all seven Emirates and globally."
+    description: "Regulated environment permitting companies to operate across the UAE and internationally, subject to activity approvals and licensing conditions."
   },
   benefits_and_incentives: {
     ownership_and_tax: [
-      "100% foreign ownership for over 1,000 activities",
-      "Standard 9% corporate tax on profits over AED 375,000",
-      "Unlimited visa quotas (linked to office size)"
+      "100% foreign ownership permitted for most activities (subject to the negative list and specific approvals)",
+      "Corporate tax treatment as per Federal Decree‑Law No. 47 of 2022 (standard 9% on taxable income above AED 375,000)",
+      "Visa quotas determined by approved facility size and Ministry policies"
     ],
     setup_efficiency: [
-      "Dubai Instant License: Zero office requirement for first 12 months",
-      "Invest in Dubai (IID) unified digital platform"
+      "Instant License options available for eligible activities (conditions apply)",
+      "Invest in Dubai (IID) unified digital platform for applications and payments"
     ]
   },
   cost: {
@@ -24,13 +24,13 @@ export const dubaiMainlandData = {
     packages: [
       {
         name: 'Professional License',
-        price: 'Starting from AED 12,000',
-        features: ['100% Foreign Ownership', 'Virtual Office', 'Service Activities']
+        price: 'Fees vary by activity and approvals',
+        features: ['Foreign Ownership (subject to activity)', 'Facility Requirement', 'Service Activities']
       },
       {
           name: 'Commercial License',
-          price: 'Starting from AED 15,000',
-          features: ['Trading Activities', 'Physical Office', 'Import/Export']
+          price: 'Fees vary by activity and approvals',
+          features: ['Trading Activities', 'Physical Office', 'Import/Export (Customs compliance required)']
       }
     ]
   },
@@ -40,14 +40,14 @@ export const dubaiMainlandData = {
     "Commercial"
   ],
   whyChooseUs: {
-    title: 'Why Choose JOAB SOLUTIONS?',
-    description: 'We guide you through the DED procedures to ensure a compliant and successful mainland setup.',
+    title: 'Our Role',
+    description: 'Guidance and coordination with DET on licensing, activity selection, facility compliance, and post‑licensing procedures.',
     image: '/images/services/why-smartzone.jpg',
-    features: ['DED Experts', 'Sponsorship Services', 'Office Solutions', 'PRO Services']
+    features: ['Regulatory Guidance', 'Sponsorship Arrangements (if applicable)', 'Office Solutions', 'PRO Services']
   },
   seo: {
     title: 'Dubai Mainland Company Setup | JOAB SOLUTIONS',
-    description: 'Setup your Dubai Mainland company with 100% ownership. Trade freely across UAE.',
+    description: 'Advisory for Dubai Mainland licensing under DET. Content subject to current UAE regulations and authority approvals.',
     keywords: ['Dubai Mainland', 'DED License', 'Business Setup Dubai', 'Mainland Company']
   }
 }

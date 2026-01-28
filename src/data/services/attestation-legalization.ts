@@ -1,8 +1,8 @@
 export const attestationLegalizationData = {
   "attestation_legalization_overview": { 
     "title": "Global Document Attestation & Legalization", 
-    "description": "Professional verification services to ensure your personal and commercial documents are legally recognized in the UAE. We manage the entire chain of authentication from the country of origin to the final UAE Ministry of Foreign Affairs (MOFA) stamp.", 
-    "major_2026_update": "As of January 2026, many UAE consulates abroad now issue a combined Electronic Legalization format, potentially removing the need for a separate MOFA stamp inside the UAE." 
+    "description": "Verification services to ensure personal and commercial documents are recognized for use in the UAE. We manage the chain of authentication from the country of origin through UAE Embassy/Consulate and the UAE Ministry of Foreign Affairs (MOFA), where applicable.", 
+    "major_2026_update": "Certain missions may implement electronic legalization formats. Applicability and local MOFA requirements vary case‑by‑case and are subject to current authority decisions." 
   }, 
   "standard_attestation_chain": [ 
     { 
@@ -23,23 +23,23 @@ export const attestationLegalizationData = {
     { 
       "step": 4, 
       "authority": "Ministry of Foreign Affairs (MOFA UAE)", 
-      "action": "Final verification and stamping inside the UAE (if not already covered by the new 2026 e-legalization)." 
+      "action": "Final verification and stamping inside the UAE, where required." 
     } 
   ], 
   "document_categories": { 
     "commercial_documents": { 
       "examples": ["Trade Licenses", "Memorandum of Association (MOA)", "Power of Attorney (POA)", "Board Resolutions", "Commercial Invoices"], 
-      "official_mofa_fee": "AED 2,000 per document", 
+      "official_mofa_fee": "MOFA fee per document as per current schedule", 
       "purpose": "Company formation, corporate bank account opening, and legal representation." 
     }, 
     "educational_documents": { 
       "examples": ["University Degrees", "Diplomas", "Transcripts", "School Transfer Certificates"], 
-      "official_mofa_fee": "AED 150 per document", 
+      "official_mofa_fee": "MOFA fee per document as per current schedule", 
       "purpose": "Employment visas, professional licensing (DHA/MOH), and university admissions." 
     }, 
     "personal_documents": { 
       "examples": ["Birth Certificates", "Marriage Certificates", "Police Clearance Certificates (PCC)", "Medical Reports"], 
-      "official_mofa_fee": "AED 150 per document", 
+      "official_mofa_fee": "MOFA fee per document as per current schedule", 
       "purpose": "Family sponsorship, residency visa processing, and legal status changes." 
     } 
   }, 
@@ -62,9 +62,9 @@ export const attestationLegalizationData = {
     } 
   ], 
   "common_fees_and_timelines": { 
-    "standard_timeline": "7–14 working days (depending on country of origin)", 
-    "express_timeline": "3–5 working days", 
-    "courier_fee": "Approx. AED 40 – 150 (domestic) / Varies (international)", 
-    "translation_fee": "Starting from AED 50 per page" 
+    "standard_timeline": "Processing timelines vary by country of origin and mission workload", 
+    "express_timeline": "Expedited services may be available subject to mission capacity", 
+    "courier_fee": "Courier fees vary by provider and destination", 
+    "translation_fee": "Translation fees depend on language pair and page count" 
   } 
 };
