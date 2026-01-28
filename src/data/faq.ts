@@ -2,7 +2,7 @@ import type { FAQ } from '@/types'
 
 export const faqCategories = [
   "General",
-  "Company Formation",
+  "Business Setup",
   "Visas & Residency",
   "Banking & VAT",
   "Office & Location"
@@ -13,7 +13,7 @@ export const faqs: FAQ[] = [
   {
     id: "general-1",
     question: "How long does it take to set up a company in UAE?",
-    answer: "Company formation in UAE typically takes 3-15 working days, depending on the jurisdiction and business activity. Mainland companies usually take 7-15 days, while free zone companies can be established in 3-7 days. The timeline varies based on documentation completeness and government processing times.",
+    answer: "Business setup in UAE typically takes 3-15 working days, depending on the jurisdiction and business activity. Mainland companies usually take 7-15 days, while free zone companies can be established in 3-7 days. The timeline varies based on documentation completeness and government processing times.",
     category: "General",
     order: 1,
     helpful: { yes: 42, no: 3 },
@@ -25,7 +25,7 @@ export const faqs: FAQ[] = [
   {
     id: "general-2",
     question: "What are the costs involved in company formation in UAE?",
-    answer: "Company formation costs in UAE vary by jurisdiction and business type. Basic packages start from AED 8,000 for free zone companies and AED 15,000 for mainland companies. These include registration fees, license fees, and basic documentation. Additional costs include visa fees, office space (if required), and miscellaneous government charges.",
+    answer: "Business setup costs in UAE vary by jurisdiction and business type. Basic packages start from AED 8,000 for free zone companies and AED 15,000 for mainland companies. These include registration fees, license fees, and basic documentation. Additional costs include visa fees, office space (if required), and miscellaneous government charges.",
     category: "General",
     order: 2,
     helpful: { yes: 38, no: 5 },
@@ -47,12 +47,12 @@ export const faqs: FAQ[] = [
     tags: ["remote", "international", "overseas", "virtual"]
   },
 
-  // Company Formation
+  // Business Setup
   {
     id: "company-formation-1",
     question: "What types of companies can be formed in UAE?",
     answer: "UAE offers various company structures: Mainland companies (limited liability, sole proprietorship, civil company), Free Zone companies (FZE, FZCO), and Offshore companies. Each has different benefits regarding ownership, taxation, and operational scope. We help you choose the right structure based on your business goals.",
-    category: "Company Formation",
+    category: "Business Setup",
     order: 4,
     helpful: { yes: 35, no: 1 },
     related: ["trade-license-1", "visa-processing-1"],
@@ -64,7 +64,7 @@ export const faqs: FAQ[] = [
     id: "company-formation-2",
     question: "Do I need a local sponsor to start a business?",
     answer: "Recent regulations allow 100% foreign ownership for most mainland commercial and industrial activities. However, some specific professional activities may still require a local service agent (LSA). Free zone companies have always allowed 100% foreign ownership.",
-    category: "Company Formation",
+    category: "Business Setup",
     order: 5,
     helpful: { yes: 45, no: 2 },
     lastUpdated: "2024-02-02",

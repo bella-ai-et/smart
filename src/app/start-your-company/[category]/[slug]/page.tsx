@@ -37,9 +37,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // Handle Ajman Free Zone with dedicated data
   if (slug === 'ajman-free-zone' && category === 'free-zone') {
     return {
-      title: 'Ajman Free Zone Company Setup | Smart Zone',
+      title: 'Ajman Free Zone Company Setup | JOAB SOLUTIONS',
       description: `Established in ${ajmanFreeZoneData.ajman_free_zone_overview.established}, Ajman Free Zone offers ${ajmanFreeZoneData.ajman_free_zone_overview.key_value_proposition}`,
-      keywords: ['Ajman Free Zone', 'Company Setup Ajman', 'UAE Free Zone', 'Business Setup', 'Smart Zone'],
+      keywords: ['Ajman Free Zone', 'Company Setup Ajman', 'UAE Free Zone', 'Business Setup', 'JOAB SOLUTIONS'],
     }
   }
 
@@ -369,12 +369,12 @@ export default async function CompanySetupPage({ params }: PageProps) {
           </Grid>
         </Container>
 
-        {/* Why Choose SmartZone */}
+        {/* Why Choose JOAB SOLUTIONS */}
         <ContentWithImage
-          title={jafzaOffshoreData.whySmartZone.title}
-          description={jafzaOffshoreData.whySmartZone.description}
-          image={jafzaOffshoreData.whySmartZone.image}
-          features={jafzaOffshoreData.whySmartZone.features}
+          title={jafzaOffshoreData.whyChooseUs.title}
+          description={jafzaOffshoreData.whyChooseUs.description}
+          image={jafzaOffshoreData.whyChooseUs.image}
+          features={jafzaOffshoreData.whyChooseUs.features}
           reverse={true}
         />
 
@@ -478,12 +478,12 @@ export default async function CompanySetupPage({ params }: PageProps) {
           </Grid>
         </Container>
 
-        {/* Why Choose SmartZone */}
+        {/* Why Choose JOAB SOLUTIONS */}
         <ContentWithImage
-          title={rakIccOffshoreData.whySmartZone.title}
-          description={rakIccOffshoreData.whySmartZone.description}
-          image={rakIccOffshoreData.whySmartZone.image}
-          features={rakIccOffshoreData.whySmartZone.features}
+          title={rakIccOffshoreData.whyChooseUs.title}
+          description={rakIccOffshoreData.whyChooseUs.description}
+          image={rakIccOffshoreData.whyChooseUs.image}
+          features={rakIccOffshoreData.whyChooseUs.features}
           reverse={true}
         />
 
@@ -578,12 +578,12 @@ export default async function CompanySetupPage({ params }: PageProps) {
           </Grid>
         </Container>
 
-        {/* Why Choose SmartZone */}
+        {/* Why Choose JOAB SOLUTIONS */}
         <ContentWithImage
-          title={ajmanOffshoreData.whySmartZone.title}
-          description={ajmanOffshoreData.whySmartZone.description}
-          image={ajmanOffshoreData.whySmartZone.image}
-          features={ajmanOffshoreData.whySmartZone.features}
+          title={ajmanOffshoreData.whyChooseUs.title}
+          description={ajmanOffshoreData.whyChooseUs.description}
+          image={ajmanOffshoreData.whyChooseUs.image}
+          features={ajmanOffshoreData.whyChooseUs.features}
           reverse={true}
         />
 
@@ -675,17 +675,12 @@ export default async function CompanySetupPage({ params }: PageProps) {
           </Grid>
         </Container>
 
-        {/* Why Choose SmartZone */}
+        {/* Why Choose JOAB SOLUTIONS */}
         <ContentWithImage
-          title="Why Choose Smart Zone?"
-          description={`${ajmanFreeZoneData.service_provider_details.provider_name} is a ${ajmanFreeZoneData.service_provider_details.credentials.status} with ${ajmanFreeZoneData.service_provider_details.credentials.experience}, having incorporated ${ajmanFreeZoneData.service_provider_details.credentials.track_record} with a ${ajmanFreeZoneData.service_provider_details.credentials.retention_rate}. Our services include ${ajmanFreeZoneData.service_provider_details.services_offered[0]}, ${ajmanFreeZoneData.service_provider_details.services_offered[1]}, ${ajmanFreeZoneData.service_provider_details.services_offered[2]}, and ${ajmanFreeZoneData.service_provider_details.services_offered[3]}.`}
-          image="/images/services/why-smartzone.jpg"
-          features={[
-            ajmanFreeZoneData.service_provider_details.credentials.status,
-            ajmanFreeZoneData.service_provider_details.credentials.experience,
-            ajmanFreeZoneData.service_provider_details.credentials.track_record,
-            ajmanFreeZoneData.service_provider_details.credentials.retention_rate
-          ]}
+          title={ajmanFreeZoneData.whyChooseUs.title}
+          description={ajmanFreeZoneData.whyChooseUs.description}
+          image={ajmanFreeZoneData.whyChooseUs.image}
+          features={ajmanFreeZoneData.whyChooseUs.features}
           reverse={true}
         />
 
@@ -787,12 +782,12 @@ export default async function CompanySetupPage({ params }: PageProps) {
           </Grid>
         </Container>
 
-        {/* Why Choose SmartZone */}
+        {/* Why Choose JOAB SOLUTIONS */}
         <ContentWithImage
-          title={ifzaData.whySmartZone.title}
-          description={ifzaData.whySmartZone.description}
-          image={ifzaData.whySmartZone.image}
-          features={ifzaData.whySmartZone.features}
+          title={ifzaData.whyChooseUs.title}
+          description={ifzaData.whyChooseUs.description}
+          image={ifzaData.whyChooseUs.image}
+          features={ifzaData.whyChooseUs.features}
           reverse={true}
         />
 
@@ -929,12 +924,12 @@ export default async function CompanySetupPage({ params }: PageProps) {
           </Grid>
         </Container>
 
-        {/* Why Choose SmartZone */}
+        {/* Why Choose JOAB SOLUTIONS */}
         <ContentWithImage
-          title={dmccData.whySmartZone.title}
-          description={dmccData.whySmartZone.description}
-          image={dmccData.whySmartZone.image}
-          features={dmccData.whySmartZone.features}
+          title={dmccData.whyChooseUs.title}
+          description={dmccData.whyChooseUs.description}
+          image={dmccData.whyChooseUs.image}
+          features={dmccData.whyChooseUs.features}
           reverse={true}
         />
 
@@ -1038,12 +1033,12 @@ export default async function CompanySetupPage({ params }: PageProps) {
           </Grid>
         </Container>
 
-        {/* Why Choose SmartZone */}
+        {/* Why Choose JOAB SOLUTIONS */}
         <ContentWithImage
-          title={creativeCityFujairahData.whySmartZone.title}
-          description={creativeCityFujairahData.whySmartZone.description}
-          image={creativeCityFujairahData.whySmartZone.image}
-          features={creativeCityFujairahData.whySmartZone.features}
+          title={creativeCityFujairahData.whyChooseUs.title}
+          description={creativeCityFujairahData.whyChooseUs.description}
+          image={creativeCityFujairahData.whyChooseUs.image}
+          features={creativeCityFujairahData.whyChooseUs.features}
           reverse={true}
         />
 
@@ -1145,12 +1140,12 @@ export default async function CompanySetupPage({ params }: PageProps) {
           </Grid>
         </Container>
 
-        {/* Why Choose SmartZone */}
+        {/* Why Choose JOAB SOLUTIONS */}
         <ContentWithImage
-          title={meydanFreeZoneData.whySmartZone.title}
-          description={meydanFreeZoneData.whySmartZone.description}
-          image={meydanFreeZoneData.whySmartZone.image}
-          features={meydanFreeZoneData.whySmartZone.features}
+          title={meydanFreeZoneData.whyChooseUs.title}
+          description={meydanFreeZoneData.whyChooseUs.description}
+          image={meydanFreeZoneData.whyChooseUs.image}
+          features={meydanFreeZoneData.whyChooseUs.features}
           reverse={true}
         />
 
@@ -1252,12 +1247,12 @@ export default async function CompanySetupPage({ params }: PageProps) {
           </Grid>
         </Container>
 
-        {/* Why Choose SmartZone */}
+        {/* Why Choose JOAB SOLUTIONS */}
         <ContentWithImage
-          title={rakezData.whySmartZone.title}
-          description={rakezData.whySmartZone.description}
-          image={rakezData.whySmartZone.image}
-          features={rakezData.whySmartZone.features}
+          title={rakezData.whyChooseUs.title}
+          description={rakezData.whyChooseUs.description}
+          image={rakezData.whyChooseUs.image}
+          features={rakezData.whyChooseUs.features}
           reverse={true}
         />
 
@@ -1359,12 +1354,12 @@ export default async function CompanySetupPage({ params }: PageProps) {
           </Grid>
         </Container>
 
-        {/* Why Choose SmartZone */}
+        {/* Why Choose JOAB SOLUTIONS */}
         <ContentWithImage
-          title={shamsData.whySmartZone.title}
-          description={shamsData.whySmartZone.description}
-          image={shamsData.whySmartZone.image}
-          features={shamsData.whySmartZone.features}
+          title={shamsData.whyChooseUs.title}
+          description={shamsData.whyChooseUs.description}
+          image={shamsData.whyChooseUs.image}
+          features={shamsData.whyChooseUs.features}
           reverse={true}
         />
 
@@ -1446,12 +1441,12 @@ export default async function CompanySetupPage({ params }: PageProps) {
             </Container>
         </div>
 
-        {/* Why Choose SmartZone */}
+        {/* Why Choose JOAB SOLUTIONS */}
         <ContentWithImage
-          title={spcFreeZoneData.whySmartZone.title}
-          description={spcFreeZoneData.whySmartZone.description}
-          image={spcFreeZoneData.whySmartZone.image}
-          features={spcFreeZoneData.whySmartZone.features}
+          title={spcFreeZoneData.whyChooseUs.title}
+          description={spcFreeZoneData.whyChooseUs.description}
+          image={spcFreeZoneData.whyChooseUs.image}
+          features={spcFreeZoneData.whyChooseUs.features}
           reverse={true}
         />
 
@@ -1553,12 +1548,12 @@ export default async function CompanySetupPage({ params }: PageProps) {
           </Grid>
         </Container>
 
-        {/* Why Choose SmartZone */}
+        {/* Why Choose JOAB SOLUTIONS */}
         <ContentWithImage
-          title={srtipData.whySmartZone.title}
-          description={srtipData.whySmartZone.description}
-          image={srtipData.whySmartZone.image}
-          features={srtipData.whySmartZone.features}
+          title={srtipData.whyChooseUs.title}
+          description={srtipData.whyChooseUs.description}
+          image={srtipData.whyChooseUs.image}
+          features={srtipData.whyChooseUs.features}
           reverse={true}
         />
 
@@ -1634,12 +1629,12 @@ export default async function CompanySetupPage({ params }: PageProps) {
           </Grid>
         </Container>
 
-        {/* Why Choose SmartZone */}
+        {/* Why Choose JOAB SOLUTIONS */}
         <ContentWithImage
-          title={dubaiMainlandData.whySmartZone.title}
-          description={dubaiMainlandData.whySmartZone.description}
-          image={dubaiMainlandData.whySmartZone.image}
-          features={dubaiMainlandData.whySmartZone.features}
+          title={dubaiMainlandData.whyChooseUs.title}
+          description={dubaiMainlandData.whyChooseUs.description}
+          image={dubaiMainlandData.whyChooseUs.image}
+          features={dubaiMainlandData.whyChooseUs.features}
           reverse={true}
         />
 
@@ -1715,12 +1710,12 @@ export default async function CompanySetupPage({ params }: PageProps) {
           </Grid>
         </Container>
 
-        {/* Why Choose SmartZone */}
+        {/* Why Choose JOAB SOLUTIONS */}
         <ContentWithImage
-          title={abuDhabiMainlandData.whySmartZone.title}
-          description={abuDhabiMainlandData.whySmartZone.description}
-          image={abuDhabiMainlandData.whySmartZone.image}
-          features={abuDhabiMainlandData.whySmartZone.features}
+          title={abuDhabiMainlandData.whyChooseUs.title}
+          description={abuDhabiMainlandData.whyChooseUs.description}
+          image={abuDhabiMainlandData.whyChooseUs.image}
+          features={abuDhabiMainlandData.whyChooseUs.features}
           reverse={true}
         />
 
@@ -1807,12 +1802,12 @@ export default async function CompanySetupPage({ params }: PageProps) {
         </Grid>
       </Container>
 
-      {/* Why Choose SmartZone */}
+      {/* Why Choose JOAB SOLUTIONS */}
       <ContentWithImage
-        title={service.whySmartZone.title}
-        description={service.whySmartZone.description}
-        image={service.whySmartZone.image}
-        features={service.whySmartZone.features}
+        title={service.whyChooseUs.title}
+        description={service.whyChooseUs.description}
+        image={service.whyChooseUs.image}
+        features={service.whyChooseUs.features}
         reverse={true}
       />
 

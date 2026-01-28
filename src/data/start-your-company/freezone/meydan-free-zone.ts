@@ -37,14 +37,14 @@ export const meydanFreeZoneData = {
     "Media License",
     "E-Commerce License"
   ],
-  whySmartZone: {
-    title: 'Why Choose SmartZone?',
-    description: 'SmartZone helps you get your Meydan license quickly and efficiently.',
+  whyChooseUs: {
+    title: 'Why Choose JOAB SOLUTIONS?',
+    description: 'JOAB SOLUTIONS helps you get your Meydan license quickly and efficiently.',
     image: '/images/services/why-smartzone.jpg',
     features: ['Digital Process', 'Cost Savings', 'Visa Assistance', 'Corporate Banking']
   },
   seo: {
-    title: 'Meydan Free Zone Setup | SmartZone',
+    title: 'Meydan Free Zone Setup | JOAB SOLUTIONS',
     description: 'Setup your company in Meydan Free Zone. Premium Dubai address at low cost.',
     keywords: ['Meydan Free Zone', 'Dubai Free Zone', 'Business Setup Dubai']
   }

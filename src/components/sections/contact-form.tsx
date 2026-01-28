@@ -37,7 +37,7 @@ export default function ContactForm({ variant = 'default' }: ContactFormProps) {
                     Ready To Take The Next Step?
                   </Heading>
                   <Text className="mb-8 text-gray-600">
-                    Call 800 SZONE 79663 or fill out the form to schedule a FREE consultation with one of our UAE Business Setup Gurus!
+                    Call +971 58 836 4257 or fill out the form to schedule a FREE consultation with one of our UAE Business Setup Gurus!
                   </Text>
                 </>
              )}
@@ -101,7 +101,7 @@ export default function ContactForm({ variant = 'default' }: ContactFormProps) {
                   id="service" 
                   label="Service Required" 
                   options={[
-                    { label: 'Company Formation', value: 'company-formation' },
+                    { label: 'Business Setup', value: 'company-formation' },
                     { label: 'Visa Processing', value: 'visa-processing' },
                     { label: 'Trade License', value: 'trade-license' },
                     { label: 'PRO Services', value: 'pro-services' },
@@ -157,7 +157,7 @@ export default function ContactForm({ variant = 'default' }: ContactFormProps) {
                       <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
                     </svg>
                   </div>
-                  <Text className="font-medium">+971 58 541 7444</Text>
+                  <Text className="font-medium">+971 58 836 4257</Text>
                 </div>
                 
                 <div className="flex items-start">
@@ -167,7 +167,7 @@ export default function ContactForm({ variant = 'default' }: ContactFormProps) {
                       <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                     </svg>
                   </div>
-                  <Text className="font-medium">info@smartzone.ae</Text>
+                  <Text className="font-medium">info@joabsolutions.com</Text>
                 </div>
                 
                 <div className="flex items-start">
@@ -176,7 +176,7 @@ export default function ContactForm({ variant = 'default' }: ContactFormProps) {
                       <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"></path>
                     </svg>
                   </div>
-                  <Text className="font-medium">API Trio Office Tower, Office Suite 2701, Sheikh Zayed Road, Dubai, UAE, PO Box 49638</Text>
+                  <Text className="font-medium">AL GURG TOWER 3, Tayseer Business Center, P Floor, Office No. 60, Dubai, UAE</Text>
                 </div>
               </div>
               
@@ -186,7 +186,6 @@ export default function ContactForm({ variant = 'default' }: ContactFormProps) {
                 </Heading>
                 <Text className="mb-2">Monday to Friday - 9:00 AM to 6:00 PM</Text>
                 <Text className="mb-6">Saturday - 12:00 PM to 4:00 PM</Text>
-                <Text className="text-gray-500 text-sm">We are a subsidiary of S Z G Corporate Services L.L.C.</Text>
               </div>
               
               <div className="flex space-x-4">

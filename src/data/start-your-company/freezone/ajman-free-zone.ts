@@ -38,18 +38,23 @@ export const ajmanFreeZoneData = {
     "E-Commerce"
   ],
   "service_provider_details": {
-    "provider_name": "Smart Zone",
-    "credentials": {
-      "status": "Registered Agents of Government Authorities",
-      "experience": "15+ Years in Business",
-      "track_record": "35,000+ Companies incorporated",
-      "retention_rate": "92% Customer Retention Rate"
-    },
+    "provider_name": "JOAB SOLUTIONS",
     "services_offered": [
       "Dedicated Relationship Managers",
       "Extensive Support Services beyond Business Setup",
       "Annual Support Services Assistance",
       "VIP Services available"
+    ]
+  },
+  whyChooseUs: {
+    title: 'Why Choose JOAB SOLUTIONS?',
+    description: 'We provide expert guidance for your Ajman Free Zone setup with comprehensive support services.',
+    image: '/images/services/why-smartzone.jpg',
+    features: [
+      'Dedicated Relationship Managers',
+      'Extensive Support Services',
+      'Annual Support Assistance',
+      'VIP Services Available'
     ]
   }
 }

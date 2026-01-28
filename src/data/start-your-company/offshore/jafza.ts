@@ -60,14 +60,14 @@ export const jafzaOffshoreData = {
     physical_presence: "Not required. The company’s legal address is the office of the Registered Agent",
     shareholders: "Minimum 1 shareholder (Corporate shareholders allowed)"
   },
-  whySmartZone: {
-    title: 'Why Choose SmartZone?',
-    description: 'SmartZone facilitates your JAFZA Offshore setup, crucial for property investors in Dubai.',
+  whyChooseUs: {
+    title: 'Why Choose JOAB SOLUTIONS?',
+    description: 'JOAB SOLUTIONS facilitates your JAFZA Offshore setup, crucial for property investors in Dubai.',
     image: '/images/services/why-smartzone.jpg',
     features: ['Property Experts', 'JAFZA Registered', 'Seamless Process', 'Legal Advisory']
   },
   seo: {
-    title: 'JAFZA Offshore Company Setup | SmartZone',
+    title: 'JAFZA Offshore Company Setup | JOAB SOLUTIONS',
     description: 'Form a JAFZA Offshore company to own property in Dubai. The premium offshore choice.',
     keywords: ['JAFZA Offshore', 'Dubai Property Ownership', 'Jebel Ali Offshore', 'Offshore Company']
   }

@@ -36,15 +36,15 @@ export const spcFreeZoneData = {
       }
     ]
   },
-  whySmartZone: {
-    title: 'Why Choose SmartZone?',
-    description: 'SmartZone ensures you take advantage of SPC\'s lightning-fast setup process.',
+  whyChooseUs: {
+    title: 'Why Choose JOAB SOLUTIONS?',
+    description: 'JOAB SOLUTIONS ensures you take advantage of SPC\'s lightning-fast setup process.',
     image: '/images/services/why-smartzone.jpg',
     features: ['Speedy Service', 'Dual License Experts', 'Visa Support', 'Office Solutions']
   },
   seo: {
-    title: 'SPC Free Zone Setup | SmartZone',
-    description: 'Get your license in Sharjah Publishing City (SPC) in 45 minutes with SmartZone.',
+    title: 'SPC Free Zone Setup | JOAB SOLUTIONS',
+    description: 'Get your license in Sharjah Publishing City (SPC) in 45 minutes with JOAB SOLUTIONS.',
     keywords: ['SPC Free Zone', 'Sharjah Publishing City', 'Fastest Free Zone', 'UAE Business']
   }
 }

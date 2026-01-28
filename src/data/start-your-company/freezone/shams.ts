@@ -36,15 +36,15 @@ export const shamsData = {
       }
     ]
   },
-  whySmartZone: {
-    title: 'Why Choose SmartZone?',
+  whyChooseUs: {
+    title: 'Why Choose JOAB SOLUTIONS?',
     description: 'We help creative professionals set up in SHAMS with ease.',
     image: '/images/services/why-smartzone.jpg',
     features: ['Creative Focus', 'Budget Friendly', 'Fast Turnaround', 'Ongoing Support']
   },
   seo: {
-    title: 'SHAMS Free Zone Setup | SmartZone',
-    description: 'Setup your media company in Sharjah Media City (SHAMS) with SmartZone.',
+    title: 'SHAMS Free Zone Setup | JOAB SOLUTIONS',
+    description: 'Setup your media company in Sharjah Media City (SHAMS) with JOAB SOLUTIONS.',
     keywords: ['SHAMS', 'Sharjah Media City', 'Media License UAE', 'Freelance Visa']
   }
 }

@@ -60,13 +60,13 @@ export const dmccData = {
     backgroundImage: '/images/hero/dmcc.jpg'
   },
   seo: {
-    title: 'DMCC Company Setup | SmartZone',
-    description: 'Start your business in DMCC with SmartZone. The world\'s best free zone for commodities and trade.',
+    title: 'DMCC Company Setup | JOAB SOLUTIONS',
+    description: 'Start your business in DMCC with JOAB SOLUTIONS. The world\'s best free zone for commodities and trade.',
     keywords: ['DMCC', 'Dubai Free Zone', 'Company Setup Dubai', 'JLT Business']
   },
-  whySmartZone: {
-    title: 'Why Choose SmartZone for DMCC?',
-    description: 'SmartZone provides expert guidance for setting up in DMCC, ensuring compliance and speed.',
+  whyChooseUs: {
+    title: 'Why Choose JOAB SOLUTIONS for DMCC?',
+    description: 'JOAB SOLUTIONS provides expert guidance for setting up in DMCC, ensuring compliance and speed.',
     image: '/images/services/why-smartzone-dmcc.jpg',
     features: ['Expert Consultants', 'Fast Track Process', 'Bank Account Assistance', 'Visa Processing']
   }

@@ -6,7 +6,7 @@ export const testimonials: Testimonial[] = [
     name: "Ahmed Al-Mansouri",
     role: "Managing Director",
     company: "Al-Mansouri Trading LLC",
-    content: "The team made our company formation process incredibly smooth and efficient. What we expected to take weeks was completed in just 5 days. Their expertise in UAE business regulations and attention to documentation detail is exceptional.",
+    content: "The team made our business setup process incredibly smooth and efficient. What we expected to take weeks was completed in just 5 days. Their expertise in UAE business regulations and attention to documentation detail is exceptional.",
     rating: 5,
     avatar: {
       src: "/images/testimonials/ahmed.jpg",
@@ -15,7 +15,7 @@ export const testimonials: Testimonial[] = [
       height: 80
     },
     project: {
-      name: "Mainland Company Formation",
+      name: "Mainland Business Setup",
       href: "/portfolio/al-mansouri-formation",
       description: "Complete mainland company setup with commercial license"
     },
@@ -45,9 +45,9 @@ export const testimonials: Testimonial[] = [
       height: 80
     },
     project: {
-      name: "Free Zone Company Setup",
+      name: "Free Zone Business Setup",
       href: "/portfolio/gulf-tech-setup",
-      description: "Complete free zone company formation with multiple visas"
+      description: "Complete free zone business setup with multiple visas"
     },
     featured: true,
     verified: true,
@@ -126,7 +126,7 @@ export const testimonials: Testimonial[] = [
     name: "Khalid Abdullah",
     role: "Business Partner", 
     company: "Gulf Enterprises Partnership",
-    content: "Their comprehensive business setup services helped us establish our partnership in record time. From company formation to trade license and multiple employment visas, everything was handled professionally. They truly understand the UAE business landscape.",
+    content: "Their comprehensive business setup services helped us establish our partnership in record time. From business setup to trade license and multiple employment visas, everything was handled professionally. They truly understand the UAE business landscape.",
     rating: 5,
     avatar: {
       src: "/images/testimonials/khalid.jpg",
@@ -156,7 +156,7 @@ export const testimonials: Testimonial[] = [
     name: "James Mitchell",
     role: "Operations Manager",
     company: "Logistics Pro",
-    content: "The internal dashboard they developed has streamlined our operations significantly. What used to take hours now takes minutes. Their solution has improved our efficiency and reduced operational costs by 40%.",
+    content: "They handled our fleet registration and driver visas efficiently. Managing the paperwork for over 50 drivers used to be a nightmare, but their PRO team took care of everything seamlessly.",
     rating: 5,
     avatar: {
       src: "/images/testimonials/james.jpg",
@@ -165,8 +165,8 @@ export const testimonials: Testimonial[] = [
       height: 80
     },
     project: {
-      name: "Logistics Pro Dashboard",
-      href: "/portfolio/logistics-dashboard"
+      name: "Logistics Licensing & Visas",
+      href: "/portfolio/logistics-pro-setup"
     },
     featured: false
   },
@@ -175,7 +175,7 @@ export const testimonials: Testimonial[] = [
     name: "Amanda Foster",
     role: "Executive Director",
     company: "NonProfit Foundation",
-    content: "As a nonprofit, we needed a website that could effectively communicate our mission and drive donations. They delivered a beautiful, functional website that helped us exceed our fundraising goals by 150% in the first quarter.",
+    content: "Setting up our foundation's legal structure was complex, but they made it simple. They guided us through the specific regulations for non-profit entities in the UAE with patience and expertise.",
     rating: 5,
     avatar: {
       src: "/images/testimonials/amanda.jpg",
@@ -184,8 +184,8 @@ export const testimonials: Testimonial[] = [
       height: 80
     },
     project: {
-      name: "NonProfit Foundation Website",
-      href: "/portfolio/nonprofit-website"
+      name: "Foundation Legal Structure",
+      href: "/portfolio/nonprofit-setup"
     },
     featured: false
   },
@@ -194,27 +194,20 @@ export const testimonials: Testimonial[] = [
     name: "Robert Martinez",
     role: "Restaurant Owner",
     company: "Bella Vista Restaurant",
-    content: "The online ordering system and app they created has revolutionized our restaurant business. Our online orders have tripled, and customers love the intuitive interface. They understood the food service industry perfectly.",
+    content: "Getting all the approvals for our restaurant, from food safety to trade license, was handled perfectly. They knew exactly which departments to approach and in what order to get us open on time.",
     rating: 5,
     avatar: {
       src: "/images/testimonials/robert.jpg",
-      alt: "Robert Martinez, Restaurant Owner at Bella Vista Restaurant",
+      alt: "Robert Martinez, Owner of Bella Vista Restaurant",
       width: 80,
       height: 80
     },
     project: {
-      name: "Bella Vista Ordering System",
-      href: "/portfolio/restaurant-ordering-system"
+      name: "Restaurant Licensing",
+      href: "/portfolio/bella-vista-setup"
     },
     featured: false
   }
 ]
 
-export const featuredTestimonials = testimonials.filter(testimonial => testimonial.featured)
-
-export const testimonialsByIndustry = {
-  "Technology": testimonials.filter(t => ["TechStart Inc.", "FinTech Solutions", "Logistics Pro"].includes(t.company)),
-  "Retail": testimonials.filter(t => ["Global Retail Co.", "Fashion Forward", "Bella Vista Restaurant"].includes(t.company)),
-  "Creative": testimonials.filter(t => ["Creative Studio"].includes(t.company)),
-  "NonProfit": testimonials.filter(t => ["NonProfit Foundation"].includes(t.company))
-}
+export const featuredTestimonials = testimonials.filter(t => t.featured)

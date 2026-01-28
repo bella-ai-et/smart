@@ -52,8 +52,8 @@ export const ajmanOffshoreData = {
     secretary: "Mandatory (can be the same person as the director)",
     suffix: "Company name must end in 'Limited' or 'LTD'"
   },
-  whySmartZone: {
-    title: "Why Choose SmartZone?",
+  whyChooseUs: {
+    title: "Why Choose JOAB SOLUTIONS?",
     description: "As a registered agent, we handle the entire Ajman Offshore incorporation process for you, ensuring compliance and speed.",
     image: "/images/services/why-smartzone.jpg",
     features: [
@@ -64,7 +64,7 @@ export const ajmanOffshoreData = {
     ]
   },
   seo: {
-    title: "Ajman Offshore Company Setup | SmartZone",
+    title: "Ajman Offshore Company Setup | JOAB SOLUTIONS",
     description: "Incorporate your Ajman Offshore company for asset protection and tax efficiency. 100% remote setup.",
     keywords: ["Ajman Offshore", "Offshore Company UAE", "Asset Protection", "Ajman Free Zone Authority"]
   }

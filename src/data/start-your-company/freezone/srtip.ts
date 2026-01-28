@@ -41,15 +41,15 @@ export const srtipData = {
     "Commercial License",
     "Innovation License"
   ],
-  whySmartZone: {
-    title: 'Why Choose SmartZone?',
+  whyChooseUs: {
+    title: 'Why Choose JOAB SOLUTIONS?',
     description: 'We specialize in helping innovative companies set up in SRTIP to leverage its unique research ecosystem.',
     image: '/images/services/why-smartzone.jpg',
     features: ['Innovation Experts', 'University Connections', 'Grant Guidance', 'Seamless Setup']
   },
   seo: {
-    title: 'SRTIP Free Zone Setup | SmartZone',
-    description: 'Setup your technology company in Sharjah Research Technology and Innovation Park (SRTIP) with SmartZone.',
+    title: 'SRTIP Free Zone Setup | JOAB SOLUTIONS',
+    description: 'Setup your technology company in Sharjah Research Technology and Innovation Park (SRTIP) with JOAB SOLUTIONS.',
     keywords: ['SRTIP', 'Sharjah Innovation Park', 'Tech Startup UAE', 'Research Hub']
   }
 }

@@ -7,9 +7,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company info */}
           <div>
-            <h3 className="font-bold text-lg mb-4">UAE Business Setup</h3>
+            <h3 className="font-bold text-lg mb-4">JOAB SOLUTIONS</h3>
             <p className="text-sm text-gray-600">
-              Expert business consultancy for company formation and corporate services in UAE.
+              Expert business consultancy for business setup and corporate services in UAE.
             </p>
           </div>
           
@@ -43,16 +43,16 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li>info@uaebusinesssetup.com</li>
-              <li>+971 4 123 4567</li>
-              <li>Dubai, United Arab Emirates</li>
+              <li>info@joabsolutions.com</li>
+              <li>+971 58 836 4257, +971 52 644 2563</li>
+              <li>AL GURG TOWER 3, Tayseer Business Center, P Floor, Office No. 60, Dubai, UAE</li>
             </ul>
           </div>
         </div>
         
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t text-center text-sm text-gray-500">
-          <p>&copy; 2026 UAE Business Setup. All rights reserved.</p>
+          <p>&copy; 2026 JOAB SOLUTIONS. All rights reserved.</p>
         </div>
       </div>
     </footer>

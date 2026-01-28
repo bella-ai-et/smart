@@ -13,7 +13,7 @@ const freeZones = startYourCompanyNavigation.filter(i => i.category === 'free-zo
         <div className="flex items-center justify-between">
           {/* Logo placeholder */}
           <div className="text-xl font-bold">
-            <Link href="/">UAE Business Setup</Link>
+            <Link href="/">JOAB SOLUTIONS</Link>
           </div>
           
           {/* Navigation */}

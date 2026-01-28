@@ -43,15 +43,15 @@ export const creativeCityFujairahData = {
       { name: 'Education', description: 'Training and educational services.' }
     ]
   },
-  whySmartZone: {
-    title: 'Why Choose SmartZone?',
+  whyChooseUs: {
+    title: 'Why Choose JOAB SOLUTIONS?',
     description: 'We make setting up in Fujairah simple and straightforward.',
     image: '/images/services/why-smartzone.jpg',
     features: ['Remote Processing', 'Cost Effective', 'Dedicated Support', 'Visa Assistance']
   },
   seo: {
-    title: 'Creative City Fujairah Company Setup | SmartZone',
-    description: 'Setup your media or consultancy business in Creative City Fujairah with SmartZone.',
+    title: 'Creative City Fujairah Company Setup | JOAB SOLUTIONS',
+    description: 'Setup your media or consultancy business in Creative City Fujairah with JOAB SOLUTIONS.',
     keywords: ['Creative City Fujairah', 'Media Free Zone', 'UAE Business Setup']
   }
 }

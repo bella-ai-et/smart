@@ -35,14 +35,26 @@ export const trademarkAttestation: DetailedService = {
     ],
   },
   whyChooseUs: {
-    title: 'Why Choose Smart Zone for IP',
+    title: 'Why Choose JOAB SOLUTIONS for IP',
     description: 'We simplify the complex process of Intellectual Property protection. Our experts guide you through classification, filing, and enforcement to secure your brand rights.',
     image: '/images/services/trademark-team.jpg',
     features: [
-      'Expert IP Attorneys',
-      'Comprehensive Brand Protection',
-      'International Trademark Support',
-      'Monitoring & Renewal Services',
+      {
+        title: 'Expert IP Attorneys',
+        description: 'Qualified legal professionals specializing in UAE intellectual property laws.'
+      },
+      {
+        title: 'Comprehensive Brand Protection',
+        description: 'End-to-end service from trademark search to final registration and certification.'
+      },
+      {
+        title: 'International Trademark Support',
+        description: 'Assistance with global trademark registration through the Madrid Protocol.'
+      },
+      {
+        title: 'Monitoring & Renewal Services',
+        description: 'Ongoing support to monitor potential infringements and handle timely renewals.'
+      },
     ],
   },
   whoIsItFor: {

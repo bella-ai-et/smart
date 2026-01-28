@@ -123,7 +123,11 @@ export interface DetailedService {
     title: string
     description: string
     image: string
-    features: string[]
+    features: Array<{
+      title: string
+      description: string
+      icon?: string
+    }>
   }
   whoIsItFor: {
     title: string
@@ -263,7 +267,7 @@ export interface CompanySetup {
       icon?: string
     }>
   }
-  whySmartZone: {
+  whyChooseUs: {
     title: string
     description: string
     image: string

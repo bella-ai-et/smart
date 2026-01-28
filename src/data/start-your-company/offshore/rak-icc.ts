@@ -52,15 +52,15 @@ export const rakIccOffshoreData = {
     registration_process: "Typically 2–5 working days after document submission",
     full_dossier_issuance: "Within 1 week"
   },
-  whySmartZone: {
-    title: 'Why Choose SmartZone?',
+  whyChooseUs: {
+    title: 'Why Choose JOAB SOLUTIONS?',
     description: 'We are a leading registered agent for RAK ICC, ensuring compliance and smooth operations.',
     image: '/images/services/why-smartzone.jpg',
     features: ['Top Agent', 'Compliance Experts', 'Banking Partners', 'Legal Support']
   },
   seo: {
-    title: 'RAK ICC Offshore Company Setup | SmartZone',
+    title: 'RAK ICC Offshore Company Setup | JOAB SOLUTIONS',
     description: 'Setup your RAK ICC Offshore company. Global recognition and property ownership rights.',
-    keywords: ['RAK ICC', 'RAK Offshore', 'Offshore Company Formation', 'Dubai Property Holding']
+    keywords: ['RAK ICC', 'RAK Offshore', 'Offshore Business Setup', 'Dubai Property Holding']
   }
 }

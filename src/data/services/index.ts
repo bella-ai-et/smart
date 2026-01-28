@@ -31,7 +31,7 @@ const accountingService: Service = {
     startingFrom: 0,
     currency: 'AED',
     period: 'consultation',
-    displayFormat: 'starting'
+    displayFormat: 'starting' as const
   },
   cta: {
     text: 'Learn More',
@@ -46,7 +46,7 @@ const accountingService: Service = {
   },
   gallery: [],
   tags: [],
-  difficulty: 'intermediate',
+  difficulty: 'intermediate' as const,
   duration: 'Custom',
   teamSize: 'Expert Team',
   technologies: [],
@@ -80,7 +80,7 @@ const bankAccountOpeningService: Service = {
     startingFrom: 0,
     currency: 'AED',
     period: 'consultation',
-    displayFormat: 'starting'
+    displayFormat: 'starting' as const
   },
   cta: {
     text: 'Learn More',
@@ -95,7 +95,7 @@ const bankAccountOpeningService: Service = {
   },
   gallery: [],
   tags: [],
-  difficulty: 'intermediate',
+  difficulty: 'intermediate' as const,
   duration: 'Custom',
   teamSize: 'Expert Team',
   technologies: [],
@@ -133,7 +133,7 @@ const corporateStructuringService: Service = {
     startingFrom: 0,
     currency: 'AED',
     period: 'consultation',
-    displayFormat: 'starting'
+    displayFormat: 'starting' as const
   },
   cta: {
     text: 'Learn More',
@@ -148,7 +148,7 @@ const corporateStructuringService: Service = {
   },
   gallery: [],
   tags: [],
-  difficulty: 'intermediate',
+  difficulty: 'intermediate' as const,
   duration: 'Custom',
   teamSize: 'Expert Team',
   technologies: [],
@@ -182,7 +182,7 @@ const corporateTaxService: Service = {
     startingFrom: 0,
     currency: 'AED',
     period: 'consultation',
-    displayFormat: 'starting'
+    displayFormat: 'starting' as const
   },
   cta: {
     text: 'Learn More',
@@ -197,7 +197,7 @@ const corporateTaxService: Service = {
   },
   gallery: [],
   tags: [],
-  difficulty: 'intermediate',
+  difficulty: 'intermediate' as const,
   duration: 'Custom',
   teamSize: 'Expert Team',
   technologies: [],
@@ -231,7 +231,7 @@ const vatService: Service = {
     startingFrom: 0,
     currency: 'AED',
     period: 'consultation',
-    displayFormat: 'starting'
+    displayFormat: 'starting' as const
   },
   cta: {
     text: 'Learn More',
@@ -246,7 +246,7 @@ const vatService: Service = {
   },
   gallery: [],
   tags: [],
-  difficulty: 'intermediate',
+  difficulty: 'intermediate' as const,
   duration: 'Custom',
   teamSize: 'Expert Team',
   technologies: [],
@@ -279,11 +279,11 @@ const officeSpaceService: Service = {
   },
   features: officeSpaceData.office_types_2026.map(t => t.type).slice(0, 6),
   pricing: {
-    startingFrom: 0,
-    currency: 'AED',
-    period: 'consultation',
-    displayFormat: 'starting'
-  },
+      startingFrom: 0,
+      currency: 'AED',
+      period: 'consultation',
+      displayFormat: 'starting' as const
+    },
   cta: {
     text: 'Learn More',
     href: '/services/office-space-solutions',
@@ -450,7 +450,7 @@ const corporateRelocationService: Service = {
   },
   gallery: [],
   tags: [],
-  difficulty: 'hard',
+  difficulty: 'advanced',
   duration: 'Custom',
   teamSize: 'Expert Team',
   technologies: [],
@@ -501,17 +501,17 @@ export const services: Service[] = [
     width: 24,
     height: 24
   },
-  features: service.whyChooseUs.features.slice(0, 6),
+  features: service.whyChooseUs.features.map(f => f.title).slice(0, 6),
   pricing: {
     startingFrom: 0,
     currency: 'AED',
     period: 'consultation',
-    displayFormat: 'starting'
+    displayFormat: 'starting' as const
   },
   cta: {
     text: 'Learn More',
     href: `/our-service/${service.slug}`, // Point to new dynamic route
-    variant: 'primary'
+    variant: 'primary' as const
   },
   heroImage: {
     src: service.hero.backgroundImage,
@@ -521,7 +521,7 @@ export const services: Service[] = [
   },
   gallery: [],
   tags: [],
-  difficulty: 'intermediate',
+  difficulty: 'intermediate' as const,
   duration: 'Custom',
   teamSize: 'Expert Team',
   technologies: [],
@@ -548,7 +548,7 @@ export const servicePageContent = {
     },
     backgroundImage: {
       src: "/images/services-hero.jpg",
-      alt: "Smart Zone Services",
+      alt: "JOAB SOLUTIONS Services",
       width: 1920,
       height: 1080
     }

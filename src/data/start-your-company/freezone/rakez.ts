@@ -38,15 +38,15 @@ export const rakezData = {
       }
     ]
   },
-  whySmartZone: {
-    title: 'Why Choose SmartZone?',
-    description: 'SmartZone guides you through the RAKEZ setup process, from license to industrial land acquisition.',
+  whyChooseUs: {
+    title: 'Why Choose JOAB SOLUTIONS?',
+    description: 'JOAB SOLUTIONS guides you through the RAKEZ setup process, from license to industrial land acquisition.',
     image: '/images/services/why-smartzone.jpg',
     features: ['Industrial Experts', 'SME Focused', 'Visa Processing', 'Facility Leasing']
   },
   seo: {
-    title: 'RAKEZ Company Setup | SmartZone',
-    description: 'Start your business in Ras Al Khaimah Economic Zone (RAKEZ) with SmartZone.',
+    title: 'RAKEZ Company Setup | JOAB SOLUTIONS',
+    description: 'Start your business in Ras Al Khaimah Economic Zone (RAKEZ) with JOAB SOLUTIONS.',
     keywords: ['RAKEZ', 'Ras Al Khaimah', 'Industrial Free Zone', 'UAE Manufacturing']
   }
 }

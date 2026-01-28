@@ -36,15 +36,15 @@ export const abuDhabiMainlandData = {
     "Contracting",
     "Services"
   ],
-  whySmartZone: {
-    title: 'Why Choose SmartZone?',
-    description: 'SmartZone has deep expertise in Abu Dhabi economic regulations and sponsorship requirements.',
+  whyChooseUs: {
+    title: 'Why Choose JOAB SOLUTIONS?',
+    description: 'JOAB SOLUTIONS has deep expertise in Abu Dhabi economic regulations and sponsorship requirements.',
     image: '/images/services/why-smartzone.jpg',
     features: ['Capital Experts', 'Sponsorship Support', 'Tajer License', 'Government Relations']
   },
   seo: {
-    title: 'Abu Dhabi Mainland Company Setup | SmartZone',
+    title: 'Abu Dhabi Mainland Company Setup | JOAB SOLUTIONS',
     description: 'Start your business in Abu Dhabi Mainland. Access government contracts and trade freely.',
-    keywords: ['Abu Dhabi Mainland', 'Tajer Abu Dhabi', 'Company Formation Abu Dhabi']
+    keywords: ['Abu Dhabi Mainland', 'Tajer Abu Dhabi', 'Business Setup Abu Dhabi']
   }
 }

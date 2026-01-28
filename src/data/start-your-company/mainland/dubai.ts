@@ -39,14 +39,14 @@ export const dubaiMainlandData = {
     "Professional",
     "Commercial"
   ],
-  whySmartZone: {
-    title: 'Why Choose SmartZone?',
+  whyChooseUs: {
+    title: 'Why Choose JOAB SOLUTIONS?',
     description: 'We guide you through the DED procedures to ensure a compliant and successful mainland setup.',
     image: '/images/services/why-smartzone.jpg',
     features: ['DED Experts', 'Sponsorship Services', 'Office Solutions', 'PRO Services']
   },
   seo: {
-    title: 'Dubai Mainland Company Setup | SmartZone',
+    title: 'Dubai Mainland Company Setup | JOAB SOLUTIONS',
     description: 'Setup your Dubai Mainland company with 100% ownership. Trade freely across UAE.',
     keywords: ['Dubai Mainland', 'DED License', 'Business Setup Dubai', 'Mainland Company']
   }

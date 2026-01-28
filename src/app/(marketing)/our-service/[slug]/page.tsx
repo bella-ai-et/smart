@@ -84,7 +84,7 @@ export default async function ServicePage({ params }: PageProps) {
         title={service.whyChooseUs.title}
         description={service.whyChooseUs.description}
         image={service.whyChooseUs.image}
-        features={service.whyChooseUs.features}
+        features={service.whyChooseUs.features.map(f => f.title)}
         reverse={true}
       />
 

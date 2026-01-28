@@ -49,21 +49,21 @@ export const companySetupData: CompanySetup[] = [
       title: 'Business License Types',
       types: ajmanFreeZoneData.business_license_types.map(type => ({ name: type, description: '' }))
     },
-    whySmartZone: {
-      title: 'Why Choose Smart Zone?',
-      description: `${ajmanFreeZoneData.service_provider_details.provider_name} is a ${ajmanFreeZoneData.service_provider_details.credentials.status} with ${ajmanFreeZoneData.service_provider_details.credentials.experience}, having incorporated ${ajmanFreeZoneData.service_provider_details.credentials.track_record} with a ${ajmanFreeZoneData.service_provider_details.credentials.retention_rate}. Our services include ${ajmanFreeZoneData.service_provider_details.services_offered[0]}, ${ajmanFreeZoneData.service_provider_details.services_offered[1]}, ${ajmanFreeZoneData.service_provider_details.services_offered[2]}, and ${ajmanFreeZoneData.service_provider_details.services_offered[3]}.`,
+    whyChooseUs: {
+      title: 'Why Choose JOAB SOLUTIONS?',
+      description: 'JOAB SOLUTIONS is a trusted business setup consultancy in the UAE. We provide expert guidance, seamless documentation, and comprehensive support to help you establish your company in Ajman Free Zone quickly and efficiently.',
       image: '/images/services/why-smartzone.jpg',
       features: [
-        ajmanFreeZoneData.service_provider_details.credentials.status,
-        ajmanFreeZoneData.service_provider_details.credentials.experience,
-        ajmanFreeZoneData.service_provider_details.credentials.track_record,
-        ajmanFreeZoneData.service_provider_details.credentials.retention_rate
+        'Expert Consultants',
+        'End-to-End Support',
+        'Fast Track Processing',
+        'Transparent Pricing'
       ]
     },
     seo: {
-      title: 'Ajman Free Zone Company Setup | Smart Zone',
+      title: 'Ajman Free Zone Company Setup | JOAB SOLUTIONS',
       description: `Established in ${ajmanFreeZoneData.ajman_free_zone_overview.established}, Ajman Free Zone offers ${ajmanFreeZoneData.ajman_free_zone_overview.key_value_proposition}`,
-      keywords: ['Ajman Free Zone', 'Company Setup Ajman', 'UAE Free Zone', 'Business Setup', 'Smart Zone']
+      keywords: ['Ajman Free Zone', 'Company Setup Ajman', 'UAE Free Zone', 'Business Setup', 'JOAB SOLUTIONS']
     }
   },
 

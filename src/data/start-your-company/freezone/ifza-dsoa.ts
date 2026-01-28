@@ -45,15 +45,15 @@ export const ifzaData = {
     "Trading",
     "Services"
   ],
-  whySmartZone: {
-    title: 'Why Choose SmartZone for IFZA?',
-    description: 'As an authorized partner, SmartZone ensures the fastest route to your IFZA license.',
+  whyChooseUs: {
+    title: 'Why Choose JOAB SOLUTIONS for IFZA?',
+    description: 'As an authorized partner, JOAB SOLUTIONS ensures the fastest route to your IFZA license.',
     image: '/images/services/why-smartzone.jpg',
     features: ['Authorized Partner', 'Lowest Prices', 'Instant Approval', 'Residency Visa Support']
   },
   seo: {
-    title: 'IFZA Dubai Company Setup | SmartZone',
-    description: 'Get your IFZA Dubai license with SmartZone. Cheapest Free Zone in Dubai.',
+    title: 'IFZA Dubai Company Setup | JOAB SOLUTIONS',
+    description: 'Get your IFZA Dubai license with JOAB SOLUTIONS. Cheapest Free Zone in Dubai.',
     keywords: ['IFZA', 'Dubai Silicon Oasis', 'Cheap Free Zone Dubai', 'Business Setup']
   }
 }
