@@ -1,4 +1,5 @@
 import type { Testimonial } from '@/types'
+import { Images } from '@/lib/assets'
 
 export const testimonials: Testimonial[] = [
   {
@@ -9,7 +10,7 @@ export const testimonials: Testimonial[] = [
     content: "The team made our business setup process incredibly smooth and efficient. What we expected to take weeks was completed in just 5 days. Their expertise in UAE business regulations and attention to documentation detail is exceptional.",
     rating: 5,
     avatar: {
-      src: "/images/testimonials/ahmed.jpg",
+      src: Images.testimonials.ahmed,
       alt: "Ahmed Al-Mansouri, Managing Director of Al-Mansouri Trading LLC",
       width: 80,
       height: 80
@@ -39,7 +40,7 @@ export const testimonials: Testimonial[] = [
     content: "Setting up our business in Dubai free zone was made effortless by their expert consultants. They handled everything from visa processing to trade license applications. Their knowledge of free zone regulations saved us significant time and costs.",
     rating: 5,
     avatar: {
-      src: "/images/testimonials/priya.jpg",
+      src: Images.testimonials.priya,
       alt: "Priya Sharma, Founder of Gulf Tech Solutions",
       width: 80,
       height: 80

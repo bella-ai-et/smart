@@ -1,8 +1,10 @@
+import { Images } from '@/lib/assets'
+
 export const shamsData = {
   hero: {
     title: 'SHAMS Free Zone Setup',
     subtitle: 'Sharjah Media City',
-    backgroundImage: '/images/hero/shams.jpg'
+    backgroundImage: Images.hero.global
   },
   shams_free_zone_overview: {
     location: "Sharjah",
@@ -40,7 +42,7 @@ export const shamsData = {
   whyChooseUs: {
     title: 'Why Choose JOAB SOLUTIONS?',
     description: 'We help creative professionals set up in SHAMS with ease.',
-    image: '/images/services/why-smartzone.jpg',
+    image: '/why-Joab.jpg',
     features: ['Creative Focus', 'Budget Friendly', 'Fast Turnaround', 'Ongoing Support']
   },
   seo: {

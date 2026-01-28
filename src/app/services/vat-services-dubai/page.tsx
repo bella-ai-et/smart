@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { vatServicesData as data } from '@/data/services/vat-services-dubai';
+import { Images } from '@/lib/assets';
 import HeroSection from '@/components/sections/hero-section';
 import ContentWithImage from '@/components/sections/content-with-image';
 import ProcessSteps from '@/components/sections/process-steps';
@@ -22,7 +23,7 @@ export default function VatServicesPage() {
       href: "/contact",
     },
     backgroundImage: {
-      src: '/images/services/vat-hero.jpg',
+      src: Images.hero.services.vat,
       alt: data.vat_services_overview.title,
     },
   };

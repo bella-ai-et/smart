@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { corporateStructuringData as data } from '@/data/services/corporate-structuring';
+import { Images } from '@/lib/assets';
 import HeroSection from '@/components/sections/hero-section';
 import ContentWithImage from '@/components/sections/content-with-image';
 import ProcessSteps from '@/components/sections/process-steps';
@@ -22,7 +23,7 @@ export default function CorporateStructuringPage() {
       href: "/contact",
     },
     backgroundImage: {
-      src: '/images/services/structuring-hero.jpg',
+      src: Images.hero.services.corporateStructuring,
       alt: data.corporate_structuring_overview.title,
     },
   };

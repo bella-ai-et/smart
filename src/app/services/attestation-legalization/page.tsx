@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { attestationLegalizationData as data } from '@/data/services/attestation-legalization';
+import { Images } from '@/lib/assets';
 import HeroSection from '@/components/sections/hero-section';
 import ContentWithImage from '@/components/sections/content-with-image';
 import ProcessSteps from '@/components/sections/process-steps';
@@ -22,7 +23,7 @@ export default function AttestationPage() {
       href: "/contact",
     },
     backgroundImage: {
-      src: '/images/services/attestation-hero.jpg',
+      src: Images.hero.services.attestation,
       alt: data.attestation_legalization_overview.title,
     },
   };

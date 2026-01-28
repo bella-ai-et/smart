@@ -1,13 +1,15 @@
+import { Images } from '@/lib/assets'
+
 export const creativeCityFujairahData = {
   hero: {
     title: 'Creative City Fujairah Setup',
     subtitle: 'The Hub for Media and Creativity',
-    backgroundImage: '/images/hero/fujairah.jpg'
+    backgroundImage: Images.hero.global
   },
   creative_city_fujairah_overview: {
     title: 'What is Creative City Fujairah?',
     description: 'Creative City Fujairah is a media-centric free zone that offers a professional environment for individuals and businesses working in a broad spectrum of business fields including media, events, consulting, education, communication and marketing, music and entertainment, design and technology.',
-    image: '/images/services/fujairah-overview.jpg'
+    image: Images.services.creativeCityOverview
   },
   cost: {
     title: 'Creative City License Costs',
@@ -46,7 +48,7 @@ export const creativeCityFujairahData = {
   whyChooseUs: {
     title: 'Why Choose JOAB SOLUTIONS?',
     description: 'We make setting up in Fujairah simple and straightforward.',
-    image: '/images/services/why-smartzone.jpg',
+    image: '/why-Joab.jpg',
     features: ['Remote Processing', 'Cost Effective', 'Dedicated Support', 'Visa Assistance']
   },
   seo: {

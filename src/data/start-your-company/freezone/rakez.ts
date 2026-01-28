@@ -1,8 +1,10 @@
+import { Images } from '@/lib/assets'
+
 export const rakezData = {
   hero: {
     title: 'RAKEZ Company Setup',
     subtitle: 'Ras Al Khaimah Economic Zone',
-    backgroundImage: '/images/hero/rakez.jpg'
+    backgroundImage: Images.hero.global
   },
   rakez_overview: {
     location: "Ras Al Khaimah",
@@ -41,7 +43,7 @@ export const rakezData = {
   whyChooseUs: {
     title: 'Why Choose JOAB SOLUTIONS?',
     description: 'JOAB SOLUTIONS guides you through the RAKEZ setup process, from license to industrial land acquisition.',
-    image: '/images/services/why-smartzone.jpg',
+    image: '/why-Joab.jpg',
     features: ['Industrial Experts', 'SME Focused', 'Visa Processing', 'Facility Leasing']
   },
   seo: {

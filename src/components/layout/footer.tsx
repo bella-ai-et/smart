@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import Image from 'next/image'
+import { Images } from '@/lib/assets'
 
 export default function Footer() {
   return (
@@ -7,7 +9,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company info */}
           <div>
-            <h3 className="font-bold text-lg mb-4">JOAB SOLUTIONS</h3>
+            <Link href="/" className="inline-block mb-4">
+              <Image 
+                src={Images.logos.defaultLogo} 
+                alt="JOAB SOLUTIONS" 
+                width={150} 
+                height={50} 
+                className="h-10 w-auto object-contain"
+              />
+            </Link>
             <p className="text-sm text-gray-600">
               Expert business consultancy for business setup and corporate services in UAE.
             </p>

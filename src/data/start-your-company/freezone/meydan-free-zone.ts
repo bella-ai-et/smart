@@ -1,8 +1,10 @@
+import { Images } from '@/lib/assets'
+
 export const meydanFreeZoneData = {
   hero: {
     title: 'Meydan Free Zone Company Setup',
     subtitle: 'Premium Address near Downtown Dubai',
-    backgroundImage: '/images/hero/meydan.jpg'
+    backgroundImage: Images.hero.global
   },
   meydan_free_zone_overview: {
     location: "Meydan Hotel area, Dubai",
@@ -40,7 +42,7 @@ export const meydanFreeZoneData = {
   whyChooseUs: {
     title: 'Why Choose JOAB SOLUTIONS?',
     description: 'JOAB SOLUTIONS helps you get your Meydan license quickly and efficiently.',
-    image: '/images/services/why-smartzone.jpg',
+    image: '/why-Joab.jpg',
     features: ['Digital Process', 'Cost Savings', 'Visa Assistance', 'Corporate Banking']
   },
   seo: {

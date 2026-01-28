@@ -49,7 +49,7 @@ export const ajmanFreeZoneData = {
   whyChooseUs: {
     title: 'Why Choose JOAB SOLUTIONS?',
     description: 'We provide expert guidance for your Ajman Free Zone setup with comprehensive support services.',
-    image: '/images/services/why-smartzone.jpg',
+    image: '/why-Joab.jpg',
     features: [
       'Dedicated Relationship Managers',
       'Extensive Support Services',

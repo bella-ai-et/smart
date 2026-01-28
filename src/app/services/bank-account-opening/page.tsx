@@ -1,5 +1,6 @@
 import React from 'react';
 import { bankAccountOpeningData } from '@/data/services/bank-account-opening';
+import { Images } from '@/lib/assets';
 import HeroSection from '@/components/sections/hero-section';
 import ContentWithImage from '@/components/sections/content-with-image';
 import ProcessSteps from '@/components/sections/process-steps';
@@ -24,7 +25,7 @@ export default function BankAccountOpeningPage() {
       href: "/contact"
     },
     backgroundImage: {
-      src: '/images/services/banking-hero.jpg', // Assuming a relevant image exists or placeholder
+      src: Images.hero.services.bankAccountOpening, // Assuming a relevant image exists or placeholder
       alt: data.bank_account_opening_overview.title
     }
   };

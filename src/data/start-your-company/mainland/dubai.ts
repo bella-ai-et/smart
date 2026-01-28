@@ -1,8 +1,10 @@
+import { Images } from '@/lib/assets'
+
 export const dubaiMainlandData = {
   hero: {
     title: 'Dubai Mainland Company Setup',
     subtitle: 'Operate across the UAE under DET oversight',
-    backgroundImage: '/images/hero/dubai-mainland.jpg'
+    backgroundImage: Images.hero.global
   },
   dubai_mainland_overview: {
     entity: "Department of Economy and Tourism (DET)",
@@ -42,7 +44,7 @@ export const dubaiMainlandData = {
   whyChooseUs: {
     title: 'Our Role',
     description: 'Guidance and coordination with DET on licensing, activity selection, facility compliance, and post‑licensing procedures.',
-    image: '/images/services/why-smartzone.jpg',
+    image: '/why-Joab.jpg',
     features: ['Regulatory Guidance', 'Sponsorship Arrangements (if applicable)', 'Office Solutions', 'PRO Services']
   },
   seo: {

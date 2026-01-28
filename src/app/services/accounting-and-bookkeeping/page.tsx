@@ -1,5 +1,6 @@
 import React from 'react';
 import { accountingBookkeepingData } from '@/data/services/accounting-bookkeeping-services-dubai';
+import { Images } from '@/lib/assets';
 import HeroSection from '@/components/sections/hero-section';
 import ContentWithImage from '@/components/sections/content-with-image';
 import ProcessSteps from '@/components/sections/process-steps';
@@ -24,7 +25,7 @@ export default function AccountingBookkeepingPage() {
       href: "/contact"
     },
     backgroundImage: {
-      src: '/images/services/accounting-hero.jpg',
+      src: Images.hero.services.accounting,
       alt: data.accounting_bookkeeping_overview.title
     }
   };
@@ -75,7 +76,7 @@ export default function AccountingBookkeepingPage() {
       <ContentWithImage
         title="Why Outsource?"
         description="Key benefits of choosing our professional services."
-        image="/images/services/accounting-matters.jpg"
+        image={Images.why.default}
         features={data.why_outsource}
         reverse={false}
       />

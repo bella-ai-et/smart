@@ -1,8 +1,10 @@
+import { Images } from '@/lib/assets'
+
 export const rakIccOffshoreData = {
   hero: {
     title: 'RAK ICC Offshore Setup',
     subtitle: 'International Corporate Centre',
-    backgroundImage: '/images/hero/rak-icc.jpg'
+    backgroundImage: Images.hero.global
   },
   rak_icc_offshore_overview: {
     entity: "RAK International Corporate Centre (RAK ICC)",
@@ -55,7 +57,7 @@ export const rakIccOffshoreData = {
   whyChooseUs: {
     title: 'Our Role',
     description: 'Coordination with registered agents, documentation management, and compliance advisory for RAK ICC incorporations.',
-    image: '/images/services/why-smartzone.jpg',
+    image: '/why-Joab.jpg',
     features: ['Agent Liaison', 'Compliance Review', 'Banking Coordination', 'Legal Support']
   },
   seo: {

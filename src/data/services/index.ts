@@ -1,4 +1,5 @@
 import type { DetailedService, Service } from '@/types';
+import { Images } from '@/lib/assets';
 import { trademarkAttestation } from './trademark-attestation-legalization';
 
 export const detailedServices: DetailedService[] = [
@@ -21,7 +22,7 @@ const accountingService: Service = {
   description: accountingBookkeepingData.accounting_bookkeeping_overview.description,
   longDescription: accountingBookkeepingData.accounting_bookkeeping_overview.description,
   icon: {
-    src: '/icons/service-default.svg',
+    src: Images.icons.serviceDefault,
     alt: accountingBookkeepingData.accounting_bookkeeping_overview.title,
     width: 24,
     height: 24
@@ -39,7 +40,7 @@ const accountingService: Service = {
     variant: 'primary'
   },
   heroImage: {
-    src: '/images/services/accounting-hero.jpg', // Fallback or known image
+    src: Images.hero.global, // Fallback or known image
     alt: accountingBookkeepingData.accounting_bookkeeping_overview.title,
     width: 1200,
     height: 800
@@ -70,7 +71,7 @@ const bankAccountOpeningService: Service = {
   description: bankAccountOpeningData.bank_account_opening_overview.description,
   longDescription: bankAccountOpeningData.bank_account_opening_overview.description,
   icon: {
-    src: '/icons/service-default.svg',
+    src: Images.icons.serviceDefault,
     alt: bankAccountOpeningData.bank_account_opening_overview.title,
     width: 24,
     height: 24
@@ -88,7 +89,7 @@ const bankAccountOpeningService: Service = {
     variant: 'primary'
   },
   heroImage: {
-    src: '/images/services/banking-hero.jpg',
+    src: Images.hero.global,
     alt: bankAccountOpeningData.bank_account_opening_overview.title,
     width: 1200,
     height: 800
@@ -141,7 +142,7 @@ const corporateStructuringService: Service = {
     variant: 'primary'
   },
   heroImage: {
-    src: '/images/services/structuring-hero.jpg',
+    src: Images.hero.global,
     alt: corporateStructuringData.corporate_structuring_overview.title,
     width: 1200,
     height: 800
@@ -190,7 +191,7 @@ const corporateTaxService: Service = {
     variant: 'primary'
   },
   heroImage: {
-    src: '/images/services/corporate-tax-hero.jpg',
+    src: Images.hero.global,
     alt: corporateTaxData.corporate_tax_overview.title,
     width: 1200,
     height: 800
@@ -239,7 +240,7 @@ const vatService: Service = {
     variant: 'primary'
   },
   heroImage: {
-    src: '/images/services/vat-hero.jpg',
+    src: Images.hero.global,
     alt: vatServicesData.vat_services_overview.title,
     width: 1200,
     height: 800
@@ -392,7 +393,7 @@ const productRegistrationService: Service = {
     variant: 'primary'
   },
   heroImage: {
-    src: '/images/services/product-registration-hero.jpg',
+    src: Images.hero.global,
     alt: productRegistrationData.product_registration_overview.title,
     width: 1200,
     height: 800
@@ -443,7 +444,7 @@ const corporateRelocationService: Service = {
     variant: 'primary'
   },
   heroImage: {
-    src: '/images/services/relocation-hero.jpg',
+    src: Images.hero.global,
     alt: relocationData.relocation_services_overview.title,
     width: 1200,
     height: 800

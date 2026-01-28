@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { relocationData as data } from '@/data/services/corporate-relocation';
+import { Images } from '@/lib/assets';
 import HeroSection from '@/components/sections/hero-section';
 import ContentWithImage from '@/components/sections/content-with-image';
 import ProcessSteps from '@/components/sections/process-steps';
@@ -22,7 +23,7 @@ export default function CorporateRelocationPage() {
       href: "/contact",
     },
     backgroundImage: {
-      src: '/images/services/relocation-hero.jpg',
+      src: Images.hero.services.corporateRelocation,
       alt: data.relocation_services_overview.title,
     },
   };

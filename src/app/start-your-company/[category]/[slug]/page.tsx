@@ -23,6 +23,7 @@ import { Heading, Text } from '@/components/ui/typography'
 import Card, { CardHeader, CardContent } from '@/components/ui/card'
 import Button from '@/components/ui/button'
 import type { Metadata } from 'next'
+import { Images } from '@/lib/assets'
 
 interface PageProps {
   params: Promise<{
@@ -301,7 +302,7 @@ export default async function CompanySetupPage({ params }: PageProps) {
           <ContentWithImage
             title="What is JAFZA Offshore?"
             description={`${jafzaOffshoreData.jafza_offshore_overview.description} ${jafzaOffshoreData.jafza_offshore_overview.key_advantage}`}
-            image="/images/services/jafza-overview.jpg"
+            image={Images.services.jafzaOverview}
           />
         </div>
 
@@ -411,7 +412,7 @@ export default async function CompanySetupPage({ params }: PageProps) {
           <ContentWithImage
             title="What is RAK ICC?"
             description={`${rakIccOffshoreData.rak_icc_offshore_overview.description} ${rakIccOffshoreData.rak_icc_offshore_overview.real_estate_benefit}`}
-            image="/images/services/rak-icc-overview.jpg"
+            image={Images.services.rakiccOverview}
           />
         </div>
 
@@ -520,7 +521,7 @@ export default async function CompanySetupPage({ params }: PageProps) {
           <ContentWithImage
             title="What is Ajman Offshore?"
             description={`${ajmanOffshoreData.ajman_offshore_overview.description} ${ajmanOffshoreData.ajman_offshore_overview.operational_limit}`}
-            image="/images/services/ajman-overview.jpg"
+            image={Images.services.ajmanOffshoreOverview}
           />
         </div>
 
@@ -606,7 +607,7 @@ export default async function CompanySetupPage({ params }: PageProps) {
         href: "#contact"
       },
       backgroundImage: {
-        src: '/images/hero/ajman-free-zone.jpg',
+        src: Images.hero.ajmanFreeZone,
         alt: 'Ajman Free Zone'
       }
     }
@@ -620,7 +621,7 @@ export default async function CompanySetupPage({ params }: PageProps) {
           <ContentWithImage
             title="What is Ajman Free Zone?"
             description={`Established in ${ajmanFreeZoneData.ajman_free_zone_overview.established}, ${ajmanFreeZoneData.ajman_free_zone_overview.description} The free zone features ${ajmanFreeZoneData.ajman_free_zone_overview.infrastructure}, offering ${ajmanFreeZoneData.ajman_free_zone_overview.key_value_proposition}`}
-            image="/images/services/ajman-overview.jpg"
+            image={Images.services.ajmanOverview}
           />
         </div>
 
@@ -717,7 +718,7 @@ export default async function CompanySetupPage({ params }: PageProps) {
           <ContentWithImage
             title="What is IFZA?"
             description={ifzaData.ifza_overview.description}
-            image="/images/services/ifza-overview.jpg"
+            image={Images.services.ifzaOverview}
           />
         </div>
 
@@ -824,7 +825,7 @@ export default async function CompanySetupPage({ params }: PageProps) {
           <ContentWithImage
             title="What is DMCC?"
             description={`${dmccData.dmcc_free_zone_overview.description} ${dmccData.dmcc_free_zone_overview.infrastructure} ${dmccData.dmcc_free_zone_overview.accolades}`}
-            image="/images/services/dmcc-overview.jpg"
+            image={Images.services.dmccOverview}
           />
         </div>
 
@@ -1075,7 +1076,7 @@ export default async function CompanySetupPage({ params }: PageProps) {
           <ContentWithImage
             title="What is Meydan Free Zone?"
             description={`${meydanFreeZoneData.meydan_free_zone_overview.description} Located at ${meydanFreeZoneData.meydan_free_zone_overview.location}. Key innovation: ${meydanFreeZoneData.meydan_free_zone_overview.key_innovation}`}
-            image="/images/services/meydan-overview.jpg"
+            image={Images.services.meydanOverview}
           />
         </div>
 
@@ -1182,7 +1183,7 @@ export default async function CompanySetupPage({ params }: PageProps) {
           <ContentWithImage
             title="What is RAKEZ?"
             description={`${rakezData.rakez_overview.description} Located in ${rakezData.rakez_overview.location}. ${rakezData.rakez_overview.dual_licensing}`}
-            image="/images/services/rakez-overview.jpg"
+            image={Images.services.rakezOverview}
           />
         </div>
 
@@ -1289,7 +1290,7 @@ export default async function CompanySetupPage({ params }: PageProps) {
           <ContentWithImage
             title="What is SHAMS?"
             description={`${shamsData.shams_free_zone_overview.description} Located in ${shamsData.shams_free_zone_overview.location}.`}
-            image="/images/services/shams-overview.jpg"
+            image={Images.services.shamsOverview}
           />
         </div>
 
@@ -1396,7 +1397,7 @@ export default async function CompanySetupPage({ params }: PageProps) {
           <ContentWithImage
             title="What is SPC Free Zone?"
             description={`${spcFreeZoneData.spc_free_zone_overview.description} Located in ${spcFreeZoneData.spc_free_zone_overview.location}. ${spcFreeZoneData.spc_free_zone_overview.dual_license}`}
-            image="/images/services/spc-overview.jpg"
+            image={Images.services.spcOverview}
           />
         </div>
 
@@ -1483,7 +1484,7 @@ export default async function CompanySetupPage({ params }: PageProps) {
             <ContentWithImage
               title="What is SRTIP?"
               description={`${srtipData.srtip_free_zone_overview.description} Located in ${srtipData.srtip_free_zone_overview.location}.`}
-              image="/images/services/srtip-overview.jpg"
+              image={Images.services.srtipOverview}
             />
           </div>
 
@@ -1590,7 +1591,7 @@ export default async function CompanySetupPage({ params }: PageProps) {
           <ContentWithImage
             title="What is Dubai Mainland?"
             description={`${dubaiMainlandData.dubai_mainland_overview.description} Entity: ${dubaiMainlandData.dubai_mainland_overview.entity}`}
-            image="/images/services/dubai-mainland-overview.jpg"
+            image={Images.services.dubaiMainlandOverview}
           />
         </div>
 
@@ -1671,7 +1672,7 @@ export default async function CompanySetupPage({ params }: PageProps) {
           <ContentWithImage
             title="What is Abu Dhabi Mainland?"
             description={`${abuDhabiMainlandData.abu_dhabi_mainland_overview.description} Key Advantage: ${abuDhabiMainlandData.abu_dhabi_mainland_overview.key_advantage}`}
-            image="/images/services/abu-dhabi-mainland-overview.jpg"
+            image={Images.services.abuDhabiMainlandOverview}
           />
         </div>
 

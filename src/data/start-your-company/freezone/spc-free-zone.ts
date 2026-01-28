@@ -1,8 +1,10 @@
+import { Images } from '@/lib/assets'
+
 export const spcFreeZoneData = {
   hero: {
     title: 'SPC Free Zone Setup',
     subtitle: 'Sharjah Publishing City',
-    backgroundImage: '/images/hero/spc.jpg'
+    backgroundImage: Images.hero.global
   },
   spc_free_zone_overview: {
     location: "Sharjah",
@@ -39,7 +41,7 @@ export const spcFreeZoneData = {
   whyChooseUs: {
     title: 'Why Choose JOAB SOLUTIONS?',
     description: 'JOAB SOLUTIONS ensures you take advantage of SPC\'s lightning-fast setup process.',
-    image: '/images/services/why-smartzone.jpg',
+    image: '/why-Joab.jpg',
     features: ['Speedy Service', 'Dual License Experts', 'Visa Support', 'Office Solutions']
   },
   seo: {

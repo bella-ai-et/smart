@@ -1,4 +1,5 @@
  import type { CompanySetup } from '@/types'
+import { Images } from '@/lib/assets'
 import { ajmanFreeZoneData } from './start-your-company/freezone/ajman-free-zone'
 
 export const companySetupData: CompanySetup[] = [
@@ -11,12 +12,12 @@ export const companySetupData: CompanySetup[] = [
     hero: {
       title: 'Ajman Free Zone',
       subtitle: ajmanFreeZoneData.ajman_free_zone_overview.description,
-      backgroundImage: '/images/hero/ajman-free-zone.jpg'
+      backgroundImage: Images.hero.ajmanFreeZone
     },
     whatIs: {
       title: 'What is Ajman Free Zone?',
       description: `Established in ${ajmanFreeZoneData.ajman_free_zone_overview.established}, ${ajmanFreeZoneData.ajman_free_zone_overview.description} The free zone features ${ajmanFreeZoneData.ajman_free_zone_overview.infrastructure}, offering ${ajmanFreeZoneData.ajman_free_zone_overview.key_value_proposition}`,
-      image: '/images/services/ajman-overview.jpg'
+      image: Images.services.ajmanOverview
     },
     cost: {
       title: 'Business License Types',
@@ -52,7 +53,7 @@ export const companySetupData: CompanySetup[] = [
     whyChooseUs: {
       title: 'Why Choose JOAB SOLUTIONS?',
       description: 'JOAB SOLUTIONS is a trusted business setup consultancy in the UAE. We provide expert guidance, seamless documentation, and comprehensive support to help you establish your company in Ajman Free Zone quickly and efficiently.',
-      image: '/images/services/why-smartzone.jpg',
+      image: Images.why.default,
       features: [
         'Expert Consultants',
         'End-to-End Support',

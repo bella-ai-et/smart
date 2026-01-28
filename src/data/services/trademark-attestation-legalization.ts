@@ -1,4 +1,5 @@
 import type { DetailedService } from '@/types';
+import { Images } from '@/lib/assets';
 
 export const trademarkAttestation: DetailedService = {
   id: 'trademark-attestation',
@@ -6,12 +7,12 @@ export const trademarkAttestation: DetailedService = {
   hero: {
     title: 'Trademark Registration & Legalization Services',
     subtitle: 'Protect Your Brand Identity and Intellectual Property in the UAE',
-    backgroundImage: '/images/services/trademark-hero.jpg',
+    backgroundImage: Images.hero.services.attestation,
   },
   whyMatters: {
     title: 'Why Protect Your Trademark?',
     description: 'In a competitive market like Dubai, your brand is your most valuable asset. Registering your trademark grants you exclusive rights to use it and protects against infringement/counterfeiting. Legalizing trademark documents is also essential when expanding your brand internationally or franchising.',
-    image: '/images/services/trademark-matters.jpg',
+    image: Images.why.default,
   },
   howItWorks: {
     title: 'Trademark Registration Process',
@@ -37,7 +38,7 @@ export const trademarkAttestation: DetailedService = {
   whyChooseUs: {
     title: 'Why Choose JOAB SOLUTIONS for IP',
     description: 'We simplify the complex process of Intellectual Property protection. Our experts guide you through classification, filing, and enforcement to secure your brand rights.',
-    image: '/images/services/trademark-team.jpg',
+    image: Images.why.default,
     features: [
       {
         title: 'Expert IP Attorneys',

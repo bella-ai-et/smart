@@ -1,4 +1,5 @@
 import type { Hero, SEO } from '@/types'
+import { Images } from '@/lib/assets'
 
 export const homePageSEO: SEO = {
   title: "Business Setup Services in UAE | JOAB SOLUTIONS",
@@ -12,13 +13,13 @@ export const homePageSEO: SEO = {
     "corporate consultancy",
     "business registration UAE"
   ],
-  ogImage: "/images/og-homepage.jpg",
+  ogImage: Images.og.home,
   ogTitle: "Business Setup Services in UAE",
   ogDescription: "Expert business consultancy offering business setup, trade licensing, and visa processing services in UAE.",
   twitterCard: "summary_large_image",
   twitterTitle: "Business Setup Services in UAE",
   twitterDescription: "Expert business consultancy offering business setup, trade licensing, and visa processing services in UAE.",
-  twitterImage: "/images/twitter-homepage.jpg"
+  twitterImage: Images.og.home
 }
 
 export const heroContent: Hero = {
@@ -34,7 +35,7 @@ export const heroContent: Hero = {
     href: "/services"
   },
   backgroundImage: {
-    src: "/images/hero-bg.jpg",
+    src: Images.hero.global,
     alt: "Dubai skyline with business professionals in meeting room",
     width: 1920,
     height: 1080
@@ -56,7 +57,7 @@ export const aboutPageSEO: SEO = {
     "business setup experts",
     "UAE business setup professionals"
   ],
-  ogImage: "/images/og-about.jpg",
+  ogImage: Images.og.about,
   ogTitle: "About Our Business Consultancy",
   ogDescription: "Leading business consultancy team with expertise in UAE business setup and corporate services."
 }
@@ -74,7 +75,7 @@ export const aboutHero: Hero = {
     href: "/contact"
   },
   backgroundImage: {
-    src: "/images/about-hero.jpg",
+    src: Images.services.ajmanOverview,
     alt: "Business consultancy team in Dubai office with clients",
     width: 1920,
     height: 1080

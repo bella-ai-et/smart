@@ -1,8 +1,10 @@
+import { Images } from '@/lib/assets'
+
 export const ajmanOffshoreData = {
   hero: {
     title: 'Ajman Offshore Company Setup',
     subtitle: 'International Business Company (IBC)',
-    backgroundImage: '/images/hero/ajman-offshore.jpg'
+    backgroundImage: Images.hero.ajmanOffshore
   },
   ajman_offshore_overview: {
     entity: "Ajman Offshore (International Business Company - IBC)",
@@ -55,7 +57,7 @@ export const ajmanOffshoreData = {
   whyChooseUs: {
     title: "Our Role",
     description: "Coordination with registered agents, documentation management, and compliance advisory for Ajman Offshore incorporations.",
-    image: "/images/services/why-smartzone.jpg",
+    image: '/why-Joab.jpg',
     features: [
       "Registered Agent Liaison",
       "Process Management",

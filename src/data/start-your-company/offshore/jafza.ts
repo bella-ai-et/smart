@@ -1,8 +1,10 @@
+import { Images } from '@/lib/assets'
+
 export const jafzaOffshoreData = {
   hero: {
     title: 'JAFZA Offshore Company Setup',
     subtitle: 'Jebel Ali Free Zone Authority',
-    backgroundImage: '/images/hero/jafza.jpg'
+    backgroundImage: Images.hero.global
   },
   jafza_offshore_overview: {
     entity: "JAFZA Offshore (Jebel Ali Free Zone Authority)",
@@ -63,7 +65,7 @@ export const jafzaOffshoreData = {
   whyChooseUs: {
     title: 'Our Role',
     description: 'Facilitation of offshore incorporation through registered agents, documentation, and compliance coordination.',
-    image: '/images/services/why-smartzone.jpg',
+    image: '/why-Joab.jpg',
     features: ['Registered Agent Liaison', 'Compliance Coordination', 'Process Management', 'Legal Advisory Integration']
   },
   seo: {

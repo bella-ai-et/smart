@@ -1,8 +1,10 @@
+import { Images } from '@/lib/assets'
+
 export const ifzaData = {
   hero: {
     title: 'IFZA - Dubai Silicon Oasis Authority',
     subtitle: 'Most Dynamic Free Zone in Dubai',
-    backgroundImage: '/images/hero/ifza.jpg'
+    backgroundImage: Images.hero.global
   },
   ifza_overview: {
     description: "International Free Zone Authority (IFZA), in partnership with Dubai Silicon Oasis Authority (DSOA), offers flexible incorporation frameworks and a broad range of business activities under established regulatory procedures.",
@@ -48,7 +50,7 @@ export const ifzaData = {
   whyChooseUs: {
     title: 'Our Role',
     description: 'Application management, documentation, and regulatory coordination for IFZA licenses in line with authority policies.',
-    image: '/images/services/why-smartzone.jpg',
+    image: '/why-Joab.jpg',
     features: ['Regulatory Guidance', 'Process Management', 'Banking Coordination', 'Visa Facilitation (subject to eligibility)']
   },
   seo: {

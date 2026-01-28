@@ -1,4 +1,5 @@
 import type { Hero } from '@/types'
+import Image from 'next/image'
 import Button from '@/components/ui/button'
 import { Heading, Text } from '@/components/ui/typography'
 import Container from '@/components/ui/container'
@@ -9,10 +10,19 @@ interface HeroSectionProps {
 
 export default function HeroSection({ data }: HeroSectionProps) {
   return (
-    <div className="relative bg-gray-900 text-white">
-      {/* Background Image Placeholder */}
+    <div className="relative bg-gray-900 text-white overflow-hidden">
+      {/* Background Image */}
       {data.backgroundImage && (
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 to-gray-800" />
+        <div className="absolute inset-0 z-0">
+          <Image
+            src={data.backgroundImage.src}
+            alt={data.backgroundImage.alt || data.title}
+            fill
+            className="object-cover opacity-50"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/80 to-gray-900/60" />
+        </div>
       )}
       
       <Container size="xl" padding="lg">

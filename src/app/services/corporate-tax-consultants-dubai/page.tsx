@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { corporateTaxData as data } from '@/data/services/corporate-tax-consultants-dubai';
+import { Images } from '@/lib/assets';
 import HeroSection from '@/components/sections/hero-section';
 import ContentWithImage from '@/components/sections/content-with-image';
 import ProcessSteps from '@/components/sections/process-steps';
@@ -22,7 +23,7 @@ export default function CorporateTaxPage() {
       href: "/contact",
     },
     backgroundImage: {
-      src: '/images/services/corporate-tax-hero.jpg',
+      src: Images.hero.services.corporateTax,
       alt: data.corporate_tax_overview.title,
     },
   };

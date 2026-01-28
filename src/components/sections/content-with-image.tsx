@@ -34,21 +34,13 @@ export default function ContentWithImage({
       )}>
         <div className="w-full lg:w-1/2">
           <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gray-100">
-             {/* Use a placeholder if image is local path that doesn't exist yet, but assuming standard Next.js Image usage */}
-             {/* In a real scenario we'd use next/image. For now, using a div with bg or img tag if src is absolute/external */}
-             {/* Since we provided local paths in data, we should use next/image, but we need to handle potential missing images gracefully in dev */}
-            <div className="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">
-               {/* Placeholder for actual implementation */}
-               <span className="text-lg">Image: {image}</span>
-            </div>
-             {/* 
+             {/* Use next/image for optimized image loading */}
             <Image 
               src={image} 
               alt={imageAlt}
               fill
               className="object-cover"
             />
-            */}
           </div>
         </div>
         

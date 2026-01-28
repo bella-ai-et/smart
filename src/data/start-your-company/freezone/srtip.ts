@@ -1,8 +1,10 @@
+import { Images } from '@/lib/assets'
+
 export const srtipData = {
   hero: {
     title: 'SRTIP Free Zone Setup',
     subtitle: 'Sharjah Research Technology and Innovation Park',
-    backgroundImage: '/images/hero/srtip.jpg'
+    backgroundImage: Images.hero.srtip
   },
   srtip_free_zone_overview: {
     location: "University City, Sharjah",
@@ -45,7 +47,7 @@ export const srtipData = {
   whyChooseUs: {
     title: 'Why Choose JOAB SOLUTIONS?',
     description: 'We specialize in helping innovative companies set up in SRTIP to leverage its unique research ecosystem.',
-    image: '/images/services/why-smartzone.jpg',
+    image: Images.why.default,
     features: ['Innovation Experts', 'University Connections', 'Grant Guidance', 'Seamless Setup']
   },
   seo: {

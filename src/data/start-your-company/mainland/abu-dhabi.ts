@@ -1,8 +1,10 @@
+import { Images } from '@/lib/assets'
+
 export const abuDhabiMainlandData = {
   hero: {
     title: 'Abu Dhabi Mainland Company Setup',
     subtitle: 'Operate under ADDED oversight',
-    backgroundImage: '/images/hero/abu-dhabi.jpg'
+    backgroundImage: Images.hero.global
   },
   abu_dhabi_mainland_overview: {
     entity: "Abu Dhabi Department of Economic Development (ADDED)",
@@ -39,7 +41,7 @@ export const abuDhabiMainlandData = {
   whyChooseUs: {
     title: 'Our Role',
     description: 'Advisory and coordination on licensing, facility compliance, sponsorship (if applicable), and regulatory procedures with ADDED.',
-    image: '/images/services/why-smartzone.jpg',
+    image: '/why-Joab.jpg',
     features: ['Regulatory Guidance', 'Sponsorship Support (if required)', 'Tajer Advisory', 'Government Relations']
   },
   seo: {

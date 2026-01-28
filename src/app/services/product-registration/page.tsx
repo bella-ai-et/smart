@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { productRegistrationData as data } from '@/data/services/product-registration';
+import { Images } from '@/lib/assets';
 import HeroSection from '@/components/sections/hero-section';
 import ContentWithImage from '@/components/sections/content-with-image';
 import ProcessSteps from '@/components/sections/process-steps';
@@ -22,7 +23,7 @@ export default function ProductRegistrationPage() {
       href: "/contact",
     },
     backgroundImage: {
-      src: '/images/services/product-registration-hero.jpg',
+      src: Images.hero.services.productRegistration,
       alt: data.product_registration_overview.title,
     },
   };

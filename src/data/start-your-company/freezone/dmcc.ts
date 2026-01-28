@@ -1,3 +1,5 @@
+import { Images } from '@/lib/assets'
+
 export const dmccData = {
   dmcc_free_zone_overview: {
     established: 2002,
@@ -57,7 +59,7 @@ export const dmccData = {
   hero: {
     title: 'DMCC Company Setup',
     subtitle: "Dubai Multi Commodities Centre (DMCC)",
-    backgroundImage: '/images/hero/dmcc.jpg'
+    backgroundImage: '/dmcc.jpg'
   },
   seo: {
     title: 'DMCC Company Setup | JOAB SOLUTIONS',
@@ -67,7 +69,7 @@ export const dmccData = {
   whyChooseUs: {
     title: 'Our Role',
     description: 'Assistance with application preparation, authority liaison, compliance reviews, and banking introductions in accordance with DMCC policies.',
-    image: '/images/services/why-smartzone-dmcc.jpg',
+    image: '/why-Joab.jpg',
     features: ['Regulatory Guidance', 'Document Management', 'Banking Coordination', 'Visa Facilitation (subject to eligibility)']
   }
 }

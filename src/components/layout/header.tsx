@@ -1,6 +1,8 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { services } from '@/data'
 import { startYourCompanyNavigation } from '@/data/navigation'
+import { Images } from '@/lib/assets'
 
 export default function Header() {
 const freeZones = startYourCompanyNavigation.filter(i => i.category === 'free-zone')
@@ -11,9 +13,18 @@ const freeZones = startYourCompanyNavigation.filter(i => i.category === 'free-zo
     <header className="w-full border-b relative z-50 bg-white">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo placeholder */}
-          <div className="text-xl font-bold">
-            <Link href="/">JOAB SOLUTIONS</Link>
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link href="/" className="block">
+              <Image 
+                src={Images.logos.defaultLogo} 
+                alt="JOAB SOLUTIONS" 
+                width={180} 
+                height={60} 
+                className="h-12 w-auto object-contain"
+                priority
+              />
+            </Link>
           </div>
           
           {/* Navigation */}

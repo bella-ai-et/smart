@@ -1,5 +1,6 @@
-import type { Metadata } from 'next';
-import { officeSpaceData as data } from '@/data/services/office-space-solutions';
+import type { Metadata } from 'next'
+import { officeSpaceData as data } from '@/data/services/office-space-solutions'
+import { Images } from '@/lib/assets'
 import HeroSection from '@/components/sections/hero-section';
 import ContentWithImage from '@/components/sections/content-with-image';
 import ProcessSteps from '@/components/sections/process-steps';
@@ -22,7 +23,7 @@ export default function OfficeSpacePage() {
       href: "/contact",
     },
     backgroundImage: {
-      src: '/images/services/office-hero.jpg',
+      src: Images.hero.services.officeSpace,
       alt: data.office_solutions_overview.title,
     },
   };
