@@ -1,10 +1,10 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
-import { Plus, Minus } from 'lucide-react'
+import { useState } from 'react'
 import type { FAQ } from '@/types'
 import { Heading, Text } from '@/components/ui/typography'
-import Container from '@/components/ui/container'
+import Container, { Grid } from '@/components/ui/container'
+import Card from '@/components/ui/card'
 
 interface FAQSectionProps {
   title?: string
@@ -21,10 +21,10 @@ export default function FAQSection({
   faqs,
   categories,
   showCategories = false,
+  cols = 2
 }: FAQSectionProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>('All')
   const [openItems, setOpenItems] = useState<Set<number>>(new Set())
-  const contentRefs = useRef<(HTMLDivElement | null)[]>([])
 
   const filteredFaqs = showCategories && selectedCategory !== 'All'
     ? faqs.filter(faq => faq.category === selectedCategory)
@@ -53,25 +53,26 @@ export default function FAQSection({
         )}
       </div>
 
+      {/* Category Filter */}
       {showCategories && categories && categories.length > 1 && (
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 mb-12">
           <button
             onClick={() => setSelectedCategory('All')}
-            className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
               selectedCategory === 'All'
-                ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg shadow-blue-200'
+                ? 'bg-blue-600 text-white'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }`}
           >
-            All
+            All Categories
           </button>
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 selectedCategory === category
-                  ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg shadow-blue-200'
+                  ? 'bg-blue-600 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -81,58 +82,48 @@ export default function FAQSection({
         </div>
       )}
 
-      <div className="max-w-4xl mx-auto space-y-3">
+      {/* FAQ Items */}
+      <Grid cols={cols} gap="lg">
         {filteredFaqs.map((faq, index) => (
-          <div
+          <Card
             key={index}
-            className="group"
+            padding="lg"
+            hover={false}
+            className="cursor-pointer"
+            onClick={() => toggleItem(index)}
           >
-            <button
-              onClick={() => toggleItem(index)}
-              className="w-full text-left"
-            >
-              <div className="bg-white border border-gray-200 rounded-xl p-5 hover:border-blue-300 hover:shadow-md transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-blue-50 group-hover:to-transparent">
-                <div className="flex items-center justify-between">
-                  <div className="flex-1">
-                    <Heading
-                      level="h3"
-                      size="md"
-                      weight="semibold"
-                      className="text-gray-900 group-hover:text-blue-700 transition-colors"
-                    >
-                      {faq.question}
-                    </Heading>
-                  </div>
-                  <div className="ml-4 flex-shrink-0">
-                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 group-hover:bg-blue-200 transition-all duration-300">
-                      {openItems.has(index) ? (
-                        <Minus className="w-5 h-5 text-blue-600 transition-transform duration-300" />
-                      ) : (
-                        <Plus className="w-5 h-5 text-blue-600 transition-transform duration-300" />
-                      )}
-                    </div>
-                  </div>
+            <div className="flex items-start justify-between">
+              <div className="flex-1">
+                <Heading 
+                  level="h3" 
+                  size="lg" 
+                  weight="medium" 
+                  className="mb-3 text-left"
+                >
+                  {faq.question}
+                </Heading>
+                
+                {openItems.has(index) && (
+                  <Text className="text-gray-600 leading-relaxed">
+                    {faq.answer}
+                  </Text>
+                )}
+              </div>
+              
+              <div className="ml-4 flex-shrink-0">
+                <div className={`w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center transition-colors ${
+                  openItems.has(index) ? 'border-blue-600' : ''
+                }`}>
+                  <div className={`w-2 h-2 rounded-full bg-blue-600 transition-transform ${
+                    openItems.has(index) ? 'scale-100' : 'scale-0'
+                  }`} />
                 </div>
               </div>
-            </button>
-
-            <div
-              ref={(el) => {
-                contentRefs.current[index] = el
-              }}
-              className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                openItems.has(index) ? 'max-h-96' : 'max-h-0'
-              }`}
-            >
-              <div className="bg-gradient-to-b from-blue-50 to-white border border-t-0 border-gray-200 rounded-b-xl px-5 py-4 -mt-1">
-                <Text className="text-gray-700 leading-relaxed">
-                  {faq.answer}
-                </Text>
-              </div>
             </div>
-          </div>
+          </Card>
         ))}
-      </div>
+      </Grid>
+
     </Container>
   )
 }
