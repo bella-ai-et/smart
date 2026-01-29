@@ -35,27 +35,42 @@ export default function CostCalculator() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission logic here
-    console.log('Form submitted:', formData)
-    alert('Thank you! We will contact you with your quote shortly.')
+    
+    const message = `Hello, I'm interested in a business setup quote.
+
+Details:
+Activity: ${formData.activity}
+Premises: ${formData.premises}
+Owners: ${formData.owners}
+Visas: ${formData.visas}
+Jurisdiction: ${formData.jurisdiction}
+
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Company: ${formData.company}`
+
+    const whatsappUrl = `https://wa.me/971588364257?text=${encodeURIComponent(message)}`
+    window.open(whatsappUrl, '_blank')
   }
 
   return (
     <section className="py-16 bg-blue-700 text-white">
       <Container>
-        <div className="flex justify-between items-center mb-8">
-          <Heading level="h2" size="3xl" className="text-white font-medium">
-            Cost Calculator
-          </Heading>
-          <Text className="text-white/90">
-            Step {step} Of 2
-          </Text>
-        </div>
-        
-        <form onSubmit={handleSubmit}>
-          {step === 1 ? (
-            <>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 mb-12">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex justify-between items-center mb-8">
+            <Heading level="h2" size="3xl" className="text-white font-medium">
+              Cost Calculator
+            </Heading>
+            <Text className="text-white/90">
+              Step {step} Of 2
+            </Text>
+          </div>
+          
+          <form onSubmit={handleSubmit}>
+            {step === 1 ? (
+              <>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 mb-12">
                 <div>
                   <label className="block text-white mb-2 font-medium">Choose your business activity*</label>
                   <div className="relative">
@@ -287,6 +302,7 @@ export default function CostCalculator() {
             </>
           )}
         </form>
+        </div>
       </Container>
     </section>
   )

@@ -134,7 +134,6 @@ const freeZones = startYourCompanyNavigation.filter(i => i.category === 'free-zo
               </div>
             </div>
 
-            <Link href="/portfolio" className="hover:text-blue-600 transition-colors">Success Stories</Link>
             <Link href="/contact" className="hover:text-blue-600 transition-colors">Contact</Link>
           </nav>
           

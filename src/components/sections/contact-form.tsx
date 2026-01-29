@@ -1,4 +1,6 @@
-import React from 'react'
+'use client'
+
+import React, { useState } from 'react'
 import Container from '@/components/ui/container'
 import { Heading, Text } from '@/components/ui/typography'
 import Button from '@/components/ui/button'
@@ -13,6 +15,46 @@ interface ContactFormProps {
 export default function ContactForm({ variant = 'default' }: ContactFormProps) {
   const isHome = variant === 'home'
   
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    name: '',
+    email: '',
+    phone: '',
+    service: 'company-formation',
+    message: ''
+  })
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target
+    setFormData(prev => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    let messageBody = `Hello, I'm interested in your services.\n\n`
+    
+    if (isHome) {
+      messageBody += `Name: ${formData.firstName} ${formData.lastName}\n`
+    } else {
+      messageBody += `Name: ${formData.name}\n`
+    }
+    
+    messageBody += `Email: ${formData.email}\nPhone: ${formData.phone}\n`
+    
+    if (!isHome && formData.service) {
+      messageBody += `Service: ${formData.service}\n`
+    }
+    
+    if (formData.message) {
+      messageBody += `Message: ${formData.message}\n`
+    }
+    
+    const whatsappUrl = `https://wa.me/971588364257?text=${encodeURIComponent(messageBody)}`
+    window.open(whatsappUrl, '_blank')
+  }
+
   // Standard input classes for both variants since we are removing the green theme
   const inputClasses = ""
 
@@ -28,7 +70,7 @@ export default function ContactForm({ variant = 'default' }: ContactFormProps) {
   return (
     <section className={`py-16 ${isHome ? 'bg-gray-50' : 'bg-white'}`}>
       <Container>
-        <div className={`grid grid-cols-1 lg:grid-cols-2 ${isHome ? 'shadow-xl rounded-2xl overflow-hidden bg-white' : 'gap-12'}`}>
+        <div className={`${isHome ? 'max-w-4xl mx-auto shadow-xl rounded-2xl overflow-hidden bg-white' : 'grid grid-cols-1 lg:grid-cols-2 gap-12'}`}>
           {/* Left Column: Form */}
           <div className={isHome ? 'p-8 lg:p-12' : ''}>
              {isHome && (
@@ -42,109 +84,132 @@ export default function ContactForm({ variant = 'default' }: ContactFormProps) {
                 </>
              )}
 
-            {isHome ? (
-               // Home variant fields
-               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                 <div>
-                    {renderLabel('First Name', 'firstName')}
-                    <Input 
-                       id="firstName" 
-                       placeholder="" 
-                       className={inputClasses}
-                    />
+            <form onSubmit={handleSubmit}>
+              {isHome ? (
+                 // Home variant fields
+                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                   <div>
+                      {renderLabel('First Name', 'firstName')}
+                      <Input 
+                         id="firstName" 
+                         name="firstName"
+                         value={formData.firstName}
+                         onChange={handleChange}
+                         placeholder="" 
+                         className={inputClasses}
+                      />
+                   </div>
+                   <div>
+                      {renderLabel('Last Name', 'lastName')}
+                      <Input 
+                         id="lastName" 
+                         name="lastName"
+                         value={formData.lastName}
+                         onChange={handleChange}
+                         placeholder="" 
+                         className={inputClasses}
+                      />
+                   </div>
                  </div>
-                 <div>
-                    {renderLabel('Last Name', 'lastName')}
-                    <Input 
-                       id="lastName" 
-                       placeholder="" 
-                       className={inputClasses}
-                    />
+              ) : (
+                 // Default variant fields
+                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                   <Input 
+                    id="name" 
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    label="Name*" 
+                    placeholder="" 
+                   />
+                   <Input 
+                    id="phone" 
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    label="Phone*" 
+                    placeholder="" 
+                   />
                  </div>
-               </div>
-            ) : (
-               // Default variant fields
-               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                 <Input id="name" label="Name*" placeholder="" />
-                 <Input id="phone" label="Phone*" placeholder="" />
-               </div>
-            )}
-            
-            {isHome ? (
-               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                 <div>
-                    {renderLabel('Email', 'email')}
-                    <Input 
-                       id="email" 
-                       placeholder="" 
-                       className={inputClasses}
-                    />
+              )}
+              
+              {isHome ? (
+                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                   <div>
+                      {renderLabel('Email', 'email')}
+                      <Input 
+                         id="email" 
+                         name="email"
+                         value={formData.email}
+                         onChange={handleChange}
+                         placeholder="" 
+                         className={inputClasses}
+                      />
+                   </div>
+                   <div>
+                      {renderLabel('Phone', 'phone')}
+                      <Input 
+                         id="phone" 
+                         name="phone"
+                         value={formData.phone}
+                         onChange={handleChange}
+                         placeholder="" 
+                         className={inputClasses}
+                      />
+                   </div>
                  </div>
-                 <div>
-                    {renderLabel('Phone', 'phone')}
+              ) : (
+                  <div className="mb-6">
                     <Input 
-                       id="phone" 
-                       placeholder="" 
-                       className={inputClasses}
+                      id="email" 
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      label="Email*" 
+                      placeholder="" 
                     />
-                 </div>
-               </div>
-            ) : (
+                  </div>
+              )}
+              
+              {!isHome && (
                 <div className="mb-6">
-                  <Input id="email" label="Email*" placeholder="" />
+                  <Select 
+                    id="service" 
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    label="Service Required" 
+                    options={[
+                      { label: 'Business Setup', value: 'company-formation' },
+                      { label: 'Visa Processing', value: 'visa-processing' },
+                      { label: 'Trade License', value: 'trade-license' },
+                      { label: 'PRO Services', value: 'pro-services' },
+                    ]}
+                  />
                 </div>
-            )}
-            
-            {!isHome && (
+              )}
+              
               <div className="mb-6">
-                <Select 
-                  id="service" 
-                  label="Service Required" 
-                  options={[
-                    { label: 'Business Setup', value: 'company-formation' },
-                    { label: 'Visa Processing', value: 'visa-processing' },
-                    { label: 'Trade License', value: 'trade-license' },
-                    { label: 'PRO Services', value: 'pro-services' },
-                  ]}
+                {renderLabel('Message', 'message')}
+                <Textarea 
+                   id="message" 
+                   name="message"
+                   value={formData.message}
+                   onChange={handleChange}
+                   label={!isHome ? "Message" : ""} 
+                   rows={4} 
+                   className={inputClasses}
                 />
               </div>
-            )}
-            
-            <div className="mb-6">
-              {renderLabel('Message', 'message')}
-              <Textarea 
-                 id="message" 
-                 label={!isHome ? "Message" : ""} 
-                 rows={4} 
-                 className={inputClasses}
-              />
-            </div>
-            
-            {isHome && (
-               <div className="bg-gray-50 p-2 rounded w-[240px] mb-6 border border-gray-200">
-                  <div className="flex items-center space-x-2">
-                     <div className="w-6 h-6 border-2 border-gray-300 rounded-sm bg-white"></div>
-                     <span className="text-sm text-gray-600">I'm not a robot</span>
-                     <div className="flex-1 text-right">
-                        <div className="text-[10px] text-gray-400">reCAPTCHA</div>
-                     </div>
-                  </div>
-               </div>
-            )}
-
-            <Button className={`w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-full text-lg font-bold`}>
-              Submit
-            </Button>
+              
+              <Button type="submit" className={`w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-full text-lg font-bold`}>
+                Submit
+              </Button>
+            </form>
           </div>
           
           {/* Right Column */}
-          {isHome ? (
-             <div className="relative h-full min-h-[400px] bg-gray-200">
-                <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                  <span className="text-lg font-medium">Woman with Laptop Image</span>
-                </div>
-             </div>
-          ) : (
+          {!isHome && (
             <div className="lg:pl-12">
               <Heading level="h2" size="3xl" className="mb-8 font-bold">
                 We Want To Hear From You!
