@@ -1,5 +1,4 @@
 import type { Hero } from '@/types'
-import Image from 'next/image'
 import Button from '@/components/ui/button'
 import { Heading, Text } from '@/components/ui/typography'
 import Container from '@/components/ui/container'
@@ -10,21 +9,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ data }: HeroSectionProps) {
   return (
-    <div className="relative bg-gray-900 text-white overflow-hidden">
-      {/* Background Image */}
-      {data.backgroundImage && (
-        <div className="absolute inset-0 z-0">
-          <Image
-            src={data.backgroundImage.src}
-            alt={data.backgroundImage.alt || data.title}
-            fill
-            className="object-cover opacity-50"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/80 to-gray-900/60" />
-        </div>
-      )}
-      
+    <div className="relative bg-gradient-to-r from-blue-900 to-blue-800 text-white overflow-hidden">
       <Container size="xl" padding="lg">
         <div className="relative z-10 py-24 lg:py-32">
           <div className="max-w-4xl">

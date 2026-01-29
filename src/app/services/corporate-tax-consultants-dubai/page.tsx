@@ -22,10 +22,6 @@ export default function CorporateTaxPage() {
       text: "Get Tax Compliant",
       href: "/contact",
     },
-    backgroundImage: {
-      src: Images.hero.services.corporateTax,
-      alt: data.corporate_tax_overview.title,
-    },
   };
 
   return (

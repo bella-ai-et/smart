@@ -23,10 +23,6 @@ export default function BankAccountOpeningPage() {
     primaryCTA: {
       text: "Start Your Application",
       href: "/contact"
-    },
-    backgroundImage: {
-      src: Images.hero.services.bankAccountOpening, // Assuming a relevant image exists or placeholder
-      alt: data.bank_account_opening_overview.title
     }
   };
 

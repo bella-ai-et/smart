@@ -22,10 +22,6 @@ export default function CorporateStructuringPage() {
       text: "Structure Your Business",
       href: "/contact",
     },
-    backgroundImage: {
-      src: Images.hero.services.corporateStructuring,
-      alt: data.corporate_structuring_overview.title,
-    },
   };
 
   return (

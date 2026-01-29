@@ -286,10 +286,6 @@ export default async function CompanySetupPage({ params }: PageProps) {
       primaryCTA: {
         text: "Get a Free Consultation",
         href: "#contact"
-      },
-      backgroundImage: {
-        src: jafzaOffshoreData.hero.backgroundImage,
-        alt: jafzaOffshoreData.hero.title
       }
     }
 
@@ -396,10 +392,6 @@ export default async function CompanySetupPage({ params }: PageProps) {
       primaryCTA: {
         text: "Get a Free Consultation",
         href: "#contact"
-      },
-      backgroundImage: {
-        src: rakIccOffshoreData.hero.backgroundImage,
-        alt: rakIccOffshoreData.hero.title
       }
     }
 
@@ -500,15 +492,10 @@ export default async function CompanySetupPage({ params }: PageProps) {
   if (slug === 'ajman-offshore' && category === 'offshore') {
     const heroData = {
       title: ajmanOffshoreData.hero.title,
-      subtitle: ajmanOffshoreData.hero.subtitle,
       description: ajmanOffshoreData.ajman_offshore_overview.description,
       primaryCTA: {
         text: "Get a Free Consultation",
         href: "#contact"
-      },
-      backgroundImage: {
-        src: ajmanOffshoreData.hero.backgroundImage,
-        alt: ajmanOffshoreData.hero.title
       }
     }
 
@@ -600,15 +587,10 @@ export default async function CompanySetupPage({ params }: PageProps) {
     // Construct Hero data from dedicated file
     const heroData = {
       title: 'Ajman Free Zone',
-      subtitle: ajmanFreeZoneData.ajman_free_zone_overview.description,
       description: ajmanFreeZoneData.ajman_free_zone_overview.description,
       primaryCTA: {
         text: "Get a Free Consultation",
         href: "#contact"
-      },
-      backgroundImage: {
-        src: Images.hero.ajmanFreeZone,
-        alt: 'Ajman Free Zone'
       }
     }
 
@@ -697,15 +679,10 @@ export default async function CompanySetupPage({ params }: PageProps) {
   if (slug === 'ifza-dsoa' && category === 'free-zone') {
     const heroData = {
       title: ifzaData.hero.title,
-      subtitle: ifzaData.hero.subtitle,
       description: ifzaData.ifza_overview.description,
       primaryCTA: {
         text: "Get a Free Consultation",
         href: "#contact"
-      },
-      backgroundImage: {
-        src: ifzaData.hero.backgroundImage,
-        alt: ifzaData.hero.title
       }
     }
 
@@ -804,15 +781,10 @@ export default async function CompanySetupPage({ params }: PageProps) {
   if (slug === 'dmcc' && category === 'free-zone') {
     const heroData = {
       title: dmccData.hero.title,
-      subtitle: dmccData.hero.subtitle,
       description: dmccData.dmcc_free_zone_overview.description,
       primaryCTA: {
         text: "Get a Free Consultation",
         href: "#contact"
-      },
-      backgroundImage: {
-        src: dmccData.hero.backgroundImage,
-        alt: dmccData.hero.title
       }
     }
 
@@ -946,15 +918,10 @@ export default async function CompanySetupPage({ params }: PageProps) {
   if (slug === 'creative-city-fujairah' && category === 'free-zone') {
     const heroData = {
       title: creativeCityFujairahData.hero.title,
-      subtitle: creativeCityFujairahData.hero.subtitle,
       description: creativeCityFujairahData.creative_city_fujairah_overview.description,
       primaryCTA: {
         text: "Get a Free Consultation",
         href: "#contact"
-      },
-      backgroundImage: {
-        src: creativeCityFujairahData.hero.backgroundImage,
-        alt: creativeCityFujairahData.hero.title
       }
     }
 
@@ -1055,15 +1022,10 @@ export default async function CompanySetupPage({ params }: PageProps) {
   if (slug === 'meydan-free-zone' && category === 'free-zone') {
     const heroData = {
       title: meydanFreeZoneData.hero.title,
-      subtitle: meydanFreeZoneData.hero.subtitle,
       description: meydanFreeZoneData.meydan_free_zone_overview.description,
       primaryCTA: {
         text: "Get a Free Consultation",
         href: "#contact"
-      },
-      backgroundImage: {
-        src: meydanFreeZoneData.hero.backgroundImage,
-        alt: meydanFreeZoneData.hero.title
       }
     }
 
@@ -1162,15 +1124,10 @@ export default async function CompanySetupPage({ params }: PageProps) {
   if (slug === 'rakez' && category === 'free-zone') {
     const heroData = {
       title: rakezData.hero.title,
-      subtitle: rakezData.hero.subtitle,
       description: rakezData.rakez_overview.description,
       primaryCTA: {
         text: "Get a Free Consultation",
         href: "#contact"
-      },
-      backgroundImage: {
-        src: rakezData.hero.backgroundImage,
-        alt: rakezData.hero.title
       }
     }
 
@@ -1274,10 +1231,6 @@ export default async function CompanySetupPage({ params }: PageProps) {
       primaryCTA: {
         text: "Get a Free Consultation",
         href: "#contact"
-      },
-      backgroundImage: {
-        src: shamsData.hero.backgroundImage,
-        alt: shamsData.hero.title
       }
     }
 
@@ -1381,10 +1334,6 @@ export default async function CompanySetupPage({ params }: PageProps) {
       primaryCTA: {
         text: "Get a Free Consultation",
         href: "#contact"
-      },
-      backgroundImage: {
-        src: spcFreeZoneData.hero.backgroundImage,
-        alt: spcFreeZoneData.hero.title
       }
     }
 
@@ -1462,18 +1411,13 @@ export default async function CompanySetupPage({ params }: PageProps) {
   // Handle SRTIP with dedicated data file
     if (slug === 'srtip' && category === 'free-zone') {
       const heroData = {
-        title: srtipData.hero.title,
-        subtitle: srtipData.hero.subtitle,
-        description: srtipData.srtip_free_zone_overview.description,
-        primaryCTA: {
-          text: "Get a Free Consultation",
-          href: "#contact"
-        },
-        backgroundImage: {
-          src: srtipData.hero.backgroundImage,
-          alt: srtipData.hero.title
-        }
+      title: srtipData.hero.title,
+      description: srtipData.srtip_free_zone_overview.description,
+      primaryCTA: {
+        text: "Get a Free Consultation",
+        href: "#contact"
       }
+    }
   
       return (
         <>
@@ -1575,10 +1519,6 @@ export default async function CompanySetupPage({ params }: PageProps) {
       primaryCTA: {
         text: "Get a Free Consultation",
         href: "#contact"
-      },
-      backgroundImage: {
-        src: dubaiMainlandData.hero.backgroundImage,
-        alt: dubaiMainlandData.hero.title
       }
     }
 
@@ -1656,10 +1596,6 @@ export default async function CompanySetupPage({ params }: PageProps) {
       primaryCTA: {
         text: "Get a Free Consultation",
         href: "#contact"
-      },
-      backgroundImage: {
-        src: abuDhabiMainlandData.hero.backgroundImage,
-        alt: abuDhabiMainlandData.hero.title
       }
     }
 
@@ -1742,10 +1678,6 @@ export default async function CompanySetupPage({ params }: PageProps) {
     primaryCTA: {
       text: "Get a Free Consultation",
       href: "#contact"
-    },
-    backgroundImage: {
-      src: service.hero.backgroundImage,
-      alt: service.hero.title
     }
   }
 

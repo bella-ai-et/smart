@@ -1,6 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
-import { Images } from '@/lib/assets'
 
 export default function Footer() {
   return (
@@ -10,13 +8,10 @@ export default function Footer() {
           {/* Company info */}
           <div>
             <Link href="/" className="inline-block mb-4">
-              <Image 
-                src={Images.logos.defaultLogo} 
-                alt="JOAB SOLUTIONS" 
-                width={150} 
-                height={50} 
-                className="h-10 w-auto object-contain"
-              />
+              <div className="flex flex-col">
+                <span className="text-2xl font-bold tracking-tight text-blue-900 leading-none">JOAB</span>
+                <span className="text-sm font-semibold tracking-widest text-blue-600 uppercase">Solutions</span>
+              </div>
             </Link>
             <p className="text-sm text-gray-600">
               Expert business consultancy for business setup and corporate services in UAE.

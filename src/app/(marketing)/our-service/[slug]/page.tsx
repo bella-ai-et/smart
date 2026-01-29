@@ -54,10 +54,6 @@ export default async function ServicePage({ params }: PageProps) {
     primaryCTA: {
       text: "Get a Free Consultation",
       href: "#contact"
-    },
-    backgroundImage: {
-      src: service.hero.backgroundImage,
-      alt: service.hero.title
     }
   }
 

@@ -22,10 +22,6 @@ export default function CorporateRelocationPage() {
       text: "Start Relocation",
       href: "/contact",
     },
-    backgroundImage: {
-      src: Images.hero.services.corporateRelocation,
-      alt: data.relocation_services_overview.title,
-    },
   };
 
   return (

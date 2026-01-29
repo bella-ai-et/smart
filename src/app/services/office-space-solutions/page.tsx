@@ -22,10 +22,6 @@ export default function OfficeSpacePage() {
       text: "Find Office Space",
       href: "/contact",
     },
-    backgroundImage: {
-      src: Images.hero.services.officeSpace,
-      alt: data.office_solutions_overview.title,
-    },
   };
 
   return (

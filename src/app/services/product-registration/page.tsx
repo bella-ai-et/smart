@@ -22,10 +22,6 @@ export default function ProductRegistrationPage() {
       text: "Register Product",
       href: "/contact",
     },
-    backgroundImage: {
-      src: Images.hero.services.productRegistration,
-      alt: data.product_registration_overview.title,
-    },
   };
 
   return (

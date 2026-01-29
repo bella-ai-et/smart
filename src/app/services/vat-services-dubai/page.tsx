@@ -22,10 +22,6 @@ export default function VatServicesPage() {
       text: "Ensure VAT Compliance",
       href: "/contact",
     },
-    backgroundImage: {
-      src: Images.hero.services.vat,
-      alt: data.vat_services_overview.title,
-    },
   };
 
   return (

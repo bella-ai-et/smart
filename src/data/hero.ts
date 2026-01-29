@@ -30,16 +30,6 @@ export const heroContent: Hero = {
     text: "Start Your Business Setup",
     href: "/contact"
   },
-  secondaryCTA: {
-    text: "View Our Services",
-    href: "/services"
-  },
-  backgroundImage: {
-    src: Images.hero.global,
-    alt: "Dubai skyline with business professionals in meeting room",
-    width: 1920,
-    height: 1080
-  },
   overlay: {
     enabled: true,
     opacity: 0.6,
@@ -73,17 +63,6 @@ export const aboutHero: Hero = {
   secondaryCTA: {
     text: "Contact Us",
     href: "/contact"
-  },
-  backgroundImage: {
-    src: Images.services.ajmanOverview,
-    alt: "Business consultancy team in Dubai office with clients",
-    width: 1920,
-    height: 1080
-  },
-  overlay: {
-    enabled: true,
-    opacity: 0.6,
-    color: "#1a3a52"
   }
 }
 
@@ -111,12 +90,6 @@ export const contactHero: Hero = {
   primaryCTA: {
     text: "Call Us Now",
     href: "tel:+971585417444"
-  },
-  backgroundImage: {
-    src: "/images/contact-hero.jpg",
-    alt: "Customer support representative talking on phone",
-    width: 1920,
-    height: 1080
   },
   overlay: {
     enabled: true,
@@ -151,16 +124,5 @@ export const portfolioHero: Hero = {
   secondaryCTA: {
     text: "Learn Our Process",
     href: "/process"
-  },
-  backgroundImage: {
-    src: "/images/portfolio-hero.jpg",
-    alt: "Successful business clients and company formation certificates",
-    width: 1920,
-    height: 1080
-  },
-  overlay: {
-    enabled: true,
-    opacity: 0.5,
-    color: "#1a3a52"
   }
 }

@@ -14,7 +14,7 @@ export interface SEO {
 
 export interface Hero {
   title: string
-  subtitle: string
+  subtitle?: string
   description: string
   primaryCTA: {
     text: string

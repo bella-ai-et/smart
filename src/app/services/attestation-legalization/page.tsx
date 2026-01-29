@@ -22,10 +22,6 @@ export default function AttestationPage() {
       text: "Get Documents Attested",
       href: "/contact",
     },
-    backgroundImage: {
-      src: Images.hero.services.attestation,
-      alt: data.attestation_legalization_overview.title,
-    },
   };
 
   return (

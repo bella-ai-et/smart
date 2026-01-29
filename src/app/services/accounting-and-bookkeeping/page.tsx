@@ -23,10 +23,6 @@ export default function AccountingBookkeepingPage() {
     primaryCTA: {
       text: "Get a Free Consultation",
       href: "/contact"
-    },
-    backgroundImage: {
-      src: Images.hero.services.accounting,
-      alt: data.accounting_bookkeeping_overview.title
     }
   };
 
