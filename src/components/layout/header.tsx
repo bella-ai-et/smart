@@ -3,45 +3,45 @@ import { services } from '@/data'
 import { startYourCompanyNavigation } from '@/data/navigation'
 
 export default function Header() {
-const freeZones = startYourCompanyNavigation.filter(i => i.category === 'free-zone')
+  const freeZones = startYourCompanyNavigation.filter(i => i.category === 'free-zone')
   const mainland = startYourCompanyNavigation.filter(i => i.category === 'mainland')
   const offshore = startYourCompanyNavigation.filter(i => i.category === 'offshore')
 
   return (
-    <header className="w-full border-b relative z-50 bg-white">
-      <div className="container mx-auto px-4 py-4">
+    <header className="w-full relative z-50 bg-white border-b border-gray-100/50 shadow-sm">
+      <div className="container mx-auto px-4 py-5">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="block">
-              <div className="flex flex-col">
-                <span className="text-2xl font-bold tracking-tight text-blue-900 leading-none">JOAB</span>
-                <span className="text-sm font-semibold tracking-widest text-blue-600 uppercase">Solutions</span>
-              </div>
-            </Link>
-          </div>
-          
-          {/* Navigation */}
-          <nav className="hidden md:flex space-x-6 items-center">
-            <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
-            <Link href="/about" className="hover:text-blue-600 transition-colors">About</Link>
-            
-            {/* Our Services */}
+          <Link href="/" className="flex-shrink-0 group">
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">JOAB</span>
+              <span className="text-xs font-bold tracking-widest text-blue-600">SOLUTIONS</span>
+            </div>
+          </Link>
+
+          <nav className="hidden lg:flex items-center gap-1">
+            <NavLink href="/">Home</NavLink>
+            <NavLink href="/about">About</NavLink>
+
             <div className="relative group">
-              <button className="hover:text-blue-600 transition-colors bg-transparent border-none p-0 cursor-pointer text-base flex items-center">
+              <button className="flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200">
                 Our Services
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
               </button>
-              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 hidden group-hover:block w-[800px]">
-                <div className="bg-white border border-gray-200 rounded-lg shadow-xl p-6">
-                  <ul className="grid grid-cols-3 gap-x-6 gap-y-4">
+              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 w-[700px]">
+                <div className="bg-white border border-gray-100 rounded-xl shadow-2xl p-6 backdrop-blur-xl">
+                  <ul className="grid grid-cols-3 gap-4">
                     {services.map((s) => (
                       <li key={s.id}>
                         <Link
                           href={s.cta.href || `/our-service/${s.slug}`}
-                          className="block text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-md transition-colors"
+                          className="group/item block p-3 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200"
                         >
-                          {s.name}
+                          <div className="flex items-center gap-2">
+                            <div className="w-2 h-2 rounded-full bg-blue-400 group-hover/item:bg-blue-600 transition-colors" />
+                            {s.name}
+                          </div>
                         </Link>
                       </li>
                     ))}
@@ -50,93 +50,66 @@ const freeZones = startYourCompanyNavigation.filter(i => i.category === 'free-zo
               </div>
             </div>
 
-            {/* Start Your Company - Cascading Flyout */}
-            <div className="relative group/start h-full flex items-center">
-              <button className="hover:text-blue-600 transition-colors bg-transparent border-none p-0 cursor-pointer text-base font-medium flex items-center h-full">
+            <div className="relative group/start">
+              <button className="flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200">
                 Start Your Company
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                <svg className="w-4 h-4 transition-transform group-hover/start:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
               </button>
-              
-              {/* Level 2: Vertical Dropdown */}
-              <div className="absolute top-full left-0 pt-4 hidden group-hover/start:block w-60 z-50">
-                <div className="bg-white border border-gray-200 shadow-xl rounded-md py-2">
-                  
-                  {/* Freezone Item */}
-                  <div className="group/freezone relative px-4 py-3 hover:bg-gray-50 cursor-pointer flex justify-between items-center text-gray-700 hover:text-blue-600 transition-colors">
-                    <span className="font-medium">Freezone</span>
-                    <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                    
-                    {/* Level 3: Freezone Flyout */}
-                    <div className="absolute left-full top-0 pl-1 hidden group-hover/freezone:block w-72">
-                       <div className="bg-white border border-gray-200 shadow-xl rounded-md py-2">
-                          <ul className="space-y-1">
-{freeZones.map(item => (
-                                <li key={item.route}>
-                                  <Link href={item.route} className="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
-                                    {item.label}
-                                  </Link>
-                                </li>
-                              ))}
-                          </ul>
-                       </div>
-                    </div>
-                  </div>
 
-                  {/* Mainland Item */}
-                  <div className="group/mainland relative px-4 py-3 hover:bg-gray-50 cursor-pointer flex justify-between items-center text-gray-700 hover:text-blue-600 transition-colors">
-                    <span className="font-medium">Mainland</span>
-                    <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                    
-                    {/* Level 3: Mainland Flyout */}
-                    <div className="absolute left-full top-0 pl-1 hidden group-hover/mainland:block w-72">
-                       <div className="bg-white border border-gray-200 shadow-xl rounded-md py-2">
-                          <ul className="space-y-1">
-{mainland.map(item => (
-                                <li key={item.route}>
-                                  <Link href={item.route} className="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
-                                    {item.label}
-                                  </Link>
-                                </li>
-                              ))}
-                          </ul>
-                       </div>
-                    </div>
-                  </div>
-
-                  {/* Offshore Item */}
-                  <div className="group/offshore relative px-4 py-3 hover:bg-gray-50 cursor-pointer flex justify-between items-center text-gray-700 hover:text-blue-600 transition-colors">
-                    <span className="font-medium">Offshore</span>
-                    <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                    
-                    {/* Level 3: Offshore Flyout */}
-                    <div className="absolute left-full top-0 pl-1 hidden group-hover/offshore:block w-72">
-                       <div className="bg-white border border-gray-200 shadow-xl rounded-md py-2">
-                          <ul className="space-y-1">
-{offshore.map(item => (
-                                <li key={item.route}>
-                                  <Link href={item.route} className="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50">
-                                    {item.label}
-                                  </Link>
-                                </li>
-                              ))}
-                          </ul>
-                       </div>
-                    </div>
-                  </div>
-
+              <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover/start:opacity-100 group-hover/start:visible transition-all duration-200 w-56 z-50">
+                <div className="bg-white border border-gray-100 rounded-xl shadow-2xl py-2 backdrop-blur-xl">
+                  <MenuSection title="Freezone" items={freeZones} />
+                  <div className="my-1 h-px bg-gray-100" />
+                  <MenuSection title="Mainland" items={mainland} />
+                  <div className="my-1 h-px bg-gray-100" />
+                  <MenuSection title="Offshore" items={offshore} />
                 </div>
               </div>
             </div>
 
-            <Link href="/contact" className="hover:text-blue-600 transition-colors">Contact</Link>
+            <NavLink href="/contact">Contact</NavLink>
           </nav>
-          
-          {/* Mobile menu placeholder */}
-          <button className="md:hidden p-2 text-gray-600">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
+
+          <button className="lg:hidden p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
           </button>
         </div>
       </div>
     </header>
+  )
+}
+
+function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <Link
+      href={href}
+      className="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200"
+    >
+      {children}
+    </Link>
+  )
+}
+
+function MenuSection({ title, items }: { title: string; items: any[] }) {
+  return (
+    <div>
+      <div className="px-4 py-2 text-xs font-bold text-gray-500 uppercase tracking-wider">{title}</div>
+      <ul className="space-y-0">
+        {items.map(item => (
+          <li key={item.route}>
+            <Link
+              href={item.route}
+              className="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+            >
+              {item.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }
